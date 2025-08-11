@@ -137,6 +137,214 @@ export const mockProducts: Product[] = [
       flipkart: { price: 87999, url: 'https://flipkart.com/dell-xps-13', available: true },
       myntra: { price: 92999, url: 'https://myntra.com/dell-xps-13', available: false }
     }
+  },
+  {
+    id: '9',
+    name: 'L\'Oreal Paris Revitalift Serum',
+    description: 'Anti-Aging Hyaluronic Acid Serum, 30ml',
+    image: 'https://images.pexels.com/photos/3685530/pexels-photo-3685530.jpeg?auto=compress&cs=tinysrgb&w=300',
+    category: 'Beauty',
+    keywords: ['loreal', 'serum', 'anti-aging', 'skincare', 'hyaluronic'],
+    platforms: {
+      amazon: { price: 1299, url: 'https://amazon.in/loreal-revitalift-serum', available: true },
+      flipkart: { price: 1199, url: 'https://flipkart.com/loreal-revitalift-serum', available: true },
+      myntra: { price: 1399, url: 'https://myntra.com/loreal-revitalift-serum', available: true }
+    }
+  },
+  {
+    id: '10',
+    name: 'Lakme Absolute Foundation',
+    description: 'Matte Finish, SPF 16, Natural Ivory',
+    image: 'https://images.pexels.com/photos/2113855/pexels-photo-2113855.jpeg?auto=compress&cs=tinysrgb&w=300',
+    category: 'Beauty',
+    keywords: ['lakme', 'foundation', 'makeup', 'matte', 'spf'],
+    platforms: {
+      amazon: { price: 899, url: 'https://amazon.in/lakme-absolute-foundation', available: true },
+      flipkart: { price: 849, url: 'https://flipkart.com/lakme-absolute-foundation', available: false },
+      myntra: { price: 799, url: 'https://myntra.com/lakme-absolute-foundation', available: true }
+    }
+  },
+  {
+    id: '11',
+    name: 'IKEA Hemnes Bookshelf',
+    description: 'White Stain, 5 Shelves, Solid Wood',
+    image: 'https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=300',
+    category: 'Home & Living',
+    keywords: ['ikea', 'bookshelf', 'furniture', 'storage', 'wood'],
+    platforms: {
+      amazon: { price: 8999, url: 'https://amazon.in/ikea-hemnes-bookshelf', available: true },
+      flipkart: { price: 8499, url: 'https://flipkart.com/ikea-hemnes-bookshelf', available: true },
+      myntra: { price: 9299, url: 'https://myntra.com/ikea-hemnes-bookshelf', available: false }
+    }
+  },
+  {
+    id: '12',
+    name: 'Philips Air Fryer HD9252',
+    description: '4.1L Capacity, Rapid Air Technology, Black',
+    image: 'https://images.pexels.com/photos/4226796/pexels-photo-4226796.jpeg?auto=compress&cs=tinysrgb&w=300',
+    category: 'Home & Living',
+    keywords: ['philips', 'air fryer', 'kitchen', 'cooking', 'healthy'],
+    platforms: {
+      amazon: { price: 12999, url: 'https://amazon.in/philips-air-fryer', available: true },
+      flipkart: { price: 11999, url: 'https://flipkart.com/philips-air-fryer', available: true },
+      myntra: { price: 13499, url: 'https://myntra.com/philips-air-fryer', available: false }
+    }
+  },
+  {
+    id: '13',
+    name: 'Yonex Arcsaber 11 Badminton Racket',
+    description: 'Professional Grade, 83g, Strung',
+    image: 'https://images.pexels.com/photos/1103829/pexels-photo-1103829.jpeg?auto=compress&cs=tinysrgb&w=300',
+    category: 'Sports',
+    keywords: ['yonex', 'badminton', 'racket', 'sports', 'professional'],
+    platforms: {
+      amazon: { price: 18999, url: 'https://amazon.in/yonex-arcsaber-11', available: true },
+      flipkart: { price: 17999, url: 'https://flipkart.com/yonex-arcsaber-11', available: true },
+      myntra: { price: 19499, url: 'https://myntra.com/yonex-arcsaber-11', available: true }
+    }
+  },
+  {
+    id: '14',
+    name: 'Decathlon Quechua Hiking Backpack',
+    description: '50L Capacity, Waterproof, Multiple Compartments',
+    image: 'https://images.pexels.com/photos/1687845/pexels-photo-1687845.jpeg?auto=compress&cs=tinysrgb&w=300',
+    category: 'Sports',
+    keywords: ['decathlon', 'backpack', 'hiking', 'outdoor', 'waterproof'],
+    platforms: {
+      amazon: { price: 4999, url: 'https://amazon.in/decathlon-hiking-backpack', available: true },
+      flipkart: { price: 4599, url: 'https://flipkart.com/decathlon-hiking-backpack', available: true },
+      myntra: { price: 5199, url: 'https://myntra.com/decathlon-hiking-backpack', available: false }
+    }
+  },
+  {
+    id: '15',
+    name: 'Zara Oversized Blazer',
+    description: 'Navy Blue, Double Breasted, Premium Fabric',
+    image: 'https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=300',
+    category: 'Fashion',
+    keywords: ['zara', 'blazer', 'formal', 'navy', 'oversized'],
+    platforms: {
+      amazon: { price: 7999, url: 'https://amazon.in/zara-oversized-blazer', available: false },
+      flipkart: { price: 7599, url: 'https://flipkart.com/zara-oversized-blazer', available: true },
+      myntra: { price: 7299, url: 'https://myntra.com/zara-oversized-blazer', available: true }
+    }
+  },
+  {
+    id: '16',
+    name: 'H&M Cotton T-Shirt Pack',
+    description: 'Pack of 3, Basic Colors, 100% Cotton',
+    image: 'https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg?auto=compress&cs=tinysrgb&w=300',
+    category: 'Fashion',
+    keywords: ['hm', 'tshirt', 'cotton', 'basic', 'pack'],
+    platforms: {
+      amazon: { price: 1999, url: 'https://amazon.in/hm-cotton-tshirt-pack', available: true },
+      flipkart: { price: 1799, url: 'https://flipkart.com/hm-cotton-tshirt-pack', available: true },
+      myntra: { price: 1699, url: 'https://myntra.com/hm-cotton-tshirt-pack', available: true }
+    }
+  },
+  {
+    id: '17',
+    name: 'Maybelline Fit Me Concealer',
+    description: 'Medium Coverage, 6.8ml, Shade 20',
+    image: 'https://images.pexels.com/photos/3373736/pexels-photo-3373736.jpeg?auto=compress&cs=tinysrgb&w=300',
+    category: 'Beauty',
+    keywords: ['maybelline', 'concealer', 'makeup', 'coverage', 'shade'],
+    platforms: {
+      amazon: { price: 599, url: 'https://amazon.in/maybelline-fit-me-concealer', available: true },
+      flipkart: { price: 549, url: 'https://flipkart.com/maybelline-fit-me-concealer', available: true },
+      myntra: { price: 579, url: 'https://myntra.com/maybelline-fit-me-concealer', available: true }
+    }
+  },
+  {
+    id: '18',
+    name: 'The Body Shop Tea Tree Face Wash',
+    description: 'Oil Control, 250ml, Natural Ingredients',
+    image: 'https://images.pexels.com/photos/3685530/pexels-photo-3685530.jpeg?auto=compress&cs=tinysrgb&w=300',
+    category: 'Beauty',
+    keywords: ['body shop', 'face wash', 'tea tree', 'oil control', 'natural'],
+    platforms: {
+      amazon: { price: 1095, url: 'https://amazon.in/body-shop-tea-tree-wash', available: true },
+      flipkart: { price: 999, url: 'https://flipkart.com/body-shop-tea-tree-wash', available: false },
+      myntra: { price: 1050, url: 'https://myntra.com/body-shop-tea-tree-wash', available: true }
+    }
+  },
+  {
+    id: '19',
+    name: 'Urban Ladder Dining Table',
+    description: '4 Seater, Sheesham Wood, Natural Finish',
+    image: 'https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=300',
+    category: 'Home & Living',
+    keywords: ['urban ladder', 'dining table', 'furniture', 'wood', 'seater'],
+    platforms: {
+      amazon: { price: 24999, url: 'https://amazon.in/urban-ladder-dining-table', available: true },
+      flipkart: { price: 23499, url: 'https://flipkart.com/urban-ladder-dining-table', available: true },
+      myntra: { price: 25999, url: 'https://myntra.com/urban-ladder-dining-table', available: false }
+    }
+  },
+  {
+    id: '20',
+    name: 'Godrej Interio Office Chair',
+    description: 'Ergonomic, High Back, Mesh Design',
+    image: 'https://images.pexels.com/photos/1957477/pexels-photo-1957477.jpeg?auto=compress&cs=tinysrgb&w=300',
+    category: 'Home & Living',
+    keywords: ['godrej', 'office chair', 'ergonomic', 'mesh', 'furniture'],
+    platforms: {
+      amazon: { price: 15999, url: 'https://amazon.in/godrej-office-chair', available: true },
+      flipkart: { price: 14999, url: 'https://flipkart.com/godrej-office-chair', available: true },
+      myntra: { price: 16499, url: 'https://myntra.com/godrej-office-chair', available: false }
+    }
+  },
+  {
+    id: '21',
+    name: 'Wilson Tennis Racket Pro Staff',
+    description: 'Professional Grade, 315g, Strung',
+    image: 'https://images.pexels.com/photos/1103829/pexels-photo-1103829.jpeg?auto=compress&cs=tinysrgb&w=300',
+    category: 'Sports',
+    keywords: ['wilson', 'tennis', 'racket', 'professional', 'sports'],
+    platforms: {
+      amazon: { price: 22999, url: 'https://amazon.in/wilson-tennis-racket', available: true },
+      flipkart: { price: 21999, url: 'https://flipkart.com/wilson-tennis-racket', available: true },
+      myntra: { price: 23499, url: 'https://myntra.com/wilson-tennis-racket', available: true }
+    }
+  },
+  {
+    id: '22',
+    name: 'Puma Running Shoes Velocity',
+    description: 'Lightweight, Breathable Mesh, Blue/White',
+    image: 'https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&w=300',
+    category: 'Sports',
+    keywords: ['puma', 'running shoes', 'lightweight', 'breathable', 'sports'],
+    platforms: {
+      amazon: { price: 6999, url: 'https://amazon.in/puma-running-shoes', available: true },
+      flipkart: { price: 6499, url: 'https://flipkart.com/puma-running-shoes', available: true },
+      myntra: { price: 6799, url: 'https://myntra.com/puma-running-shoes', available: true }
+    }
+  },
+  {
+    id: '23',
+    name: 'Canon EOS R6 Mark II',
+    description: '24.2MP Full Frame, 4K Video, Image Stabilization',
+    image: 'https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&w=300',
+    category: 'Electronics',
+    keywords: ['canon', 'camera', 'dslr', 'photography', 'video'],
+    platforms: {
+      amazon: { price: 249999, url: 'https://amazon.in/canon-eos-r6-mark2', available: true },
+      flipkart: { price: 244999, url: 'https://flipkart.com/canon-eos-r6-mark2', available: true },
+      myntra: { price: 254999, url: 'https://myntra.com/canon-eos-r6-mark2', available: false }
+    }
+  },
+  {
+    id: '24',
+    name: 'JBL Flip 6 Bluetooth Speaker',
+    description: 'Waterproof, 12hr Battery, Powerful Bass',
+    image: 'https://images.pexels.com/photos/3394650/pexels-photo-3394650.jpeg?auto=compress&cs=tinysrgb&w=300',
+    category: 'Electronics',
+    keywords: ['jbl', 'speaker', 'bluetooth', 'waterproof', 'bass'],
+    platforms: {
+      amazon: { price: 11999, url: 'https://amazon.in/jbl-flip-6-speaker', available: true },
+      flipkart: { price: 10999, url: 'https://flipkart.com/jbl-flip-6-speaker', available: true },
+      myntra: { price: 12499, url: 'https://myntra.com/jbl-flip-6-speaker', available: true }
+    }
   }
 ];
 
