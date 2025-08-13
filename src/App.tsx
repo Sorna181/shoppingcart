@@ -39,6 +39,12 @@ function App() {
     setCartItems(prev => prev.filter((_, i) => i !== index));
   };
 
+  const handleUpdateQuantity = (index: number, newQuantity: number) => {
+    setCartItems(prev => prev.map((item, i) => 
+      i === index ? { ...item, quantity: newQuantity } : item
+    ));
+  };
+
   const handleProductSelect = (product: typeof mockProducts[0]) => {
     setSelectedProduct(product);
   };
@@ -139,6 +145,7 @@ function App() {
       <ShoppingCartComponent
         cartItems={cartItems}
         onRemoveItem={handleRemoveFromCart}
+        onUpdateQuantity={handleUpdateQuantity}
         isOpen={isCartOpen}
         onToggle={() => setIsCartOpen(!isCartOpen)}
       />

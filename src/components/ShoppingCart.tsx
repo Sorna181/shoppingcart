@@ -1,11 +1,12 @@
 import React from 'react';
-import { ShoppingCart, X, TrendingDown } from 'lucide-react';
+import { ShoppingCart, X, TrendingDown, Plus, Minus } from 'lucide-react';
 import { CartItem } from '../data/products';
 import { formatPrice, getPlatformLogo, getCartSummary } from '../utils/priceUtils';
 
 interface ShoppingCartProps {
   cartItems: CartItem[];
   onRemoveItem: (index: number) => void;
+  onUpdateQuantity: (index: number, newQuantity: number) => void;
   isOpen: boolean;
   onToggle: () => void;
 }
@@ -13,10 +14,16 @@ interface ShoppingCartProps {
 export const ShoppingCartComponent: React.FC<ShoppingCartProps> = ({
   cartItems,
   onRemoveItem,
+  onUpdateQuantity,
   isOpen,
   onToggle,
 }) => {
   const { totalItems, totalPrice } = getCartSummary(cartItems);
+
+  const handleQuantityChange = (index: number, change: number) => {
+    const newQuantity = Math.max(1, cartItems[index].quantity + change);
+    onUpdateQuantity(index, newQuantity);
+  };
 
   return (
     <>
@@ -78,15 +85,38 @@ export const ShoppingCartComponent: React.FC<ShoppingCartProps> = ({
                         </span>
                       </div>
                       <div className="flex items-center justify-between">
-                        <span className="font-bold text-green-600">
-                          {formatPrice(item.price)}
-                        </span>
-                        <button
-                          onClick={() => onRemoveItem(index)}
-                          className="text-red-500 hover:text-red-700 p-1"
-                        >
-                          <X className="w-4 h-4" />
-                        </button>
+                        <div>
+                          <span className="font-bold text-green-600">
+                            {formatPrice(item.price * item.quantity)}
+                          </span>
+                          <div className="text-xs text-gray-500">
+                            {formatPrice(item.price)} each
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="flex items-center bg-gray-100 rounded">
+                            <button
+                              onClick={() => handleQuantityChange(index, -1)}
+                              className="p-1 hover:bg-gray-200 rounded-l"
+                              disabled={item.quantity <= 1}
+                            >
+                              <Minus className={`w-3 h-3 ${item.quantity <= 1 ? 'text-gray-300' : 'text-gray-600'}`} />
+                            </button>
+                            <span className="px-2 text-sm font-semibold">{item.quantity}</span>
+                            <button
+                              onClick={() => handleQuantityChange(index, 1)}
+                              className="p-1 hover:bg-gray-200 rounded-r"
+                            >
+                              <Plus className="w-3 h-3 text-gray-600" />
+                            </button>
+                          </div>
+                          <button
+                            onClick={() => onRemoveItem(index)}
+                            className="text-red-500 hover:text-red-700 p-1"
+                          >
+                            <X className="w-4 h-4" />
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>

@@ -65,9 +65,11 @@ export const calculateSavingsPercentage = (currentPrice: number, highestPrice: n
 
 export const findSimilarProducts = (searchProduct: Product, allProducts: Product[], maxResults = 3) => {
   const searchKeywords = searchProduct.keywords;
+  const searchCategory = searchProduct.category;
   
   return allProducts
     .filter(product => product.id !== searchProduct.id)
+    .filter(product => product.category === searchCategory) // Only show products from same category
     .map(product => {
       const matchingKeywords = product.keywords.filter(keyword => 
         searchKeywords.some(searchKeyword => 
@@ -88,11 +90,11 @@ export const findSimilarProducts = (searchProduct: Product, allProducts: Product
 };
 
 export const getCartSummary = (cartItems: CartItem[]) => {
-  const totalItems = cartItems.length;
-  const totalPrice = cartItems.reduce((sum, item) => sum + item.price, 0);
+  const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+  const totalPrice = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
   
   const platformCounts = cartItems.reduce((counts, item) => {
-    counts[item.platform] = (counts[item.platform] || 0) + 1;
+    counts[item.platform] = (counts[item.platform] || 0) + item.quantity;
     return counts;
   }, {} as Record<string, number>);
 

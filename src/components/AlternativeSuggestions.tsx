@@ -41,6 +41,7 @@ export const AlternativeSuggestions: React.FC<AlternativeSuggestionsProps> = ({
                 price: platformData.price,
                 url: platformData.url,
                 image: product.image,
+                quantity: 1,
               };
               onAddToCart(cartItem);
             }
@@ -55,7 +56,7 @@ export const AlternativeSuggestions: React.FC<AlternativeSuggestionsProps> = ({
               />
               
               <h3 className="font-bold text-lg mb-2 line-clamp-2">{product.name}</h3>
-              <p className="text-gray-600 text-sm mb-3 line-clamp-2">{product.description}</p>
+              <p className="text-gray-600 text-sm mb-3 line-clamp-3">{product.description}</p>
               
               <div className="flex items-center justify-between mb-3">
                 <div>

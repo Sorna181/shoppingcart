@@ -31,13 +31,14 @@ export interface CartItem {
   price: number;
   url: string;
   image: string;
+  quantity: number;
 }
 
 export const mockProducts: Product[] = [
   {
     id: '1',
     name: 'Samsung Galaxy S24 Ultra',
-    description: '512GB, Titanium Black, 200MP Camera',
+    description: '512GB Storage, Titanium Black, 200MP Camera, Snapdragon 8 Gen 3, 12GB RAM, 5000mAh Battery, S Pen Included',
     image: 'https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=300',
     category: 'Electronics',
     keywords: ['samsung', 'galaxy', 'smartphone', 'android', 'camera'],
@@ -50,7 +51,7 @@ export const mockProducts: Product[] = [
   {
     id: '2',
     name: 'Apple iPhone 15 Pro Max',
-    description: '256GB, Natural Titanium, A17 Pro Chip',
+    description: '256GB Storage, Natural Titanium, A17 Pro Chip, 48MP Camera System, 6.7" Super Retina XDR Display, iOS 17',
     image: 'https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&w=300',
     category: 'Electronics',
     keywords: ['iphone', 'apple', 'smartphone', 'ios', 'premium'],
@@ -63,10 +64,10 @@ export const mockProducts: Product[] = [
   {
     id: '3',
     name: 'Sony WH-1000XM5 Headphones',
-    description: 'Wireless Noise Cancelling, 30hr Battery',
+    description: 'Wireless Noise Cancelling, 30hr Battery Life, Hi-Res Audio, Touch Controls, Quick Charge, Multipoint Connection',
     image: 'https://images.pexels.com/photos/3394650/pexels-photo-3394650.jpeg?auto=compress&cs=tinysrgb&w=300',
     category: 'Electronics',
-    keywords: ['sony', 'headphones', 'wireless', 'noise cancelling', 'audio'],
+    keywords: ['sony', 'headphones', 'wireless', 'noise cancelling', 'audio', 'bluetooth'],
     platforms: {
       amazon: { price: 29990, url: 'https://amazon.in/sony-wh1000xm5', available: true },
       flipkart: { price: 28499, url: 'https://flipkart.com/sony-wh1000xm5', available: true },
@@ -115,10 +116,10 @@ export const mockProducts: Product[] = [
   {
     id: '7',
     name: 'MacBook Air M3',
-    description: '13-inch, 8GB RAM, 256GB SSD, Space Grey',
+    description: '13-inch Liquid Retina Display, Apple M3 Chip, 8GB Unified Memory, 256GB SSD, macOS Sonoma, All-day Battery',
     image: 'https://images.pexels.com/photos/109371/pexels-photo-109371.jpeg?auto=compress&cs=tinysrgb&w=300',
     category: 'Electronics',
-    keywords: ['macbook', 'apple', 'laptop', 'm3', 'ultrabook'],
+    keywords: ['macbook', 'apple', 'laptop', 'm3', 'ultrabook', 'computer'],
     platforms: {
       amazon: { price: 114900, url: 'https://amazon.in/macbook-air-m3', available: true },
       flipkart: { price: 112900, url: 'https://flipkart.com/macbook-air-m3', available: true },
@@ -128,10 +129,10 @@ export const mockProducts: Product[] = [
   {
     id: '8',
     name: 'Dell XPS 13',
-    description: '11th Gen Intel i7, 16GB RAM, 512GB SSD',
+    description: '11th Gen Intel Core i7, 16GB LPDDR4x RAM, 512GB PCIe SSD, 13.4" FHD+ Display, Windows 11, Premium Build',
     image: 'https://images.pexels.com/photos/238118/pexels-photo-238118.jpeg?auto=compress&cs=tinysrgb&w=300',
     category: 'Electronics',
-    keywords: ['dell', 'xps', 'laptop', 'intel', 'premium'],
+    keywords: ['dell', 'xps', 'laptop', 'intel', 'premium', 'computer'],
     platforms: {
       amazon: { price: 89999, url: 'https://amazon.in/dell-xps-13', available: true },
       flipkart: { price: 87999, url: 'https://flipkart.com/dell-xps-13', available: true },
@@ -141,7 +142,7 @@ export const mockProducts: Product[] = [
   {
     id: '9',
     name: 'L\'Oreal Paris Revitalift Serum',
-    description: 'Anti-Aging Hyaluronic Acid Serum, 30ml',
+    description: 'Anti-Aging Serum with 1.5% Pure Hyaluronic Acid, Vitamin B5, Plumps & Hydrates Skin, Reduces Fine Lines, 30ml',
     image: 'https://images.pexels.com/photos/3685530/pexels-photo-3685530.jpeg?auto=compress&cs=tinysrgb&w=300',
     category: 'Beauty',
     keywords: ['loreal', 'serum', 'anti-aging', 'skincare', 'hyaluronic'],
@@ -323,10 +324,10 @@ export const mockProducts: Product[] = [
   {
     id: '23',
     name: 'Canon EOS R6 Mark II',
-    description: '24.2MP Full Frame, 4K Video, Image Stabilization',
+    description: '24.2MP Full-Frame CMOS Sensor, DIGIC X Processor, 4K 60p Video, In-Body Image Stabilization, Dual Pixel CMOS AF',
     image: 'https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&w=300',
     category: 'Electronics',
-    keywords: ['canon', 'camera', 'dslr', 'photography', 'video'],
+    keywords: ['canon', 'camera', 'dslr', 'photography', 'video', 'mirrorless'],
     platforms: {
       amazon: { price: 249999, url: 'https://amazon.in/canon-eos-r6-mark2', available: true },
       flipkart: { price: 244999, url: 'https://flipkart.com/canon-eos-r6-mark2', available: true },
