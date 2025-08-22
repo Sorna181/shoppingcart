@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShoppingCart, X, TrendingDown, Plus, Minus } from 'lucide-react';
+import { ShoppingCart, X, TrendingDown, Plus, Minus, ExternalLink, CreditCard } from 'lucide-react';
 import { CartItem } from '../data/products';
 import { formatPrice, getPlatformLogo, getCartSummary } from '../utils/priceUtils';
 
