@@ -6,7 +6,7 @@ import { ComparisonTable } from './components/ComparisonTable';
 import { AlternativeSuggestions } from './components/AlternativeSuggestions';
 import { ShoppingCartComponent } from './components/ShoppingCart';
 import { SavingsDashboard } from './components/SavingsDashboard';
-import { mockProducts, CartItem } from './data/products';
+import { mockProducts, CartItem, categories } from './data/products';
 import { getLowestPrice, findSimilarProducts } from './utils/priceUtils';
 
 function App() {
