@@ -346,6 +346,110 @@ export const mockProducts: Product[] = [
       flipkart: { price: 10999, url: 'https://flipkart.com/jbl-flip-6-speaker', available: true },
       myntra: { price: 12499, url: 'https://myntra.com/jbl-flip-6-speaker', available: true }
     }
+  },
+  {
+    id: '25',
+    name: 'Head & Shoulders Anti-Dandruff Shampoo',
+    description: 'Zinc Pyrithione Formula, 650ml, Clinically Proven Dandruff Protection, Fresh Scent, Suitable for Daily Use',
+    image: 'https://images.pexels.com/photos/3685530/pexels-photo-3685530.jpeg?auto=compress&cs=tinysrgb&w=300',
+    category: 'Beauty',
+    keywords: ['head shoulders', 'shampoo', 'anti-dandruff', 'hair care', 'zinc pyrithione'],
+    platforms: {
+      amazon: { price: 399, url: 'https://amazon.in/head-shoulders-shampoo', available: true },
+      flipkart: { price: 379, url: 'https://flipkart.com/head-shoulders-shampoo', available: true },
+      myntra: { price: 419, url: 'https://myntra.com/head-shoulders-shampoo', available: true }
+    }
+  },
+  {
+    id: '26',
+    name: 'Dove Beauty Bar Soap',
+    description: 'Original Formula, Pack of 4 x 100g, 1/4 Moisturizing Cream, Gentle Cleansing, Suitable for Sensitive Skin',
+    image: 'https://images.pexels.com/photos/4465124/pexels-photo-4465124.jpeg?auto=compress&cs=tinysrgb&w=300',
+    category: 'Beauty',
+    keywords: ['dove', 'soap', 'beauty bar', 'moisturizing', 'gentle'],
+    platforms: {
+      amazon: { price: 299, url: 'https://amazon.in/dove-beauty-bar', available: true },
+      flipkart: { price: 289, url: 'https://flipkart.com/dove-beauty-bar', available: true },
+      myntra: { price: 309, url: 'https://myntra.com/dove-beauty-bar', available: false }
+    }
+  },
+  {
+    id: '27',
+    name: 'Neutrogena Ultra Sheer Sunscreen SPF 50+',
+    description: 'Broad Spectrum UVA/UVB Protection, 88ml, Water Resistant, Non-Greasy Formula, Helioplex Technology',
+    image: 'https://images.pexels.com/photos/4465124/pexels-photo-4465124.jpeg?auto=compress&cs=tinysrgb&w=300',
+    category: 'Beauty',
+    keywords: ['neutrogena', 'sunscreen', 'spf 50', 'uv protection', 'water resistant'],
+    platforms: {
+      amazon: { price: 849, url: 'https://amazon.in/neutrogena-sunscreen', available: true },
+      flipkart: { price: 799, url: 'https://flipkart.com/neutrogena-sunscreen', available: true },
+      myntra: { price: 879, url: 'https://myntra.com/neutrogena-sunscreen', available: true }
+    }
+  },
+  {
+    id: '28',
+    name: 'Pantene Pro-V Hair Conditioner',
+    description: 'Smooth & Silky Formula, 340ml, Vitamin Pro-V Complex, Reduces Frizz, Adds Shine and Softness',
+    image: 'https://images.pexels.com/photos/3685530/pexels-photo-3685530.jpeg?auto=compress&cs=tinysrgb&w=300',
+    category: 'Beauty',
+    keywords: ['pantene', 'conditioner', 'hair care', 'pro-v', 'smooth silky'],
+    platforms: {
+      amazon: { price: 299, url: 'https://amazon.in/pantene-conditioner', available: true },
+      flipkart: { price: 279, url: 'https://flipkart.com/pantene-conditioner', available: true },
+      myntra: { price: 319, url: 'https://myntra.com/pantene-conditioner', available: true }
+    }
+  },
+  {
+    id: '29',
+    name: 'Himalaya Neem Face Wash',
+    description: 'Natural Neem & Turmeric Extract, 150ml, Purifies & Prevents Pimples, Oil Control, Ayurvedic Formula',
+    image: 'https://images.pexels.com/photos/3685530/pexels-photo-3685530.jpeg?auto=compress&cs=tinysrgb&w=300',
+    category: 'Beauty',
+    keywords: ['himalaya', 'neem', 'face wash', 'turmeric', 'ayurvedic', 'pimples'],
+    platforms: {
+      amazon: { price: 149, url: 'https://amazon.in/himalaya-neem-face-wash', available: true },
+      flipkart: { price: 139, url: 'https://flipkart.com/himalaya-neem-face-wash', available: true },
+      myntra: { price: 159, url: 'https://myntra.com/himalaya-neem-face-wash', available: true }
+    }
+  },
+  {
+    id: '30',
+    name: 'Garnier Micellar Cleansing Water',
+    description: 'All-in-1 Makeup Remover, 400ml, Suitable for Sensitive Skin, No Rinse Required, Removes Waterproof Makeup',
+    image: 'https://images.pexels.com/photos/3373736/pexels-photo-3373736.jpeg?auto=compress&cs=tinysrgb&w=300',
+    category: 'Beauty',
+    keywords: ['garnier', 'micellar water', 'makeup remover', 'cleansing', 'sensitive skin'],
+    platforms: {
+      amazon: { price: 599, url: 'https://amazon.in/garnier-micellar-water', available: true },
+      flipkart: { price: 569, url: 'https://flipkart.com/garnier-micellar-water', available: true },
+      myntra: { price: 619, url: 'https://myntra.com/garnier-micellar-water', available: true }
+    }
+  },
+  {
+    id: '31',
+    name: 'Johnson\'s Baby Shampoo',
+    description: 'No More Tears Formula, 500ml, Gentle & Mild, pH Balanced, Hypoallergenic, Suitable for Daily Use',
+    image: 'https://images.pexels.com/photos/3685530/pexels-photo-3685530.jpeg?auto=compress&cs=tinysrgb&w=300',
+    category: 'Beauty',
+    keywords: ['johnsons', 'baby shampoo', 'no tears', 'gentle', 'hypoallergenic'],
+    platforms: {
+      amazon: { price: 249, url: 'https://amazon.in/johnsons-baby-shampoo', available: true },
+      flipkart: { price: 229, url: 'https://flipkart.com/johnsons-baby-shampoo', available: true },
+      myntra: { price: 269, url: 'https://myntra.com/johnsons-baby-shampoo', available: false }
+    }
+  },
+  {
+    id: '32',
+    name: 'Nivea Soft Light Moisturizing Cream',
+    description: 'Jojoba Oil & Vitamin E, 200ml, Quick Absorbing, Non-Greasy, 48hr Moisturization, All Skin Types',
+    image: 'https://images.pexels.com/photos/4465124/pexels-photo-4465124.jpeg?auto=compress&cs=tinysrgb&w=300',
+    category: 'Beauty',
+    keywords: ['nivea', 'moisturizer', 'jojoba oil', 'vitamin e', 'soft light'],
+    platforms: {
+      amazon: { price: 199, url: 'https://amazon.in/nivea-soft-cream', available: true },
+      flipkart: { price: 189, url: 'https://flipkart.com/nivea-soft-cream', available: true },
+      myntra: { price: 209, url: 'https://myntra.com/nivea-soft-cream', available: true }
+    }
   }
 ];
 

@@ -162,6 +162,9 @@ function App() {
 
                 {/* Savings Dashboard */}
                 <SavingsDashboard cartItems={cartItems} />
+
+                {/* Web Scraping Demo */}
+                <WebScrapingDemo />
               </>
             )}
           </>
