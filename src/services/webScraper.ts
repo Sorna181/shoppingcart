@@ -49,9 +49,9 @@ export const scrapeProductPrices = async (productName: string): Promise<Scraping
       {
         name: productName,
         price: Math.floor(Math.random() * 10000) + 1000,
-        url: `https://myntra.com/search?q=${encodeURIComponent(productName)}`,
+        url: `https://meesho.com/search?q=${encodeURIComponent(productName)}`,
         image: 'https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=300',
-        platform: 'myntra',
+        platform: 'meesho',
         available: Math.random() > 0.2
       }
     ];

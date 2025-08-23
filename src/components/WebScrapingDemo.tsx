@@ -88,7 +88,7 @@ export const WebScrapingDemo: React.FC = () => {
                   <div key={index} className="border border-gray-200 rounded-lg p-4">
                     <div className={`inline-block px-3 py-1 rounded-full text-white text-sm font-semibold mb-3 ${
                       product.platform === 'amazon' ? 'bg-orange-500' :
-                      product.platform === 'flipkart' ? 'bg-blue-500' : 'bg-pink-500'
+                      product.platform === 'flipkart' ? 'bg-blue-500' : 'bg-purple-500'
                     }`}>
                       {product.platform.toUpperCase()}
                     </div>

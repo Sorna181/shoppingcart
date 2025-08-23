@@ -39,7 +39,7 @@ export const ComparisonTable: React.FC<ComparisonTableProps> = ({ product }) => 
                 <td className="py-4 px-4">
                   <span className={`inline-block px-3 py-1 rounded-full text-white text-sm font-semibold ${
                     platform === 'amazon' ? 'bg-orange-500' : 
-                    platform === 'flipkart' ? 'bg-blue-500' : 'bg-pink-500'
+                    platform === 'flipkart' ? 'bg-blue-500' : 'bg-purple-500'
                   }`}>
                     {getPlatformLogo(platform)}
                   </span>

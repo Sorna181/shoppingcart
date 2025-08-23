@@ -77,7 +77,7 @@ export const SavingsDashboard: React.FC<SavingsDashboardProps> = ({ cartItems })
                 <div className="flex items-center gap-3">
                   <div className={`w-4 h-4 rounded ${
                     platform === 'amazon' ? 'bg-orange-500' :
-                    platform === 'flipkart' ? 'bg-blue-500' : 'bg-pink-500'
+                    platform === 'flipkart' ? 'bg-blue-500' : 'bg-purple-500'
                   }`}></div>
                   <span className="font-medium">{platform.toUpperCase()}</span>
                 </div>

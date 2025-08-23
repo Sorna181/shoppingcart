@@ -37,7 +37,7 @@ export const AlternativeSuggestions: React.FC<AlternativeSuggestionsProps> = ({
               const cartItem: CartItem = {
                 productId: product.id,
                 productName: product.name,
-                platform: lowest.platform as 'amazon' | 'flipkart' | 'myntra',
+                platform: lowest.platform as 'amazon' | 'flipkart' | 'meesho',
                 price: platformData.price,
                 url: platformData.url,
                 image: product.image,

@@ -136,7 +136,7 @@ function App() {
                 <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
                   <h2 className="text-2xl font-bold mb-6">Price Comparison - {selectedProduct.name}</h2>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {(['amazon', 'flipkart', 'myntra'] as const).map((platform) => {
+                    {(['amazon', 'flipkart', 'meesho'] as const).map((platform) => {
                       const lowestPlatform = getLowestPrice(selectedProduct).platform;
                       return (
                         <ProductCard
