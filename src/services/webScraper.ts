@@ -146,4 +146,3 @@ app.get('/api/scrape/:platform/:query', async (req, res) => {
   }
 });
 `;
-</parameter>
