@@ -20,6 +20,11 @@ export interface Product {
       url: string;
       available: boolean;
     };
+    meesho?: {
+      price: number;
+      url: string;
+      available: boolean;
+    };
   };
   keywords: string[];
 }
@@ -27,7 +32,7 @@ export interface Product {
 export interface CartItem {
   productId: string;
   productName: string;
-  platform: 'amazon' | 'flipkart' | 'myntra';
+  platform: 'amazon' | 'flipkart' | 'meesho';
   price: number;
   url: string;
   image: string;
@@ -45,7 +50,7 @@ export const mockProducts: Product[] = [
     platforms: {
       amazon: { price: 124999, url: 'https://amazon.in/samsung-s24-ultra', available: true },
       flipkart: { price: 119999, url: 'https://flipkart.com/samsung-s24-ultra', available: true },
-      myntra: { price: 127999, url: 'https://myntra.com/samsung-s24-ultra', available: false }
+      meesho: { price: 122999, url: 'https://meesho.com/samsung-s24-ultra', available: true }
     }
   },
   {
@@ -58,7 +63,7 @@ export const mockProducts: Product[] = [
     platforms: {
       amazon: { price: 159900, url: 'https://amazon.in/iphone-15-pro-max', available: true },
       flipkart: { price: 154900, url: 'https://flipkart.com/iphone-15-pro-max', available: true },
-      myntra: { price: 162900, url: 'https://myntra.com/iphone-15-pro-max', available: true }
+      meesho: { price: 157900, url: 'https://meesho.com/iphone-15-pro-max', available: true }
     }
   },
   {
@@ -71,7 +76,7 @@ export const mockProducts: Product[] = [
     platforms: {
       amazon: { price: 29990, url: 'https://amazon.in/sony-wh1000xm5', available: true },
       flipkart: { price: 28499, url: 'https://flipkart.com/sony-wh1000xm5', available: true },
-      myntra: { price: 31990, url: 'https://myntra.com/sony-wh1000xm5', available: true }
+      meesho: { price: 27999, url: 'https://meesho.com/sony-wh1000xm5', available: true }
     }
   },
   {
@@ -84,7 +89,7 @@ export const mockProducts: Product[] = [
     platforms: {
       amazon: { price: 12995, url: 'https://amazon.in/nike-air-max-270', available: true },
       flipkart: { price: 11999, url: 'https://flipkart.com/nike-air-max-270', available: false },
-      myntra: { price: 12495, url: 'https://myntra.com/nike-air-max-270', available: true }
+      meesho: { price: 11495, url: 'https://meesho.com/nike-air-max-270', available: true }
     }
   },
   {
@@ -97,7 +102,7 @@ export const mockProducts: Product[] = [
     platforms: {
       amazon: { price: 16999, url: 'https://amazon.in/adidas-ultraboost-22', available: true },
       flipkart: { price: 15999, url: 'https://flipkart.com/adidas-ultraboost-22', available: true },
-      myntra: { price: 16499, url: 'https://myntra.com/adidas-ultraboost-22', available: true }
+      meesho: { price: 15499, url: 'https://meesho.com/adidas-ultraboost-22', available: true }
     }
   },
   {
@@ -110,7 +115,7 @@ export const mockProducts: Product[] = [
     platforms: {
       amazon: { price: 3499, url: 'https://amazon.in/levis-511-jeans', available: true },
       flipkart: { price: 3299, url: 'https://flipkart.com/levis-511-jeans', available: true },
-      myntra: { price: 3199, url: 'https://myntra.com/levis-511-jeans', available: true }
+      meesho: { price: 2999, url: 'https://meesho.com/levis-511-jeans', available: true }
     }
   },
   {
@@ -123,7 +128,7 @@ export const mockProducts: Product[] = [
     platforms: {
       amazon: { price: 114900, url: 'https://amazon.in/macbook-air-m3', available: true },
       flipkart: { price: 112900, url: 'https://flipkart.com/macbook-air-m3', available: true },
-      myntra: { price: 117900, url: 'https://myntra.com/macbook-air-m3', available: false }
+      meesho: { price: 109900, url: 'https://meesho.com/macbook-air-m3', available: true }
     }
   },
   {
@@ -136,7 +141,7 @@ export const mockProducts: Product[] = [
     platforms: {
       amazon: { price: 89999, url: 'https://amazon.in/dell-xps-13', available: true },
       flipkart: { price: 87999, url: 'https://flipkart.com/dell-xps-13', available: true },
-      myntra: { price: 92999, url: 'https://myntra.com/dell-xps-13', available: false }
+      meesho: { price: 85999, url: 'https://meesho.com/dell-xps-13', available: true }
     }
   },
   {
@@ -149,7 +154,7 @@ export const mockProducts: Product[] = [
     platforms: {
       amazon: { price: 1299, url: 'https://amazon.in/loreal-revitalift-serum', available: true },
       flipkart: { price: 1199, url: 'https://flipkart.com/loreal-revitalift-serum', available: true },
-      myntra: { price: 1399, url: 'https://myntra.com/loreal-revitalift-serum', available: true }
+      meesho: { price: 1099, url: 'https://meesho.com/loreal-revitalift-serum', available: true }
     }
   },
   {
@@ -162,7 +167,7 @@ export const mockProducts: Product[] = [
     platforms: {
       amazon: { price: 899, url: 'https://amazon.in/lakme-absolute-foundation', available: true },
       flipkart: { price: 849, url: 'https://flipkart.com/lakme-absolute-foundation', available: false },
-      myntra: { price: 799, url: 'https://myntra.com/lakme-absolute-foundation', available: true }
+      meesho: { price: 749, url: 'https://meesho.com/lakme-absolute-foundation', available: true }
     }
   },
   {
@@ -175,7 +180,7 @@ export const mockProducts: Product[] = [
     platforms: {
       amazon: { price: 8999, url: 'https://amazon.in/ikea-hemnes-bookshelf', available: true },
       flipkart: { price: 8499, url: 'https://flipkart.com/ikea-hemnes-bookshelf', available: true },
-      myntra: { price: 9299, url: 'https://myntra.com/ikea-hemnes-bookshelf', available: false }
+      meesho: { price: 7999, url: 'https://meesho.com/ikea-hemnes-bookshelf', available: true }
     }
   },
   {
@@ -188,7 +193,7 @@ export const mockProducts: Product[] = [
     platforms: {
       amazon: { price: 12999, url: 'https://amazon.in/philips-air-fryer', available: true },
       flipkart: { price: 11999, url: 'https://flipkart.com/philips-air-fryer', available: true },
-      myntra: { price: 13499, url: 'https://myntra.com/philips-air-fryer', available: false }
+      meesho: { price: 11499, url: 'https://meesho.com/philips-air-fryer', available: true }
     }
   },
   {
@@ -201,7 +206,7 @@ export const mockProducts: Product[] = [
     platforms: {
       amazon: { price: 18999, url: 'https://amazon.in/yonex-arcsaber-11', available: true },
       flipkart: { price: 17999, url: 'https://flipkart.com/yonex-arcsaber-11', available: true },
-      myntra: { price: 19499, url: 'https://myntra.com/yonex-arcsaber-11', available: true }
+      meesho: { price: 17499, url: 'https://meesho.com/yonex-arcsaber-11', available: true }
     }
   },
   {
@@ -214,7 +219,7 @@ export const mockProducts: Product[] = [
     platforms: {
       amazon: { price: 4999, url: 'https://amazon.in/decathlon-hiking-backpack', available: true },
       flipkart: { price: 4599, url: 'https://flipkart.com/decathlon-hiking-backpack', available: true },
-      myntra: { price: 5199, url: 'https://myntra.com/decathlon-hiking-backpack', available: false }
+      meesho: { price: 4299, url: 'https://meesho.com/decathlon-hiking-backpack', available: true }
     }
   },
   {
@@ -227,7 +232,7 @@ export const mockProducts: Product[] = [
     platforms: {
       amazon: { price: 7999, url: 'https://amazon.in/zara-oversized-blazer', available: false },
       flipkart: { price: 7599, url: 'https://flipkart.com/zara-oversized-blazer', available: true },
-      myntra: { price: 7299, url: 'https://myntra.com/zara-oversized-blazer', available: true }
+      meesho: { price: 6999, url: 'https://meesho.com/zara-oversized-blazer', available: true }
     }
   },
   {
@@ -240,7 +245,7 @@ export const mockProducts: Product[] = [
     platforms: {
       amazon: { price: 1999, url: 'https://amazon.in/hm-cotton-tshirt-pack', available: true },
       flipkart: { price: 1799, url: 'https://flipkart.com/hm-cotton-tshirt-pack', available: true },
-      myntra: { price: 1699, url: 'https://myntra.com/hm-cotton-tshirt-pack', available: true }
+      meesho: { price: 1599, url: 'https://meesho.com/hm-cotton-tshirt-pack', available: true }
     }
   },
   {
@@ -253,7 +258,7 @@ export const mockProducts: Product[] = [
     platforms: {
       amazon: { price: 599, url: 'https://amazon.in/maybelline-fit-me-concealer', available: true },
       flipkart: { price: 549, url: 'https://flipkart.com/maybelline-fit-me-concealer', available: true },
-      myntra: { price: 579, url: 'https://myntra.com/maybelline-fit-me-concealer', available: true }
+      meesho: { price: 529, url: 'https://meesho.com/maybelline-fit-me-concealer', available: true }
     }
   },
   {
@@ -266,7 +271,7 @@ export const mockProducts: Product[] = [
     platforms: {
       amazon: { price: 1095, url: 'https://amazon.in/body-shop-tea-tree-wash', available: true },
       flipkart: { price: 999, url: 'https://flipkart.com/body-shop-tea-tree-wash', available: false },
-      myntra: { price: 1050, url: 'https://myntra.com/body-shop-tea-tree-wash', available: true }
+      meesho: { price: 949, url: 'https://meesho.com/body-shop-tea-tree-wash', available: true }
     }
   },
   {
@@ -279,7 +284,7 @@ export const mockProducts: Product[] = [
     platforms: {
       amazon: { price: 24999, url: 'https://amazon.in/urban-ladder-dining-table', available: true },
       flipkart: { price: 23499, url: 'https://flipkart.com/urban-ladder-dining-table', available: true },
-      myntra: { price: 25999, url: 'https://myntra.com/urban-ladder-dining-table', available: false }
+      meesho: { price: 22999, url: 'https://meesho.com/urban-ladder-dining-table', available: true }
     }
   },
   {
@@ -292,7 +297,7 @@ export const mockProducts: Product[] = [
     platforms: {
       amazon: { price: 15999, url: 'https://amazon.in/godrej-office-chair', available: true },
       flipkart: { price: 14999, url: 'https://flipkart.com/godrej-office-chair', available: true },
-      myntra: { price: 16499, url: 'https://myntra.com/godrej-office-chair', available: false }
+      meesho: { price: 14499, url: 'https://meesho.com/godrej-office-chair', available: true }
     }
   },
   {
@@ -305,7 +310,7 @@ export const mockProducts: Product[] = [
     platforms: {
       amazon: { price: 22999, url: 'https://amazon.in/wilson-tennis-racket', available: true },
       flipkart: { price: 21999, url: 'https://flipkart.com/wilson-tennis-racket', available: true },
-      myntra: { price: 23499, url: 'https://myntra.com/wilson-tennis-racket', available: true }
+      meesho: { price: 21499, url: 'https://meesho.com/wilson-tennis-racket', available: true }
     }
   },
   {
@@ -318,7 +323,7 @@ export const mockProducts: Product[] = [
     platforms: {
       amazon: { price: 6999, url: 'https://amazon.in/puma-running-shoes', available: true },
       flipkart: { price: 6499, url: 'https://flipkart.com/puma-running-shoes', available: true },
-      myntra: { price: 6799, url: 'https://myntra.com/puma-running-shoes', available: true }
+      meesho: { price: 6299, url: 'https://meesho.com/puma-running-shoes', available: true }
     }
   },
   {
@@ -331,7 +336,7 @@ export const mockProducts: Product[] = [
     platforms: {
       amazon: { price: 249999, url: 'https://amazon.in/canon-eos-r6-mark2', available: true },
       flipkart: { price: 244999, url: 'https://flipkart.com/canon-eos-r6-mark2', available: true },
-      myntra: { price: 254999, url: 'https://myntra.com/canon-eos-r6-mark2', available: false }
+      meesho: { price: 239999, url: 'https://meesho.com/canon-eos-r6-mark2', available: true }
     }
   },
   {
@@ -344,7 +349,7 @@ export const mockProducts: Product[] = [
     platforms: {
       amazon: { price: 11999, url: 'https://amazon.in/jbl-flip-6-speaker', available: true },
       flipkart: { price: 10999, url: 'https://flipkart.com/jbl-flip-6-speaker', available: true },
-      myntra: { price: 12499, url: 'https://myntra.com/jbl-flip-6-speaker', available: true }
+      meesho: { price: 10499, url: 'https://meesho.com/jbl-flip-6-speaker', available: true }
     }
   },
   {
@@ -357,7 +362,7 @@ export const mockProducts: Product[] = [
     platforms: {
       amazon: { price: 399, url: 'https://amazon.in/head-shoulders-shampoo', available: true },
       flipkart: { price: 379, url: 'https://flipkart.com/head-shoulders-shampoo', available: true },
-      myntra: { price: 419, url: 'https://myntra.com/head-shoulders-shampoo', available: true }
+      meesho: { price: 359, url: 'https://meesho.com/head-shoulders-shampoo', available: true }
     }
   },
   {
@@ -370,7 +375,7 @@ export const mockProducts: Product[] = [
     platforms: {
       amazon: { price: 299, url: 'https://amazon.in/dove-beauty-bar', available: true },
       flipkart: { price: 289, url: 'https://flipkart.com/dove-beauty-bar', available: true },
-      myntra: { price: 309, url: 'https://myntra.com/dove-beauty-bar', available: false }
+      meesho: { price: 279, url: 'https://meesho.com/dove-beauty-bar', available: true }
     }
   },
   {
@@ -383,7 +388,7 @@ export const mockProducts: Product[] = [
     platforms: {
       amazon: { price: 849, url: 'https://amazon.in/neutrogena-sunscreen', available: true },
       flipkart: { price: 799, url: 'https://flipkart.com/neutrogena-sunscreen', available: true },
-      myntra: { price: 879, url: 'https://myntra.com/neutrogena-sunscreen', available: true }
+      meesho: { price: 779, url: 'https://meesho.com/neutrogena-sunscreen', available: true }
     }
   },
   {
@@ -396,7 +401,7 @@ export const mockProducts: Product[] = [
     platforms: {
       amazon: { price: 299, url: 'https://amazon.in/pantene-conditioner', available: true },
       flipkart: { price: 279, url: 'https://flipkart.com/pantene-conditioner', available: true },
-      myntra: { price: 319, url: 'https://myntra.com/pantene-conditioner', available: true }
+      meesho: { price: 259, url: 'https://meesho.com/pantene-conditioner', available: true }
     }
   },
   {
@@ -409,7 +414,7 @@ export const mockProducts: Product[] = [
     platforms: {
       amazon: { price: 149, url: 'https://amazon.in/himalaya-neem-face-wash', available: true },
       flipkart: { price: 139, url: 'https://flipkart.com/himalaya-neem-face-wash', available: true },
-      myntra: { price: 159, url: 'https://myntra.com/himalaya-neem-face-wash', available: true }
+      meesho: { price: 129, url: 'https://meesho.com/himalaya-neem-face-wash', available: true }
     }
   },
   {
@@ -422,7 +427,7 @@ export const mockProducts: Product[] = [
     platforms: {
       amazon: { price: 599, url: 'https://amazon.in/garnier-micellar-water', available: true },
       flipkart: { price: 569, url: 'https://flipkart.com/garnier-micellar-water', available: true },
-      myntra: { price: 619, url: 'https://myntra.com/garnier-micellar-water', available: true }
+      meesho: { price: 549, url: 'https://meesho.com/garnier-micellar-water', available: true }
     }
   },
   {
@@ -435,7 +440,7 @@ export const mockProducts: Product[] = [
     platforms: {
       amazon: { price: 249, url: 'https://amazon.in/johnsons-baby-shampoo', available: true },
       flipkart: { price: 229, url: 'https://flipkart.com/johnsons-baby-shampoo', available: true },
-      myntra: { price: 269, url: 'https://myntra.com/johnsons-baby-shampoo', available: false }
+      meesho: { price: 219, url: 'https://meesho.com/johnsons-baby-shampoo', available: true }
     }
   },
   {
@@ -448,9 +453,9 @@ export const mockProducts: Product[] = [
     platforms: {
       amazon: { price: 199, url: 'https://amazon.in/nivea-soft-cream', available: true },
       flipkart: { price: 189, url: 'https://flipkart.com/nivea-soft-cream', available: true },
-      myntra: { price: 209, url: 'https://myntra.com/nivea-soft-cream', available: true }
+      meesho: { price: 179, url: 'https://meesho.com/nivea-soft-cream', available: true }
     }
   }
 ];
 
-export const categories = ['All', 'Electronics', 'Fashion', 'Home & Living', 'Beauty', 'Sports'];
+export const categories = ['All', 'Electronics', 'Fashion', 'Home & Living', 'Beauty', 'Sports', 'Books', 'Toys & Games', 'Automotive', 'Health & Wellness', 'Jewelry', 'Pet Supplies'];

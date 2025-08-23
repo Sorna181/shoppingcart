@@ -45,8 +45,8 @@ export const ShoppingCartComponent: React.FC<ShoppingCartProps> = ({
         return 'bg-orange-500 hover:bg-orange-600';
       case 'flipkart':
         return 'bg-blue-500 hover:bg-blue-600';
-      case 'myntra':
-        return 'bg-pink-500 hover:bg-pink-600';
+      case 'meesho':
+        return 'bg-purple-500 hover:bg-purple-600';
       default:
         return 'bg-gray-500 hover:bg-gray-600';
     }
@@ -106,7 +106,7 @@ export const ShoppingCartComponent: React.FC<ShoppingCartProps> = ({
                         <div className="flex items-center gap-2 mb-2">
                           <span className={`text-xs px-2 py-1 rounded text-white ${
                             item.platform === 'amazon' ? 'bg-orange-500' :
-                            item.platform === 'flipkart' ? 'bg-blue-500' : 'bg-pink-500'
+                            item.platform === 'flipkart' ? 'bg-blue-500' : 'bg-purple-500'
                           }`}>
                             {getPlatformLogo(item.platform)}
                           </span>
@@ -168,7 +168,7 @@ export const ShoppingCartComponent: React.FC<ShoppingCartProps> = ({
                           <div className="flex items-center gap-3">
                             <span className={`text-xs px-3 py-1 rounded text-white font-semibold ${
                               platform === 'amazon' ? 'bg-orange-500' :
-                              platform === 'flipkart' ? 'bg-blue-500' : 'bg-pink-500'
+                              platform === 'flipkart' ? 'bg-blue-500' : 'bg-purple-500'
                             }`}>
                               {getPlatformLogo(platform)}
                             </span>

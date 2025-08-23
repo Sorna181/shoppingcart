@@ -5,7 +5,7 @@ import { formatPrice, getPlatformColor, getPlatformLogo } from '../utils/priceUt
 
 interface ProductCardProps {
   product: Product;
-  platform: 'amazon' | 'flipkart' | 'myntra';
+  platform: 'amazon' | 'flipkart' | 'meesho';
   onAddToCart: (item: CartItem) => void;
   isLowestPrice?: boolean;
 }

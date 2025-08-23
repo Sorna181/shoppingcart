@@ -6,8 +6,8 @@ export const getPlatformColor = (platform: string) => {
       return 'from-orange-400 to-orange-600';
     case 'flipkart':
       return 'from-blue-400 to-blue-600';
-    case 'myntra':
-      return 'from-pink-400 to-pink-600';
+    case 'meesho':
+      return 'from-purple-400 to-purple-600';
     default:
       return 'from-gray-400 to-gray-600';
   }
@@ -20,8 +20,8 @@ export const getPlatformLogo = (platform: string) => {
       return 'AMAZON';
     case 'flipkart':
       return 'FLIPKART';
-    case 'myntra':
-      return 'MYNTRA';
+    case 'meesho':
+      return 'MEESHO';
     default:
       return platform.toUpperCase();
   }
