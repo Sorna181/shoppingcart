@@ -61,7 +61,7 @@ function App() {
             <Zap className="w-8 h-8" />
             <h1 className="text-3xl font-bold">AI-Powered Shopping Cart Price Optimizer</h1>
           </div>
-          <p className="text-blue-100">Compare prices across Amazon, Flipkart, and Myntra • Find the best deals • Save money with AI recommendations</p>
+          <p className="text-blue-100">Compare prices across Amazon, Flipkart, and Meesho • Find the best deals • Save money with AI recommendations</p>
         </div>
       </div>
 

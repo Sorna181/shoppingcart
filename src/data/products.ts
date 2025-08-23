@@ -456,6 +456,160 @@ export const mockProducts: Product[] = [
       meesho: { price: 179, url: 'https://meesho.com/nivea-soft-cream', available: true }
     }
   }
+  },
+  {
+    id: '33',
+    name: 'Harry Potter Complete Book Series',
+    description: 'Complete 7-book collection by J.K. Rowling, Paperback Edition, Fantasy Adventure Series, Perfect for Young Adults and Adults',
+    image: 'https://images.pexels.com/photos/1029141/pexels-photo-1029141.jpeg?auto=compress&cs=tinysrgb&w=300',
+    category: 'Books',
+    keywords: ['harry potter', 'books', 'fantasy', 'jk rowling', 'series', 'reading'],
+    platforms: {
+      amazon: { price: 2499, url: 'https://amazon.in/harry-potter-complete-series', available: true },
+      flipkart: { price: 2299, url: 'https://flipkart.com/harry-potter-complete-series', available: true },
+      meesho: { price: 2199, url: 'https://meesho.com/harry-potter-complete-series', available: true }
+    }
+  },
+  {
+    id: '34',
+    name: 'The Alchemist by Paulo Coelho',
+    description: 'International Bestseller, Inspirational Fiction, Life-changing Philosophy, Paperback, Perfect for Personal Growth and Motivation',
+    image: 'https://images.pexels.com/photos/1029141/pexels-photo-1029141.jpeg?auto=compress&cs=tinysrgb&w=300',
+    category: 'Books',
+    keywords: ['alchemist', 'paulo coelho', 'philosophy', 'inspiration', 'bestseller', 'fiction'],
+    platforms: {
+      amazon: { price: 299, url: 'https://amazon.in/alchemist-paulo-coelho', available: true },
+      flipkart: { price: 279, url: 'https://flipkart.com/alchemist-paulo-coelho', available: true },
+      meesho: { price: 259, url: 'https://meesho.com/alchemist-paulo-coelho', available: true }
+    }
+  },
+  {
+    id: '35',
+    name: 'LEGO Classic Creative Bricks Set',
+    description: '1500 Pieces, Multiple Colors, Building Blocks for Kids 4-12 Years, Enhances Creativity and Problem-solving Skills',
+    image: 'https://images.pexels.com/photos/1337247/pexels-photo-1337247.jpeg?auto=compress&cs=tinysrgb&w=300',
+    category: 'Toys & Games',
+    keywords: ['lego', 'building blocks', 'creative', 'kids', 'toys', 'educational'],
+    platforms: {
+      amazon: { price: 4999, url: 'https://amazon.in/lego-classic-creative-bricks', available: true },
+      flipkart: { price: 4799, url: 'https://flipkart.com/lego-classic-creative-bricks', available: true },
+      meesho: { price: 4599, url: 'https://meesho.com/lego-classic-creative-bricks', available: true }
+    }
+  },
+  {
+    id: '36',
+    name: 'Monopoly Board Game Classic Edition',
+    description: 'Family Board Game, 2-8 Players, Ages 8+, Classic Property Trading Game, Perfect for Family Game Nights',
+    image: 'https://images.pexels.com/photos/1337247/pexels-photo-1337247.jpeg?auto=compress&cs=tinysrgb&w=300',
+    category: 'Toys & Games',
+    keywords: ['monopoly', 'board game', 'family', 'classic', 'strategy', 'entertainment'],
+    platforms: {
+      amazon: { price: 1999, url: 'https://amazon.in/monopoly-board-game-classic', available: true },
+      flipkart: { price: 1899, url: 'https://flipkart.com/monopoly-board-game-classic', available: true },
+      meesho: { price: 1799, url: 'https://meesho.com/monopoly-board-game-classic', available: true }
+    }
+  },
+  {
+    id: '37',
+    name: 'Car Dashboard Camera HD 1080p',
+    description: 'Full HD Recording, Night Vision, Loop Recording, G-Sensor, 32GB Memory Card Included, Easy Installation',
+    image: 'https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg?auto=compress&cs=tinysrgb&w=300',
+    category: 'Automotive',
+    keywords: ['dash cam', 'car camera', 'hd recording', 'automotive', 'safety', 'surveillance'],
+    platforms: {
+      amazon: { price: 3999, url: 'https://amazon.in/car-dashboard-camera-hd', available: true },
+      flipkart: { price: 3799, url: 'https://flipkart.com/car-dashboard-camera-hd', available: true },
+      meesho: { price: 3599, url: 'https://meesho.com/car-dashboard-camera-hd', available: true }
+    }
+  },
+  {
+    id: '38',
+    name: 'Car Phone Holder Magnetic Mount',
+    description: 'Universal Magnetic Car Mount, 360° Rotation, Strong Magnet, Compatible with All Smartphones, Dashboard & Windshield Mount',
+    image: 'https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg?auto=compress&cs=tinysrgb&w=300',
+    category: 'Automotive',
+    keywords: ['phone holder', 'car mount', 'magnetic', 'universal', 'automotive', 'accessories'],
+    platforms: {
+      amazon: { price: 899, url: 'https://amazon.in/car-phone-holder-magnetic', available: true },
+      flipkart: { price: 799, url: 'https://flipkart.com/car-phone-holder-magnetic', available: true },
+      meesho: { price: 699, url: 'https://meesho.com/car-phone-holder-magnetic', available: true }
+    }
+  },
+  {
+    id: '39',
+    name: 'Yoga Mat Anti-Slip Exercise Mat',
+    description: '6mm Thick, Non-Slip Surface, Eco-Friendly TPE Material, 183cm x 61cm, Perfect for Yoga, Pilates, and Home Workouts',
+    image: 'https://images.pexels.com/photos/3822906/pexels-photo-3822906.jpeg?auto=compress&cs=tinysrgb&w=300',
+    category: 'Health & Wellness',
+    keywords: ['yoga mat', 'exercise', 'fitness', 'anti-slip', 'workout', 'health'],
+    platforms: {
+      amazon: { price: 1499, url: 'https://amazon.in/yoga-mat-anti-slip', available: true },
+      flipkart: { price: 1399, url: 'https://flipkart.com/yoga-mat-anti-slip', available: true },
+      meesho: { price: 1299, url: 'https://meesho.com/yoga-mat-anti-slip', available: true }
+    }
+  },
+  {
+    id: '40',
+    name: 'Whey Protein Powder 2kg',
+    description: 'Premium Whey Protein Isolate, 25g Protein per Serving, Chocolate Flavor, Muscle Building, Post-Workout Recovery',
+    image: 'https://images.pexels.com/photos/3822906/pexels-photo-3822906.jpeg?auto=compress&cs=tinysrgb&w=300',
+    category: 'Health & Wellness',
+    keywords: ['whey protein', 'protein powder', 'muscle building', 'fitness', 'supplement', 'chocolate'],
+    platforms: {
+      amazon: { price: 3999, url: 'https://amazon.in/whey-protein-powder-2kg', available: true },
+      flipkart: { price: 3799, url: 'https://flipkart.com/whey-protein-powder-2kg', available: true },
+      meesho: { price: 3599, url: 'https://meesho.com/whey-protein-powder-2kg', available: true }
+    }
+  },
+  {
+    id: '41',
+    name: 'Gold Plated Chain Necklace',
+    description: '18K Gold Plated, 20 inch Length, Elegant Design, Hypoallergenic, Perfect for Daily Wear and Special Occasions',
+    image: 'https://images.pexels.com/photos/1454171/pexels-photo-1454171.jpeg?auto=compress&cs=tinysrgb&w=300',
+    category: 'Jewelry',
+    keywords: ['gold necklace', 'chain', 'jewelry', 'gold plated', 'elegant', 'accessories'],
+    platforms: {
+      amazon: { price: 2999, url: 'https://amazon.in/gold-plated-chain-necklace', available: true },
+      flipkart: { price: 2799, url: 'https://flipkart.com/gold-plated-chain-necklace', available: true },
+      meesho: { price: 2599, url: 'https://meesho.com/gold-plated-chain-necklace', available: true }
+    }
+  },
+  {
+    id: '42',
+    name: 'Silver Stud Earrings Set',
+    description: 'Sterling Silver, Set of 6 Pairs, Different Designs, Hypoallergenic, Perfect Gift for Women, Comes with Gift Box',
+    image: 'https://images.pexels.com/photos/1454171/pexels-photo-1454171.jpeg?auto=compress&cs=tinysrgb&w=300',
+    category: 'Jewelry',
+    keywords: ['silver earrings', 'stud earrings', 'jewelry set', 'sterling silver', 'gift', 'women'],
+    platforms: {
+      amazon: { price: 1499, url: 'https://amazon.in/silver-stud-earrings-set', available: true },
+      flipkart: { price: 1399, url: 'https://flipkart.com/silver-stud-earrings-set', available: true },
+      meesho: { price: 1299, url: 'https://meesho.com/silver-stud-earrings-set', available: true }
+    }
+  },
+  {
+    id: '43',
+    name: 'Dog Food Premium Adult Formula',
+    description: '10kg Pack, High Protein, Real Chicken, Complete Nutrition for Adult Dogs, Supports Healthy Digestion and Shiny Coat',
+    image: 'https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=300',
+    category: 'Pet Supplies',
+    keywords: ['dog food', 'pet food', 'premium', 'chicken', 'adult dogs', 'nutrition'],
+    platforms: {
+      amazon: { price: 2999, url: 'https://amazon.in/dog-food-premium-adult', available: true },
+      flipkart: { price: 2799, url: 'https://flipkart.com/dog-food-premium-adult', available: true },
+      meesho: { price: 2699, url: 'https://meesho.com/dog-food-premium-adult', available: true }
+    }
+  },
+  {
+    id: '44',
+    name: 'Cat Litter Box Self-Cleaning',
+    description: 'Automatic Self-Cleaning, Odor Control, Large Size, Easy to Clean, Suitable for Multiple Cats, Includes Waste Bags',
+    image: 'https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=300',
+    category: 'Pet Supplies',
+    keywords: ['cat litter box', 'self-cleaning', 'automatic', 'odor control', 'pet supplies', 'cats'],
+    platforms: {
+      amazon: { price: 4999, url: 'https://amazon.in/cat-litter-box-self-cleaning', available: true },
+      flipkart: { price: 4799, url: 'https://flipkart.com/cat-litter-box-self-cleaning', available: true },
+      meesho: { price: 4599, url: 'https://meesho.com/cat-litter-box-self-cleaning', available: true }
+    }
 ];
-
-export const categories = ['All', 'Electronics', 'Fashion', 'Home & Living', 'Beauty', 'Sports', 'Books', 'Toys & Games', 'Automotive', 'Health & Wellness', 'Jewelry', 'Pet Supplies'];
