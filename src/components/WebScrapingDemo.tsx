@@ -148,4 +148,3 @@ export const WebScrapingDemo: React.FC = () => {
     </div>
   );
 };
-</parameter>
