@@ -30,6 +30,7 @@ export interface CartItem {
 }
 
 export const categories = [
+  'All',
   'Electronics',
   'Fashion',
   'Home & Kitchen',
@@ -39,7 +40,8 @@ export const categories = [
   'Automotive',
   'Health & Wellness',
   'Jewelry',
-  'Pet Supplies'
+  'Pet Supplies',
+  'Personal Care'
 ];
 
 export const mockProducts: Product[] = [
@@ -424,6 +426,86 @@ export const mockProducts: Product[] = [
       amazon: { price: 4999, available: true, url: 'https://amazon.in/cat-litter', rating: 4.2 },
       flipkart: { price: 5199, available: true, url: 'https://flipkart.com/cat-litter', rating: 4.0 },
       meesho: { price: 4599, available: true, url: 'https://meesho.com/cat-litter', rating: 3.9 }
+    }
+  },
+
+  // Personal Care
+  {
+    id: '29',
+    name: 'Anti-Dandruff Shampoo 400ml',
+    description: 'Clinically proven anti-dandruff shampoo with zinc pyrithione, suitable for all hair types',
+    image: 'https://images.pexels.com/photos/4465124/pexels-photo-4465124.jpeg',
+    category: 'Personal Care',
+    keywords: ['shampoo', 'anti-dandruff', 'hair care', 'zinc pyrithione'],
+    platforms: {
+      amazon: { price: 299, available: true, url: 'https://amazon.in/anti-dandruff-shampoo', rating: 4.2 },
+      flipkart: { price: 319, available: true, url: 'https://flipkart.com/anti-dandruff-shampoo', rating: 4.1 },
+      meesho: { price: 279, available: true, url: 'https://meesho.com/anti-dandruff-shampoo', rating: 4.0 }
+    }
+  },
+  {
+    id: '30',
+    name: 'Moisturizing Body Soap Pack of 4',
+    description: 'Natural glycerin soap bars with aloe vera and vitamin E, gentle on skin',
+    image: 'https://images.pexels.com/photos/4465831/pexels-photo-4465831.jpeg',
+    category: 'Personal Care',
+    keywords: ['soap', 'moisturizing', 'glycerin', 'aloe vera', 'body care'],
+    platforms: {
+      amazon: { price: 199, available: true, url: 'https://amazon.in/moisturizing-soap', rating: 4.3 },
+      flipkart: { price: 219, available: true, url: 'https://flipkart.com/moisturizing-soap', rating: 4.2 },
+      meesho: { price: 179, available: true, url: 'https://meesho.com/moisturizing-soap', rating: 4.1 }
+    }
+  },
+  {
+    id: '31',
+    name: 'Anti-Aging Night Cream 50g',
+    description: 'Advanced anti-aging night cream with retinol and hyaluronic acid for younger-looking skin',
+    image: 'https://images.pexels.com/photos/3685530/pexels-photo-3685530.jpeg',
+    category: 'Personal Care',
+    keywords: ['night cream', 'anti-aging', 'retinol', 'hyaluronic acid', 'skincare'],
+    platforms: {
+      amazon: { price: 899, available: true, url: 'https://amazon.in/anti-aging-cream', rating: 4.4 },
+      flipkart: { price: 949, available: true, url: 'https://flipkart.com/anti-aging-cream', rating: 4.3 },
+      meesho: { price: 799, available: true, url: 'https://meesho.com/anti-aging-cream', rating: 4.2 }
+    }
+  },
+  {
+    id: '32',
+    name: 'Vitamin C Face Serum 30ml',
+    description: '20% Vitamin C serum with niacinamide for brightening and reducing dark spots',
+    image: 'https://images.pexels.com/photos/7755515/pexels-photo-7755515.jpeg',
+    category: 'Personal Care',
+    keywords: ['face serum', 'vitamin c', 'niacinamide', 'brightening', 'skincare'],
+    platforms: {
+      amazon: { price: 599, available: true, url: 'https://amazon.in/vitamin-c-serum', rating: 4.5 },
+      flipkart: { price: 629, available: true, url: 'https://flipkart.com/vitamin-c-serum', rating: 4.4 },
+      meesho: { price: 549, available: true, url: 'https://meesho.com/vitamin-c-serum', rating: 4.3 }
+    }
+  },
+  {
+    id: '33',
+    name: 'Herbal Face Wash 150ml',
+    description: 'Natural herbal face wash with neem and turmeric, suitable for oily and acne-prone skin',
+    image: 'https://images.pexels.com/photos/4465124/pexels-photo-4465124.jpeg',
+    category: 'Personal Care',
+    keywords: ['face wash', 'herbal', 'neem', 'turmeric', 'acne', 'oily skin'],
+    platforms: {
+      amazon: { price: 149, available: true, url: 'https://amazon.in/herbal-face-wash', rating: 4.1 },
+      flipkart: { price: 159, available: true, url: 'https://flipkart.com/herbal-face-wash', rating: 4.0 },
+      meesho: { price: 129, available: true, url: 'https://meesho.com/herbal-face-wash', rating: 3.9 }
+    }
+  },
+  {
+    id: '34',
+    name: 'Sunscreen SPF 50+ 100ml',
+    description: 'Broad spectrum sunscreen with SPF 50+, water-resistant and non-greasy formula',
+    image: 'https://images.pexels.com/photos/4465831/pexels-photo-4465831.jpeg',
+    category: 'Personal Care',
+    keywords: ['sunscreen', 'spf 50', 'broad spectrum', 'water resistant', 'sun protection'],
+    platforms: {
+      amazon: { price: 399, available: true, url: 'https://amazon.in/sunscreen-spf50', rating: 4.3 },
+      flipkart: { price: 419, available: true, url: 'https://flipkart.com/sunscreen-spf50', rating: 4.2 },
+      meesho: { price: 359, available: true, url: 'https://meesho.com/sunscreen-spf50', rating: 4.1 }
     }
   }
 ];
