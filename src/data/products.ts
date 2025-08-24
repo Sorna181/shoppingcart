@@ -1,3 +1,10 @@
+export interface PlatformData {
+  price: number;
+  available: boolean;
+  url: string;
+  rating: number;
+}
+
 export interface Product {
   id: string;
   name: string;
@@ -5,26 +12,21 @@ export interface Product {
   image: string;
   category: string;
   keywords: string[];
-  prices: {
-    amazon: number;
-    flipkart: number;
-    meesho: number;
-  };
-  availability: {
-    amazon: boolean;
-    flipkart: boolean;
-    meesho: boolean;
-  };
-  ratings: {
-    amazon: number;
-    flipkart: number;
-    meesho: number;
+  platforms: {
+    amazon?: PlatformData;
+    flipkart?: PlatformData;
+    meesho?: PlatformData;
   };
 }
 
-export interface CartItem extends Product {
+export interface CartItem {
+  productId: string;
+  productName: string;
+  platform: 'amazon' | 'flipkart' | 'meesho';
+  price: number;
+  url: string;
+  image: string;
   quantity: number;
-  selectedPlatform: 'amazon' | 'flipkart' | 'meesho';
 }
 
 export const categories = [
@@ -49,9 +51,11 @@ export const mockProducts: Product[] = [
     image: 'https://images.pexels.com/photos/3394650/pexels-photo-3394650.jpeg',
     category: 'Electronics',
     keywords: ['headphones', 'wireless', 'bluetooth', 'audio'],
-    prices: { amazon: 2999, flipkart: 3199, meesho: 2799 },
-    availability: { amazon: true, flipkart: true, meesho: true },
-    ratings: { amazon: 4.5, flipkart: 4.3, meesho: 4.2 }
+    platforms: {
+      amazon: { price: 2999, available: true, url: 'https://amazon.in/headphones', rating: 4.5 },
+      flipkart: { price: 3199, available: true, url: 'https://flipkart.com/headphones', rating: 4.3 },
+      meesho: { price: 2799, available: true, url: 'https://meesho.com/headphones', rating: 4.2 }
+    }
   },
   {
     id: '2',
@@ -60,9 +64,11 @@ export const mockProducts: Product[] = [
     image: 'https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg',
     category: 'Electronics',
     keywords: ['smartphone', 'mobile', 'phone', 'android'],
-    prices: { amazon: 15999, flipkart: 16499, meesho: 15499 },
-    availability: { amazon: true, flipkart: true, meesho: true },
-    ratings: { amazon: 4.2, flipkart: 4.1, meesho: 4.0 }
+    platforms: {
+      amazon: { price: 15999, available: true, url: 'https://amazon.in/smartphone', rating: 4.2 },
+      flipkart: { price: 16499, available: true, url: 'https://flipkart.com/smartphone', rating: 4.1 },
+      meesho: { price: 15499, available: true, url: 'https://meesho.com/smartphone', rating: 4.0 }
+    }
   },
   {
     id: '3',
@@ -71,9 +77,11 @@ export const mockProducts: Product[] = [
     image: 'https://images.pexels.com/photos/205421/pexels-photo-205421.jpeg',
     category: 'Electronics',
     keywords: ['laptop', 'computer', 'intel', 'windows'],
-    prices: { amazon: 45999, flipkart: 47999, meesho: 44999 },
-    availability: { amazon: true, flipkart: true, meesho: true },
-    ratings: { amazon: 4.4, flipkart: 4.2, meesho: 4.1 }
+    platforms: {
+      amazon: { price: 45999, available: true, url: 'https://amazon.in/laptop', rating: 4.4 },
+      flipkart: { price: 47999, available: true, url: 'https://flipkart.com/laptop', rating: 4.2 },
+      meesho: { price: 44999, available: true, url: 'https://meesho.com/laptop', rating: 4.1 }
+    }
   },
   {
     id: '4',
@@ -82,9 +90,11 @@ export const mockProducts: Product[] = [
     image: 'https://images.pexels.com/photos/437037/pexels-photo-437037.jpeg',
     category: 'Electronics',
     keywords: ['smartwatch', 'fitness', 'tracker', 'health'],
-    prices: { amazon: 8999, flipkart: 9499, meesho: 8499 },
-    availability: { amazon: true, flipkart: true, meesho: true },
-    ratings: { amazon: 4.3, flipkart: 4.1, meesho: 4.0 }
+    platforms: {
+      amazon: { price: 8999, available: true, url: 'https://amazon.in/smartwatch', rating: 4.3 },
+      flipkart: { price: 9499, available: true, url: 'https://flipkart.com/smartwatch', rating: 4.1 },
+      meesho: { price: 8499, available: true, url: 'https://meesho.com/smartwatch', rating: 4.0 }
+    }
   },
 
   // Fashion
@@ -95,9 +105,11 @@ export const mockProducts: Product[] = [
     image: 'https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg',
     category: 'Fashion',
     keywords: ['tshirt', 'cotton', 'casual', 'clothing'],
-    prices: { amazon: 599, flipkart: 649, meesho: 499 },
-    availability: { amazon: true, flipkart: true, meesho: true },
-    ratings: { amazon: 4.1, flipkart: 4.0, meesho: 3.9 }
+    platforms: {
+      amazon: { price: 599, available: true, url: 'https://amazon.in/tshirt', rating: 4.1 },
+      flipkart: { price: 649, available: true, url: 'https://flipkart.com/tshirt', rating: 4.0 },
+      meesho: { price: 499, available: true, url: 'https://meesho.com/tshirt', rating: 3.9 }
+    }
   },
   {
     id: '6',
@@ -106,9 +118,11 @@ export const mockProducts: Product[] = [
     image: 'https://images.pexels.com/photos/1598507/pexels-photo-1598507.jpeg',
     category: 'Fashion',
     keywords: ['jeans', 'denim', 'pants', 'casual'],
-    prices: { amazon: 1299, flipkart: 1399, meesho: 1199 },
-    availability: { amazon: true, flipkart: true, meesho: true },
-    ratings: { amazon: 4.2, flipkart: 4.1, meesho: 4.0 }
+    platforms: {
+      amazon: { price: 1299, available: true, url: 'https://amazon.in/jeans', rating: 4.2 },
+      flipkart: { price: 1399, available: true, url: 'https://flipkart.com/jeans', rating: 4.1 },
+      meesho: { price: 1199, available: true, url: 'https://meesho.com/jeans', rating: 4.0 }
+    }
   },
   {
     id: '7',
@@ -117,9 +131,11 @@ export const mockProducts: Product[] = [
     image: 'https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg',
     category: 'Fashion',
     keywords: ['shoes', 'running', 'sports', 'footwear'],
-    prices: { amazon: 2499, flipkart: 2699, meesho: 2299 },
-    availability: { amazon: true, flipkart: true, meesho: true },
-    ratings: { amazon: 4.4, flipkart: 4.2, meesho: 4.1 }
+    platforms: {
+      amazon: { price: 2499, available: true, url: 'https://amazon.in/shoes', rating: 4.4 },
+      flipkart: { price: 2699, available: true, url: 'https://flipkart.com/shoes', rating: 4.2 },
+      meesho: { price: 2299, available: true, url: 'https://meesho.com/shoes', rating: 4.1 }
+    }
   },
   {
     id: '8',
@@ -128,9 +144,11 @@ export const mockProducts: Product[] = [
     image: 'https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg',
     category: 'Fashion',
     keywords: ['handbag', 'leather', 'bag', 'accessories'],
-    prices: { amazon: 3999, flipkart: 4299, meesho: 3699 },
-    availability: { amazon: true, flipkart: true, meesho: true },
-    ratings: { amazon: 4.3, flipkart: 4.1, meesho: 4.0 }
+    platforms: {
+      amazon: { price: 3999, available: true, url: 'https://amazon.in/handbag', rating: 4.3 },
+      flipkart: { price: 4299, available: true, url: 'https://flipkart.com/handbag', rating: 4.1 },
+      meesho: { price: 3699, available: true, url: 'https://meesho.com/handbag', rating: 4.0 }
+    }
   },
 
   // Home & Kitchen
@@ -141,9 +159,11 @@ export const mockProducts: Product[] = [
     image: 'https://images.pexels.com/photos/4226796/pexels-photo-4226796.jpeg',
     category: 'Home & Kitchen',
     keywords: ['cookware', 'kitchen', 'non-stick', 'cooking'],
-    prices: { amazon: 3499, flipkart: 3799, meesho: 3199 },
-    availability: { amazon: true, flipkart: true, meesho: true },
-    ratings: { amazon: 4.2, flipkart: 4.0, meesho: 3.9 }
+    platforms: {
+      amazon: { price: 3499, available: true, url: 'https://amazon.in/cookware', rating: 4.2 },
+      flipkart: { price: 3799, available: true, url: 'https://flipkart.com/cookware', rating: 4.0 },
+      meesho: { price: 3199, available: true, url: 'https://meesho.com/cookware', rating: 3.9 }
+    }
   },
   {
     id: '10',
@@ -152,9 +172,11 @@ export const mockProducts: Product[] = [
     image: 'https://images.pexels.com/photos/324028/pexels-photo-324028.jpeg',
     category: 'Home & Kitchen',
     keywords: ['coffee', 'maker', 'machine', 'kitchen'],
-    prices: { amazon: 5999, flipkart: 6299, meesho: 5699 },
-    availability: { amazon: true, flipkart: true, meesho: true },
-    ratings: { amazon: 4.3, flipkart: 4.1, meesho: 4.0 }
+    platforms: {
+      amazon: { price: 5999, available: true, url: 'https://amazon.in/coffee-maker', rating: 4.3 },
+      flipkart: { price: 6299, available: true, url: 'https://flipkart.com/coffee-maker', rating: 4.1 },
+      meesho: { price: 5699, available: true, url: 'https://meesho.com/coffee-maker', rating: 4.0 }
+    }
   },
   {
     id: '11',
@@ -163,9 +185,11 @@ export const mockProducts: Product[] = [
     image: 'https://images.pexels.com/photos/1454806/pexels-photo-1454806.jpeg',
     category: 'Home & Kitchen',
     keywords: ['bedsheet', 'cotton', 'bedroom', 'home'],
-    prices: { amazon: 1999, flipkart: 2199, meesho: 1799 },
-    availability: { amazon: true, flipkart: true, meesho: true },
-    ratings: { amazon: 4.1, flipkart: 3.9, meesho: 3.8 }
+    platforms: {
+      amazon: { price: 1999, available: true, url: 'https://amazon.in/bedsheet', rating: 4.1 },
+      flipkart: { price: 2199, available: true, url: 'https://flipkart.com/bedsheet', rating: 3.9 },
+      meesho: { price: 1799, available: true, url: 'https://meesho.com/bedsheet', rating: 3.8 }
+    }
   },
   {
     id: '12',
@@ -174,9 +198,11 @@ export const mockProducts: Product[] = [
     image: 'https://images.pexels.com/photos/1112598/pexels-photo-1112598.jpeg',
     category: 'Home & Kitchen',
     keywords: ['lamp', 'led', 'desk', 'lighting'],
-    prices: { amazon: 1499, flipkart: 1599, meesho: 1399 },
-    availability: { amazon: true, flipkart: true, meesho: true },
-    ratings: { amazon: 4.2, flipkart: 4.0, meesho: 3.9 }
+    platforms: {
+      amazon: { price: 1499, available: true, url: 'https://amazon.in/lamp', rating: 4.2 },
+      flipkart: { price: 1599, available: true, url: 'https://flipkart.com/lamp', rating: 4.0 },
+      meesho: { price: 1399, available: true, url: 'https://meesho.com/lamp', rating: 3.9 }
+    }
   },
 
   // Sports
@@ -187,9 +213,11 @@ export const mockProducts: Product[] = [
     image: 'https://images.pexels.com/photos/3822906/pexels-photo-3822906.jpeg',
     category: 'Sports',
     keywords: ['yoga', 'mat', 'exercise', 'fitness'],
-    prices: { amazon: 1299, flipkart: 1399, meesho: 1199 },
-    availability: { amazon: true, flipkart: true, meesho: true },
-    ratings: { amazon: 4.3, flipkart: 4.1, meesho: 4.0 }
+    platforms: {
+      amazon: { price: 1299, available: true, url: 'https://amazon.in/yoga-mat', rating: 4.3 },
+      flipkart: { price: 1399, available: true, url: 'https://flipkart.com/yoga-mat', rating: 4.1 },
+      meesho: { price: 1199, available: true, url: 'https://meesho.com/yoga-mat', rating: 4.0 }
+    }
   },
   {
     id: '14',
@@ -198,9 +226,11 @@ export const mockProducts: Product[] = [
     image: 'https://images.pexels.com/photos/416717/pexels-photo-416717.jpeg',
     category: 'Sports',
     keywords: ['dumbbell', 'weights', 'fitness', 'gym'],
-    prices: { amazon: 8999, flipkart: 9499, meesho: 8499 },
-    availability: { amazon: true, flipkart: true, meesho: true },
-    ratings: { amazon: 4.4, flipkart: 4.2, meesho: 4.1 }
+    platforms: {
+      amazon: { price: 8999, available: true, url: 'https://amazon.in/dumbbell', rating: 4.4 },
+      flipkart: { price: 9499, available: true, url: 'https://flipkart.com/dumbbell', rating: 4.2 },
+      meesho: { price: 8499, available: true, url: 'https://meesho.com/dumbbell', rating: 4.1 }
+    }
   },
   {
     id: '15',
@@ -209,9 +239,11 @@ export const mockProducts: Product[] = [
     image: 'https://images.pexels.com/photos/1661950/pexels-photo-1661950.jpeg',
     category: 'Sports',
     keywords: ['cricket', 'bat', 'sports', 'willow'],
-    prices: { amazon: 4999, flipkart: 5299, meesho: 4699 },
-    availability: { amazon: true, flipkart: true, meesho: true },
-    ratings: { amazon: 4.2, flipkart: 4.0, meesho: 3.9 }
+    platforms: {
+      amazon: { price: 4999, available: true, url: 'https://amazon.in/cricket-bat', rating: 4.2 },
+      flipkart: { price: 5299, available: true, url: 'https://flipkart.com/cricket-bat', rating: 4.0 },
+      meesho: { price: 4699, available: true, url: 'https://meesho.com/cricket-bat', rating: 3.9 }
+    }
   },
   {
     id: '16',
@@ -220,9 +252,11 @@ export const mockProducts: Product[] = [
     image: 'https://images.pexels.com/photos/47730/the-ball-stadion-football-the-pitch-47730.jpeg',
     category: 'Sports',
     keywords: ['football', 'soccer', 'ball', 'sports'],
-    prices: { amazon: 1299, flipkart: 1399, meesho: 1199 },
-    availability: { amazon: true, flipkart: true, meesho: true },
-    ratings: { amazon: 4.1, flipkart: 3.9, meesho: 3.8 }
+    platforms: {
+      amazon: { price: 1299, available: true, url: 'https://amazon.in/football', rating: 4.1 },
+      flipkart: { price: 1399, available: true, url: 'https://flipkart.com/football', rating: 3.9 },
+      meesho: { price: 1199, available: true, url: 'https://meesho.com/football', rating: 3.8 }
+    }
   },
 
   // Books
@@ -233,9 +267,11 @@ export const mockProducts: Product[] = [
     image: 'https://images.pexels.com/photos/1029141/pexels-photo-1029141.jpeg',
     category: 'Books',
     keywords: ['harry potter', 'books', 'series', 'fiction'],
-    prices: { amazon: 2499, flipkart: 2699, meesho: 2199 },
-    availability: { amazon: true, flipkart: true, meesho: true },
-    ratings: { amazon: 4.8, flipkart: 4.7, meesho: 4.6 }
+    platforms: {
+      amazon: { price: 2499, available: true, url: 'https://amazon.in/harry-potter', rating: 4.8 },
+      flipkart: { price: 2699, available: true, url: 'https://flipkart.com/harry-potter', rating: 4.7 },
+      meesho: { price: 2199, available: true, url: 'https://meesho.com/harry-potter', rating: 4.6 }
+    }
   },
   {
     id: '18',
@@ -244,9 +280,11 @@ export const mockProducts: Product[] = [
     image: 'https://images.pexels.com/photos/1029141/pexels-photo-1029141.jpeg',
     category: 'Books',
     keywords: ['alchemist', 'paulo coelho', 'fiction', 'bestseller'],
-    prices: { amazon: 299, flipkart: 319, meesho: 259 },
-    availability: { amazon: true, flipkart: true, meesho: true },
-    ratings: { amazon: 4.6, flipkart: 4.5, meesho: 4.4 }
+    platforms: {
+      amazon: { price: 299, available: true, url: 'https://amazon.in/alchemist', rating: 4.6 },
+      flipkart: { price: 319, available: true, url: 'https://flipkart.com/alchemist', rating: 4.5 },
+      meesho: { price: 259, available: true, url: 'https://meesho.com/alchemist', rating: 4.4 }
+    }
   },
 
   // Toys & Games
@@ -257,9 +295,11 @@ export const mockProducts: Product[] = [
     image: 'https://images.pexels.com/photos/298825/pexels-photo-298825.jpeg',
     category: 'Toys & Games',
     keywords: ['lego', 'toys', 'creative', 'kids'],
-    prices: { amazon: 4999, flipkart: 5199, meesho: 4599 },
-    availability: { amazon: true, flipkart: true, meesho: true },
-    ratings: { amazon: 4.7, flipkart: 4.6, meesho: 4.5 }
+    platforms: {
+      amazon: { price: 4999, available: true, url: 'https://amazon.in/lego', rating: 4.7 },
+      flipkart: { price: 5199, available: true, url: 'https://flipkart.com/lego', rating: 4.6 },
+      meesho: { price: 4599, available: true, url: 'https://meesho.com/lego', rating: 4.5 }
+    }
   },
   {
     id: '20',
@@ -268,9 +308,11 @@ export const mockProducts: Product[] = [
     image: 'https://images.pexels.com/photos/163064/play-stone-network-networked-interactive-163064.jpeg',
     category: 'Toys & Games',
     keywords: ['monopoly', 'board game', 'family', 'classic'],
-    prices: { amazon: 1999, flipkart: 2099, meesho: 1799 },
-    availability: { amazon: true, flipkart: true, meesho: true },
-    ratings: { amazon: 4.4, flipkart: 4.3, meesho: 4.2 }
+    platforms: {
+      amazon: { price: 1999, available: true, url: 'https://amazon.in/monopoly', rating: 4.4 },
+      flipkart: { price: 2099, available: true, url: 'https://flipkart.com/monopoly', rating: 4.3 },
+      meesho: { price: 1799, available: true, url: 'https://meesho.com/monopoly', rating: 4.2 }
+    }
   },
 
   // Automotive
@@ -281,9 +323,11 @@ export const mockProducts: Product[] = [
     image: 'https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg',
     category: 'Automotive',
     keywords: ['dashcam', 'car', 'camera', 'recording'],
-    prices: { amazon: 3999, flipkart: 4199, meesho: 3599 },
-    availability: { amazon: true, flipkart: true, meesho: true },
-    ratings: { amazon: 4.2, flipkart: 4.0, meesho: 3.9 }
+    platforms: {
+      amazon: { price: 3999, available: true, url: 'https://amazon.in/dashcam', rating: 4.2 },
+      flipkart: { price: 4199, available: true, url: 'https://flipkart.com/dashcam', rating: 4.0 },
+      meesho: { price: 3599, available: true, url: 'https://meesho.com/dashcam', rating: 3.9 }
+    }
   },
   {
     id: '22',
@@ -292,9 +336,11 @@ export const mockProducts: Product[] = [
     image: 'https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg',
     category: 'Automotive',
     keywords: ['phone holder', 'car mount', 'magnetic', 'universal'],
-    prices: { amazon: 899, flipkart: 949, meesho: 699 },
-    availability: { amazon: true, flipkart: true, meesho: true },
-    ratings: { amazon: 4.1, flipkart: 3.9, meesho: 3.8 }
+    platforms: {
+      amazon: { price: 899, available: true, url: 'https://amazon.in/phone-holder', rating: 4.1 },
+      flipkart: { price: 949, available: true, url: 'https://flipkart.com/phone-holder', rating: 3.9 },
+      meesho: { price: 699, available: true, url: 'https://meesho.com/phone-holder', rating: 3.8 }
+    }
   },
 
   // Health & Wellness
@@ -305,9 +351,11 @@ export const mockProducts: Product[] = [
     image: 'https://images.pexels.com/photos/3822906/pexels-photo-3822906.jpeg',
     category: 'Health & Wellness',
     keywords: ['yoga mat', 'exercise', 'fitness', 'wellness'],
-    prices: { amazon: 1499, flipkart: 1599, meesho: 1299 },
-    availability: { amazon: true, flipkart: true, meesho: true },
-    ratings: { amazon: 4.3, flipkart: 4.1, meesho: 4.0 }
+    platforms: {
+      amazon: { price: 1499, available: true, url: 'https://amazon.in/exercise-mat', rating: 4.3 },
+      flipkart: { price: 1599, available: true, url: 'https://flipkart.com/exercise-mat', rating: 4.1 },
+      meesho: { price: 1299, available: true, url: 'https://meesho.com/exercise-mat', rating: 4.0 }
+    }
   },
   {
     id: '24',
@@ -316,9 +364,11 @@ export const mockProducts: Product[] = [
     image: 'https://images.pexels.com/photos/416717/pexels-photo-416717.jpeg',
     category: 'Health & Wellness',
     keywords: ['protein', 'whey', 'supplement', 'fitness'],
-    prices: { amazon: 3999, flipkart: 4199, meesho: 3599 },
-    availability: { amazon: true, flipkart: true, meesho: true },
-    ratings: { amazon: 4.4, flipkart: 4.2, meesho: 4.1 }
+    platforms: {
+      amazon: { price: 3999, available: true, url: 'https://amazon.in/protein', rating: 4.4 },
+      flipkart: { price: 4199, available: true, url: 'https://flipkart.com/protein', rating: 4.2 },
+      meesho: { price: 3599, available: true, url: 'https://meesho.com/protein', rating: 4.1 }
+    }
   },
 
   // Jewelry
@@ -329,9 +379,11 @@ export const mockProducts: Product[] = [
     image: 'https://images.pexels.com/photos/1454806/pexels-photo-1454806.jpeg',
     category: 'Jewelry',
     keywords: ['necklace', 'gold plated', 'jewelry', 'chain'],
-    prices: { amazon: 2999, flipkart: 3199, meesho: 2599 },
-    availability: { amazon: true, flipkart: true, meesho: true },
-    ratings: { amazon: 4.2, flipkart: 4.0, meesho: 3.9 }
+    platforms: {
+      amazon: { price: 2999, available: true, url: 'https://amazon.in/necklace', rating: 4.2 },
+      flipkart: { price: 3199, available: true, url: 'https://flipkart.com/necklace', rating: 4.0 },
+      meesho: { price: 2599, available: true, url: 'https://meesho.com/necklace', rating: 3.9 }
+    }
   },
   {
     id: '26',
@@ -340,9 +392,11 @@ export const mockProducts: Product[] = [
     image: 'https://images.pexels.com/photos/1454806/pexels-photo-1454806.jpeg',
     category: 'Jewelry',
     keywords: ['earrings', 'silver', 'jewelry', 'set'],
-    prices: { amazon: 1499, flipkart: 1599, meesho: 1299 },
-    availability: { amazon: true, flipkart: true, meesho: true },
-    ratings: { amazon: 4.1, flipkart: 3.9, meesho: 3.8 }
+    platforms: {
+      amazon: { price: 1499, available: true, url: 'https://amazon.in/earrings', rating: 4.1 },
+      flipkart: { price: 1599, available: true, url: 'https://flipkart.com/earrings', rating: 3.9 },
+      meesho: { price: 1299, available: true, url: 'https://meesho.com/earrings', rating: 3.8 }
+    }
   },
 
   // Pet Supplies
@@ -353,9 +407,11 @@ export const mockProducts: Product[] = [
     image: 'https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg',
     category: 'Pet Supplies',
     keywords: ['dog food', 'pet food', 'premium', 'chicken'],
-    prices: { amazon: 2999, flipkart: 3199, meesho: 2699 },
-    availability: { amazon: true, flipkart: true, meesho: true },
-    ratings: { amazon: 4.3, flipkart: 4.1, meesho: 4.0 }
+    platforms: {
+      amazon: { price: 2999, available: true, url: 'https://amazon.in/dog-food', rating: 4.3 },
+      flipkart: { price: 3199, available: true, url: 'https://flipkart.com/dog-food', rating: 4.1 },
+      meesho: { price: 2699, available: true, url: 'https://meesho.com/dog-food', rating: 4.0 }
+    }
   },
   {
     id: '28',
@@ -364,8 +420,10 @@ export const mockProducts: Product[] = [
     image: 'https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg',
     category: 'Pet Supplies',
     keywords: ['cat litter', 'self cleaning', 'pet supplies', 'automatic'],
-    prices: { amazon: 4999, flipkart: 5199, meesho: 4599 },
-    availability: { amazon: true, flipkart: true, meesho: true },
-    ratings: { amazon: 4.2, flipkart: 4.0, meesho: 3.9 }
+    platforms: {
+      amazon: { price: 4999, available: true, url: 'https://amazon.in/cat-litter', rating: 4.2 },
+      flipkart: { price: 5199, available: true, url: 'https://flipkart.com/cat-litter', rating: 4.0 },
+      meesho: { price: 4599, available: true, url: 'https://meesho.com/cat-litter', rating: 3.9 }
+    }
   }
 ];
