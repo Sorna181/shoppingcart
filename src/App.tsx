@@ -6,7 +6,6 @@ import { ComparisonTable } from './components/ComparisonTable';
 import { AlternativeSuggestions } from './components/AlternativeSuggestions';
 import { ShoppingCartComponent } from './components/ShoppingCart';
 import { SavingsDashboard } from './components/SavingsDashboard';
-import { WebScrapingDemo } from './components/WebScrapingDemo';
 import { mockProducts, CartItem, categories } from './data/products';
 import { getLowestPrice, findSimilarProducts } from './utils/priceUtils';
 
@@ -164,8 +163,6 @@ function App() {
                 {/* Savings Dashboard */}
                 <SavingsDashboard cartItems={cartItems} />
 
-                {/* Web Scraping Demo */}
-                <WebScrapingDemo />
               </>
             )}
           </>
