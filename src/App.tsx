@@ -80,15 +80,15 @@ function App() {
           </div>
         ) : (
           <>
-            {selectedCategory === 'All' ? (
+            {selectedCategory === 'All' && searchTerm === '' ? (
               <div className="text-center py-16">
                 <div className="max-w-md mx-auto">
                   <div className="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
                     <SearchIcon className="w-12 h-12 text-blue-500" />
                   </div>
-                  <h2 className="text-2xl font-bold text-gray-800 mb-4">Choose a Category to Start</h2>
+                  <h2 className="text-2xl font-bold text-gray-800 mb-4">Search or Choose a Category</h2>
                   <p className="text-gray-600 mb-6">
-                    Select a specific category from the filter above to discover products and compare prices across platforms.
+                    Search for products by name or select a specific category to discover products and compare prices across platforms.
                   </p>
                   <div className="grid grid-cols-2 gap-3 text-sm">
                     {categories.slice(1).map((category) => (
