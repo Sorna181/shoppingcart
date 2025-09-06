@@ -61,41 +61,41 @@ export const mockProducts: Product[] = [
   },
   {
     id: '2',
-    name: 'Smartphone 128GB',
-    description: '6.5-inch display, dual camera, fast charging smartphone',
+    name: 'Redmi Smartphone',
+    description: 'Redmi A4 5G Starry Black 4GB RAM 128GB Storage, Global Debut SD 4s Gen 2, Segment Largest 6.88in 120Hz, 50MP Dual Camera, 18W Fast Charging',
     image: 'https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg',
     category: 'Electronics',
     keywords: ['smartphone', 'mobile', 'phone', 'android'],
     platforms: {
-      amazon: { price: 15999, available: true, url: 'https://amazon.in/smartphone', rating: 4.2 },
-      flipkart: { price: 16499, available: true, url: 'https://flipkart.com/smartphone', rating: 4.1 },
-      meesho: { price: 15499, available: true, url: 'https://meesho.com/smartphone', rating: 4.0 }
+      amazon: { price: 9299, available: true, url: 'https://www.amazon.in/Redmi-A4-5G-Storage-Charging/dp/B0DLW4QD72/ref=sr_1_2_sspa?crid=145PZFQBQMFH7&dib=eyJ2IjoiMSJ9.sSLntKEKo9_cOUAOfJk81KVw5p9N3_-o3VZ00qIZYUvfMrCvNH23sm8sxa2Fr4s12b8UY0yzIEShAxFCRMsKg9jbpL1vuNz9Yg85Nyc_hmTDIJcNEAUqLZtQZi81gzb9qq11F2CByN3ydeNl70dfQ2V6y5dNP2V_GQZyR6D_KCqUZhVcUt1RGLGMQO4ME8jV0W3WgFL7El8bBtExsMFdYlEIRNuWn4PH1xkNlE_WTax621-ErJ1fFGEPHQLEOSBE3Btt4u67jwab2p4hqN8Go-FMhZGMt5e0kp8omY86vG4.G1HAJm_UKFccX9CjE2QPb66rsKzDene7OLLeacVYTaI&dib_tag=se&keywords=REDMI%2BA4&qid=1757138485&s=electronics&sprefix=redmi%2Ba4%2Celectronics%2C359&sr=1-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1', rating: 3.9 },
+      flipkart: { price: 9348, available: true, url: 'https://www.flipkart.com/redmi-a4-sparkle-purple-128-gb/p/itm195b57bdc2f83?pid=MOBH6YHDGD57AVHX&lid=LSTMOBH6YHDGD57AVHXS7TM33&marketplace=FLIPKART&q=Redmi+A4+5G+%28Sparkle+Purple%2C+4GB+RAM%2C+128GB+Storage%29+%7C+Global+Debut+SD+4s+Gen+2+%7C+Segment+Largest+6.88in+120Hz+%7C+50MP+Dual+Camera+%7C+18W+Fast+Charging&store=tyy%2F4io&srno=s_1_1&otracker=search&otracker1=search&fm=Search&iid=f1c4a1fc-1a96-4dd5-b2ca-a3635eb4fbd8.MOBH6YHDGD57AVHX.SEARCH&ppt=pp&ppn=pp&ssid=q2ezfgz3v40000001757138184513&qH=1ed3099a55ca19d2', rating: 4.3 },
+      meesho: { available: false, message: 'Product not available on Meesho' }
     }
   },
   {
     id: '3',
-    name: 'Laptop 15.6 inch',
-    description: 'Intel i5 processor, 8GB RAM, 512GB SSD, Windows 11',
+    name: 'HP Laptop',
+    description: 'HP 15, AMD Ryzen 3 7320U (8GB LPDDR5, 512GB SSD) FHD, Anti-Glare, Micro-Edge, 15.6"/39.6cm, Win 11, Office 21, Silver, 1.59kg, fc0154AU, AMD Radeon Graphics, 1080p FHD Camera Laptop',
     image: 'https://images.pexels.com/photos/205421/pexels-photo-205421.jpeg',
     category: 'Electronics',
     keywords: ['laptop', 'computer', 'intel', 'windows'],
     platforms: {
-      amazon: { price: 45999, available: true, url: 'https://amazon.in/laptop', rating: 4.4 },
-      flipkart: { price: 47999, available: true, url: 'https://flipkart.com/laptop', rating: 4.2 },
-      meesho: { price: 44999, available: true, url: 'https://meesho.com/laptop', rating: 4.1 }
+      amazon: { price: 30880, available: true, url: 'https://www.amazon.in/HP-Laptop-15-6-inch-Graphics-fc0154AU/dp/B0D3HG5CMG/ref=sr_1_3?crid=1OA8L34TBIASN&dib=eyJ2IjoiMSJ9.vTT5ocH1UNCusAvvlNprLt6exRyfR8SNYkJYwELnozA8yvKjb7F2dBSgwLUd_xm2-mCy1Q6hsTT7UCOEMhcUb-YknfRD7lSazhzR60ralxsWT3aZsm21BkhW2KUXPnXg3Qt859yATh3pCWuAno6lPPNYLK8_WaJmkCcK_kp7B2lS_DZy5GIuCuDyECDV_NJw-ZIUkOfvv4yJhGhtd_LVlQWBlirj_L9APjRagvA0Hr1AZ2j1Wu18s1cVnM7NYAVzfwqEq4sDgv238KExhGPz9aaOS9pRsDbvcsF6xfr7neU.8d62e8YlpMEzVa3sZIVpUMjH_hUj4mXxnp8OQk0zPco&dib_tag=se&keywords=laptop&qid=1757138690&s=electronics&sprefix=laptop%2Celectronics%2C403&sr=1-3&th=1', rating: 4.0 },
+      flipkart: { price: 31299, available: true, url: 'https://www.flipkart.com/hp-15s-backlit-keyboard-amd-ryzen-3-quad-core-7320u-8-gb-512-gb-ssd-windows-11-home-15-fc0026au-thin-light-laptop/p/itm4e6d85f618393?pid=COMGZNSBMUR7S8WY&lid=LSTCOMGZNSBMUR7S8WYDJAIHL&marketplace=FLIPKART&q=HP+15%2C+AMD+Ryzen+3+7320U+%288GB+LPDDR5%2C+512GB+SSD%29+FHD%2C+Anti-Glare%2C+Micro-Edge%2C+15.6%2F39.6cm%2C+Win+11%2C+Office+21%2C+Silver%2C+1.59kg%2C+fc0154AU%2C+AMD+Radeon+Graphics%2C+1080p+FHD+Camera+Laptop&store=6bo%2Fb5g&srno=s_1_2&otracker=search&otracker1=search&fm=Search&iid=84e26705-1441-4678-a2b9-74a72626490a.COMGZNSBMUR7S8WY.SEARCH&ppt=pp&ppn=pp&ssid=wilqxlc2a80000001757138736445&qH=fcd7f000930bf35e', rating: 4.2 },
+      meesho: { available: false, message: 'Product not available on Meesho' }
     }
   },
   {
     id: '4',
-    name: 'Smart Watch Fitness Tracker',
-    description: 'Heart rate monitor, GPS, waterproof fitness smartwatch',
+    name: 'Smart Watch ',
+    description: 'Noise Icon 3 1.91" Display, Bluetooth Calling, Metallic Finish Smart Watch, Voice Assistant, 7 Days Battery, 100 Sports Modes, Smartwatch for Men and Women',
     image: 'https://images.pexels.com/photos/437037/pexels-photo-437037.jpeg',
     category: 'Electronics',
     keywords: ['smartwatch', 'fitness', 'tracker', 'health'],
     platforms: {
-      amazon: { price: 8999, available: true, url: 'https://amazon.in/smartwatch', rating: 4.3 },
-      flipkart: { price: 9499, available: true, url: 'https://flipkart.com/smartwatch', rating: 4.1 },
-      meesho: { price: 8499, available: true, url: 'https://meesho.com/smartwatch', rating: 4.0 }
+      amazon: { price: 1399, available: true, url: 'https://www.amazon.in/Noise-ColorFit-Icon-3/dp/B0C2F9VGZ5/ref=sr_1_5?crid=188HKWJV5NC3N&dib=eyJ2IjoiMSJ9.Njd4nXciNiC8Fa1LzRiv_SEy-Dv7HfEZsDeVBqkWyPjwYFDJR2K-LxmSB7q23Shnzi-DOISWhj8xW8Ff9GNO3GscZIc22FykPLvRjZlFCo-_oSFcPjwfRFrPXMZ51PtSIMiaxFWWOB6GAcGhDi9Kz5Nag4c1xBYVD_zlxm68YzaG7RJrSpV4C2yvDrhwIpHDw5IH6Y-rSTL2je3TGTqtajB0Cpl_J-fdRhWAoMYRBHyD9PFd6CdsNKJRaK9dUgpeu1X--Jqc5leisnLNdQ1Hw7lLbJhulhmmQOHzO2lJM4w.FkZv4XABlHMwdOHdC8XTotx5Du0CZNCECAD5cljHp4I&dib_tag=se&keywords=Noise%2BColorfit%2BIcon%2B2%2B1.8%27%27%2BDisplay%2Bwith%2BBluetooth%2BCalling%2C%2BAI%2BVoice%2BAssistant%2BSmartwatch%2B(Jet%2BBlack%2BStrap%2C%2BRegular)&nsdOptOutParam=true&qid=1757139034&s=electronics&sprefix=noise%2Bcolorfit%2Bicon%2B2%2B1.8%27%27%2Bdisplay%2Bwith%2Bbluetooth%2Bcalling%2C%2Bai%2Bvoice%2Bassistant%2Bsmartwatch%2Bjet%2Bblack%2Bstrap%2C%2Bregular%2B%2Celectronics%2C395&sr=1-5&th=1', rating: 3.2 },
+      flipkart: { price: 1399, available: true, url: 'https://www.flipkart.com/noise-colorfit-icon-2-1-8-display-bluetooth-calling-ai-voice-assistant-smartwatch/p/itmd4cd819eadb9f?pid=SMWGEH7VGYMGCP3V&lid=LSTSMWGEH7VGYMGCP3VXIJHDY&marketplace=FLIPKART&q=smartwatch&store=ajy%2Fbuh&spotlightTagId=default_BestsellerId_ajy%2Fbuh&srno=s_1_9&otracker=search&otracker1=search&fm=Search&iid=1cfc3223-2be9-4710-960a-03f8a5c5a08e.SMWGEH7VGYMGCP3V.SEARCH&ppt=sp&ppn=sp&qH=adc5bc5b72db9fa3', rating: 4.1 },
+      meesho: { available: false, message: 'Product not available on Meesho' }
     }
   },
 
@@ -108,9 +108,9 @@ export const mockProducts: Product[] = [
     category: 'Fashion',
     keywords: ['tshirt', 'cotton', 'casual', 'clothing'],
     platforms: {
-      amazon: { price: 599, available: true, url: 'https://amazon.in/tshirt', rating: 4.1 },
-      flipkart: { price: 649, available: true, url: 'https://flipkart.com/tshirt', rating: 4.0 },
-      meesho: { price: 499, available: true, url: 'https://meesho.com/tshirt', rating: 3.9 }
+      amazon: { price: 599, available: true, url: 'https://www.amazon.in/s?k=cotton+t+shirt+men', rating: 4.1 },
+      flipkart: { price: 649, available: true, url: 'https://www.flipkart.com/search?q=cotton%20t%20shirt%20men&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=offt', rating: 4.0 },
+      meesho: { price: 499, available: true, url: 'https://www.meesho.com/search?q=cotton%20t%20shirt%20men&searchType=manual&searchIdentifier=text_search', rating: 3.9 }
     }
   },
   {
@@ -121,9 +121,9 @@ export const mockProducts: Product[] = [
     category: 'Fashion',
     keywords: ['jeans', 'denim', 'pants', 'casual'],
     platforms: {
-      amazon: { price: 1299, available: true, url: 'https://amazon.in/jeans', rating: 4.2 },
-      flipkart: { price: 1399, available: true, url: 'https://flipkart.com/jeans', rating: 4.1 },
-      meesho: { price: 1199, available: true, url: 'https://meesho.com/jeans', rating: 4.0 }
+      amazon: { price: 1299, available: true, url: 'https://www.amazon.in/s?k=denim+jeans+for+men&crid=2NJ780KUSBPKX&sprefix=%2Caps%2C434&ref=nb_sb_noss_2', rating: 4.2 },
+      flipkart: { price: 1399, available: true, url: 'https://www.flipkart.com/search?q=denim+jeans+for+men&sid=clo%2Cvua%2Ck58%2Ci51&as=on&as-show=on&otracker=AS_QueryStore_OrganicAutoSuggest_1_15_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_15_na_na_na&as-pos=1&as-type=RECENT&suggestionId=denim+jeans+for+men%7CMen%27s+Jeans&requestId=8bd9bdd6-aca3-47cf-8ad1-782e69a642ff&as-searchtext=denim%20jeans%20men', rating: 4.1 },
+      meesho: { price: 1199, available: true, url: 'https://www.meesho.com/search?q=denim%20jeans%20for%20men&searchType=manual&searchIdentifier=text_search', rating: 4.0 }
     }
   },
   {
@@ -134,9 +134,9 @@ export const mockProducts: Product[] = [
     category: 'Fashion',
     keywords: ['shoes', 'running', 'sports', 'footwear'],
     platforms: {
-      amazon: { price: 2499, available: true, url: 'https://amazon.in/shoes', rating: 4.4 },
-      flipkart: { price: 2699, available: true, url: 'https://flipkart.com/shoes', rating: 4.2 },
-      meesho: { price: 2299, available: true, url: 'https://meesho.com/shoes', rating: 4.1 }
+      amazon: { price: 2499, available: true, url: 'https://www.amazon.in/s?k=running+shoes+for+man&crid=B7M0V20XSQEO&sprefix=runni%2Caps%2C391&ref=nb_sb_ss_mvt-t11-ranker_1_5', rating: 4.4 },
+      flipkart: { price: 2699, available: true, url: 'https://www.flipkart.com/search?q=running%20shoes%20for%20man&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off', rating: 4.2 },
+      meesho: { price: 2299, available: true, url: 'https://www.meesho.com/search?q=running%20shoes%20for%20man&searchType=manual&searchIdentifier=text_search', rating: 4.1 }
     }
   },
   {
@@ -147,9 +147,9 @@ export const mockProducts: Product[] = [
     category: 'Fashion',
     keywords: ['handbag', 'leather', 'bag', 'accessories'],
     platforms: {
-      amazon: { price: 3999, available: true, url: 'https://amazon.in/handbag', rating: 4.3 },
-      flipkart: { price: 4299, available: true, url: 'https://flipkart.com/handbag', rating: 4.1 },
-      meesho: { price: 3699, available: true, url: 'https://meesho.com/handbag', rating: 4.0 }
+      amazon: { price: 3999, available: true, url: 'https://www.amazon.in/s?k=leather+handbags+for+men&crid=3ZSP6WS8MJYE&sprefix=leather+handbags+for+women%2Caps%2C427&ref=nb_sb_ss_saint-en-refocus-candidate_1_26', rating: 4.3 },
+      flipkart: { price: 4299, available: true, url: 'https://www.flipkart.com/search?q=leather%20handbags%20for%20men&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off', rating: 4.1 },
+      meesho: { price: 3699, available: true, url: 'https://www.meesho.com/search?q=leather%20handbags%20for%20men&searchType=manual&searchIdentifier=text_search', rating: 4.0 }
     }
   },
 
