@@ -54,9 +54,9 @@ export const mockProducts: Product[] = [
     category: 'Electronics',
     keywords: ['headphones', 'wireless', 'bluetooth', 'audio'],
     platforms: {
-      amazon: { price: 2999, available: true, url: 'https://amazon.in/headphones', rating: 4.5 },
-      flipkart: { price: 3199, available: true, url: 'https://flipkart.com/headphones', rating: 4.3 },
-      meesho: { price: 2799, available: true, url: 'https://meesho.com/headphones', rating: 4.2 }
+      amazon: { price: 1699, available: true, url: 'https://www.amazon.in/boAt-Rockerz-480-Bluetooth-Headphones/dp/B0DGTTKCJX/ref=sxin_15_pa_sp_search_thematic_sspa?content-id=amzn1.sym.739e670d-dfb3-4be0-9815-d8c5c0372e07%3Aamzn1.sym.739e670d-dfb3-4be0-9815-d8c5c0372e07&crid=19F8ZJF2QVW86&cv_ct_cx=headphones%2Bbluetooth%2Bwireless&keywords=headphones%2Bbluetooth%2Bwireless&pd_rd_i=B0DGTSRX3R&pd_rd_r=3442a7c8-4653-4542-b236-fc0be748b739&pd_rd_w=gYd1G&pd_rd_wg=6vesW&pf_rd_p=739e670d-dfb3-4be0-9815-d8c5c0372e07&pf_rd_r=532C36ZWVS7EQCDNZNZD&qid=1757136289&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=head%2Caps%2C403&sr=1-1-66673dcf-083f-43ba-b782-d4a436cc5cfb-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM&th=1', rating: 4.1 },
+      flipkart: { price: 1699, available: true, url: 'https://www.flipkart.com/boat-rockerz-480-w-beast-mode-rgb-leds-6-light-modes-60hrs-playback-enx-tech-bluetooth/p/itm7362b8da6ff74?pid=ACCH44E526JMXHZN&lid=LSTACCH44E526JMXHZN5SOCIA&marketplace=FLIPKART&q=boAt+Rockerz+480+W%2FRGB+LEDs%2C+6+Light+Modes%2C+40Mm+Drivers%2C+Beast+Mode%2C+60Hrs+Playback%2C+Enx+Tech%2C+BT+V5.3%2C+Adaptive+Fit+%26+Easy+Access+Controls%2C+Bluetooth+Over+Ear+Headphones%28Black+Sabre%29&store=0pm%2Ffcn%2F821&spotlightTagId=default_BestsellerId_0pm%2Ffcn%2F821&srno=s_1_1&otracker=search&otracker1=search&fm=Search&iid=c30448a0-ebae-438f-a386-d0145497d959.ACCH44E526JMXHZN.SEARCH&ppt=sp&ppn=sp&ssid=c6vesgwzwg0000001757136457655&qH=b8ef5c033205f099', rating: 4.1 },
+      meesho: { available: false, message: 'Product not available on Meesho' }
     }
   },
   {
