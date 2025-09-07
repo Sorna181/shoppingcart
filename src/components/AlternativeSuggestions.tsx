@@ -32,7 +32,7 @@ export const AlternativeSuggestions: React.FC<AlternativeSuggestionsProps> = ({
           const savingsPercentage = calculateSavingsPercentage(lowest.price, originalLowest.price);
 
           const handleAddToCart = () => {
-            const platformData = product.platforms[lowest.platform as keyof typeof product.platforms];
+            const platformData = product.platforms[lowest.platform as 'amazon' | 'flipkart' | 'meesho'];
             if (platformData) {
               const cartItem: CartItem = {
                 productId: product.id,
@@ -88,7 +88,7 @@ export const AlternativeSuggestions: React.FC<AlternativeSuggestionsProps> = ({
                   Add Alternative
                 </button>
                 <a
-                  href={product.platforms[lowest.platform as keyof typeof product.platforms]?.url}
+                  href={platformData?.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors duration-200"

@@ -19,7 +19,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
   const [quantity, setQuantity] = React.useState(1);
   const platformData = product.platforms[platform];
 
-  if (!platformData || !platformData.available) {
+  if (!platformData?.available) {
     return (
       <div className="bg-white rounded-lg shadow-md p-4 opacity-50">
         <div className="text-center text-gray-500">

@@ -51,8 +51,7 @@ export const mockProducts: Product[] = [
     keywords: ['headphones', 'wireless', 'bluetooth', 'audio'],
     platforms: {
       amazon: { price: 1699, available: true, url: 'https://www.amazon.in/boAt-Rockerz-480-Bluetooth-Headphones/dp/B0DGTTKCJX/ref=sxin_15_pa_sp_search_thematic_sspa?content-id=amzn1.sym.739e670d-dfb3-4be0-9815-d8c5c0372e07%3Aamzn1.sym.739e670d-dfb3-4be0-9815-d8c5c0372e07&crid=19F8ZJF2QVW86&cv_ct_cx=headphones%2Bbluetooth%2Bwireless&keywords=headphones%2Bbluetooth%2Bwireless&pd_rd_i=B0DGTSRX3R&pd_rd_r=3442a7c8-4653-4542-b236-fc0be748b739&pd_rd_w=gYd1G&pd_rd_wg=6vesW&pf_rd_p=739e670d-dfb3-4be0-9815-d8c5c0372e07&pf_rd_r=532C36ZWVS7EQCDNZNZD&qid=1757136289&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=head%2Caps%2C403&sr=1-1-66673dcf-083f-43ba-b782-d4a436cc5cfb-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM&th=1', rating: 4.1 },
-      flipkart: { price: 1699, available: true, url: 'https://www.flipkart.com/boat-rockerz-480-w-beast-mode-rgb-leds-6-light-modes-60hrs-playback-enx-tech-bluetooth/p/itm7362b8da6ff74?pid=ACCH44E526JMXHZN&lid=LSTACCH44E526JMXHZN5SOCIA&marketplace=FLIPKART&q=boAt+Rockerz+480+W%2FRGB+LEDs%2C+6+Light+Modes%2C+40Mm+Drivers%2C+Beast+Mode%2C+60Hrs+Playback%2C+Enx+Tech%2C+BT+V5.3%2C+Adaptive+Fit+%26+Easy+Access+Controls%2C+Bluetooth+Over+Ear+Headphones%28Black+Sabre%29&store=0pm%2Ffcn%2F821&spotlightTagId=default_BestsellerId_0pm%2Ffcn%2F821&srno=s_1_1&otracker=search&otracker1=search&fm=Search&iid=c30448a0-ebae-438f-a386-d0145497d959.ACCH44E526JMXHZN.SEARCH&ppt=sp&ppn=sp&ssid=c6vesgwzwg0000001757136457655&qH=b8ef5c033205f099', rating: 4.1 },
-      meesho: { available: false, message: 'Product not available on Meesho' }
+      flipkart: { price: 1699, available: true, url: 'https://www.flipkart.com/boat-rockerz-480-w-beast-mode-rgb-leds-6-light-modes-60hrs-playback-enx-tech-bluetooth/p/itm7362b8da6ff74?pid=ACCH44E526JMXHZN&lid=LSTACCH44E526JMXHZN5SOCIA&marketplace=FLIPKART&q=boAt+Rockerz+480+W%2FRGB+LEDs%2C+6+Light+Modes%2C+40Mm+Drivers%2C+Beast+Mode%2C+60Hrs+Playback%2C+Enx+Tech%2C+BT+V5.3%2C+Adaptive+Fit+%26+Easy+Access+Controls%2C+Bluetooth+Over+Ear+Headphones%28Black+Sabre%29&store=0pm%2Ffcn%2F821&spotlightTagId=default_BestsellerId_0pm%2Ffcn%2F821&srno=s_1_1&otracker=search&otracker1=search&fm=Search&iid=c30448a0-ebae-438f-a386-d0145497d959.ACCH44E526JMXHZN.SEARCH&ppt=sp&ppn=sp&ssid=c6vesgwzwg0000001757136457655&qH=b8ef5c033205f099', rating: 4.1 }
     }
   },
   {
@@ -64,8 +63,7 @@ export const mockProducts: Product[] = [
     keywords: ['smartphone', 'mobile', 'phone', 'android'],
     platforms: {
       amazon: { price: 9299, available: true, url: 'https://www.amazon.in/Redmi-A4-5G-Storage-Charging/dp/B0DLW4QD72/ref=sr_1_2_sspa?crid=145PZFQBQMFH7&dib=eyJ2IjoiMSJ9.sSLntKEKo9_cOUAOfJk81KVw5p9N3_-o3VZ00qIZYUvfMrCvNH23sm8sxa2Fr4s12b8UY0yzIEShAxFCRMsKg9jbpL1vuNz9Yg85Nyc_hmTDIJcNEAUqLZtQZi81gzb9qq11F2CByN3ydeNl70dfQ2V6y5dNP2V_GQZyR6D_KCqUZhVcUt1RGLGMQO4ME8jV0W3WgFL7El8bBtExsMFdYlEIRNuWn4PH1xkNlE_WTax621-ErJ1fFGEPHQLEOSBE3Btt4u67jwab2p4hqN8Go-FMhZGMt5e0kp8omY86vG4.G1HAJm_UKFccX9CjE2QPb66rsKzDene7OLLeacVYTaI&dib_tag=se&keywords=REDMI%2BA4&qid=1757138485&s=electronics&sprefix=redmi%2Ba4%2Celectronics%2C359&sr=1-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1', rating: 3.9 },
-      flipkart: { price: 9348, available: true, url: 'https://www.flipkart.com/redmi-a4-sparkle-purple-128-gb/p/itm195b57bdc2f83?pid=MOBH6YHDGD57AVHX&lid=LSTMOBH6YHDGD57AVHXS7TM33&marketplace=FLIPKART&q=Redmi+A4+5G+%28Sparkle+Purple%2C+4GB+RAM%2C+128GB+Storage%29+%7C+Global+Debut+SD+4s+Gen+2+%7C+Segment+Largest+6.88in+120Hz+%7C+50MP+Dual+Camera+%7C+18W+Fast+Charging&store=tyy%2F4io&srno=s_1_1&otracker=search&otracker1=search&fm=Search&iid=f1c4a1fc-1a96-4dd5-b2ca-a3635eb4fbd8.MOBH6YHDGD57AVHX.SEARCH&ppt=pp&ppn=pp&ssid=q2ezfgz3v40000001757138184513&qH=1ed3099a55ca19d2', rating: 4.3 },
-      meesho: { available: false, message: 'Product not available on Meesho' }
+      flipkart: { price: 9348, available: true, url: 'https://www.flipkart.com/redmi-a4-sparkle-purple-128-gb/p/itm195b57bdc2f83?pid=MOBH6YHDGD57AVHX&lid=LSTMOBH6YHDGD57AVHXS7TM33&marketplace=FLIPKART&q=Redmi+A4+5G+%28Sparkle+Purple%2C+4GB+RAM%2C+128GB+Storage%29+%7C+Global+Debut+SD+4s+Gen+2+%7C+Segment+Largest+6.88in+120Hz+%7C+50MP+Dual+Camera+%7C+18W+Fast+Charging&store=tyy%2F4io&srno=s_1_1&otracker=search&otracker1=search&fm=Search&iid=f1c4a1fc-1a96-4dd5-b2ca-a3635eb4fbd8.MOBH6YHDGD57AVHX.SEARCH&ppt=pp&ppn=pp&ssid=q2ezfgz3v40000001757138184513&qH=1ed3099a55ca19d2', rating: 4.3 }
     }
   },
   {
@@ -77,8 +75,7 @@ export const mockProducts: Product[] = [
     keywords: ['laptop', 'computer', 'intel', 'windows'],
     platforms: {
       amazon: { price: 30880, available: true, url: 'https://www.amazon.in/HP-Laptop-15-6-inch-Graphics-fc0154AU/dp/B0D3HG5CMG/ref=sr_1_3?crid=1OA8L34TBIASN&dib=eyJ2IjoiMSJ9.vTT5ocH1UNCusAvvlNprLt6exRyfR8SNYkJYwELnozA8yvKjb7F2dBSgwLUd_xm2-mCy1Q6hsTT7UCOEMhcUb-YknfRD7lSazhzR60ralxsWT3aZsm21BkhW2KUXPnXg3Qt859yATh3pCWuAno6lPPNYLK8_WaJmkCcK_kp7B2lS_DZy5GIuCuDyECDV_NJw-ZIUkOfvv4yJhGhtd_LVlQWBlirj_L9APjRagvA0Hr1AZ2j1Wu18s1cVnM7NYAVzfwqEq4sDgv238KExhGPz9aaOS9pRsDbvcsF6xfr7neU.8d62e8YlpMEzVa3sZIVpUMjH_hUj4mXxnp8OQk0zPco&dib_tag=se&keywords=laptop&qid=1757138690&s=electronics&sprefix=laptop%2Celectronics%2C403&sr=1-3&th=1', rating: 4.0 },
-      flipkart: { price: 31299, available: true, url: 'https://www.flipkart.com/hp-15s-backlit-keyboard-amd-ryzen-3-quad-core-7320u-8-gb-512-gb-ssd-windows-11-home-15-fc0026au-thin-light-laptop/p/itm4e6d85f618393?pid=COMGZNSBMUR7S8WY&lid=LSTCOMGZNSBMUR7S8WYDJAIHL&marketplace=FLIPKART&q=HP+15%2C+AMD+Ryzen+3+7320U+%288GB+LPDDR5%2C+512GB+SSD%29+FHD%2C+Anti-Glare%2C+Micro-Edge%2C+15.6%2F39.6cm%2C+Win+11%2C+Office+21%2C+Silver%2C+1.59kg%2C+fc0154AU%2C+AMD+Radeon+Graphics%2C+1080p+FHD+Camera+Laptop&store=6bo%2Fb5g&srno=s_1_2&otracker=search&otracker1=search&fm=Search&iid=84e26705-1441-4678-a2b9-74a72626490a.COMGZNSBMUR7S8WY.SEARCH&ppt=pp&ppn=pp&ssid=wilqxlc2a80000001757138736445&qH=fcd7f000930bf35e', rating: 4.2 },
-      meesho: { available: false, message: 'Product not available on Meesho' }
+      flipkart: { price: 31299, available: true, url: 'https://www.flipkart.com/hp-15s-backlit-keyboard-amd-ryzen-3-quad-core-7320u-8-gb-512-gb-ssd-windows-11-home-15-fc0026au-thin-light-laptop/p/itm4e6d85f618393?pid=COMGZNSBMUR7S8WY&lid=LSTCOMGZNSBMUR7S8WYDJAIHL&marketplace=FLIPKART&q=HP+15%2C+AMD+Ryzen+3+7320U+%288GB+LPDDR5%2C+512GB+SSD%29+FHD%2C+Anti-Glare%2C+Micro-Edge%2C+15.6%2F39.6cm%2C+Win+11%2C+Office+21%2C+Silver%2C+1.59kg%2C+fc0154AU%2C+AMD+Radeon+Graphics%2C+1080p+FHD+Camera+Laptop&store=6bo%2Fb5g&srno=s_1_2&otracker=search&otracker1=search&fm=Search&iid=84e26705-1441-4678-a2b9-74a72626490a.COMGZNSBMUR7S8WY.SEARCH&ppt=pp&ppn=pp&ssid=wilqxlc2a80000001757138736445&qH=fcd7f000930bf35e', rating: 4.2 }
     }
   },
   {
@@ -90,8 +87,7 @@ export const mockProducts: Product[] = [
     keywords: ['smartwatch', 'fitness', 'tracker', 'health'],
     platforms: {
       amazon: { price: 1399, available: true, url: 'https://www.amazon.in/Noise-ColorFit-Icon-3/dp/B0C2F9VGZ5/ref=sr_1_5?crid=188HKWJV5NC3N&dib=eyJ2IjoiMSJ9.Njd4nXciNiC8Fa1LzRiv_SEy-Dv7HfEZsDeVBqkWyPjwYFDJR2K-LxmSB7q23Shnzi-DOISWhj8xW8Ff9GNO3GscZIc22FykPLvRjZlFCo-_oSFcPjwfRFrPXMZ51PtSIMiaxFWWOB6GAcGhDi9Kz5Nag4c1xBYVD_zlxm68YzaG7RJrSpV4C2yvDrhwIpHDw5IH6Y-rSTL2je3TGTqtajB0Cpl_J-fdRhWAoMYRBHyD9PFd6CdsNKJRaK9dUgpeu1X--Jqc5leisnLNdQ1Hw7lLbJhulhmmQOHzO2lJM4w.FkZv4XABlHMwdOHdC8XTotx5Du0CZNCECAD5cljHp4I&dib_tag=se&keywords=Noise%2BColorfit%2BIcon%2B2%2B1.8%27%27%2BDisplay%2Bwith%2BBluetooth%2BCalling%2C%2BAI%2BVoice%2BAssistant%2BSmartwatch%2B(Jet%2BBlack%2BStrap%2C%2BRegular)&nsdOptOutParam=true&qid=1757139034&s=electronics&sprefix=noise%2Bcolorfit%2Bicon%2B2%2B1.8%27%27%2Bdisplay%2Bwith%2Bbluetooth%2Bcalling%2C%2Bai%2Bvoice%2Bassistant%2Bsmartwatch%2Bjet%2Bblack%2Bstrap%2C%2Bregular%2B%2Celectronics%2C395&sr=1-5&th=1', rating: 3.2 },
-      flipkart: { price: 1399, available: true, url: 'https://www.flipkart.com/noise-colorfit-icon-2-1-8-display-bluetooth-calling-ai-voice-assistant-smartwatch/p/itmd4cd819eadb9f?pid=SMWGEH7VGYMGCP3V&lid=LSTSMWGEH7VGYMGCP3VXIJHDY&marketplace=FLIPKART&q=smartwatch&store=ajy%2Fbuh&spotlightTagId=default_BestsellerId_ajy%2Fbuh&srno=s_1_9&otracker=search&otracker1=search&fm=Search&iid=1cfc3223-2be9-4710-960a-03f8a5c5a08e.SMWGEH7VGYMGCP3V.SEARCH&ppt=sp&ppn=sp&qH=adc5bc5b72db9fa3', rating: 4.1 },
-      meesho: { available: false, message: 'Product not available on Meesho' }
+      flipkart: { price: 1399, available: true, url: 'https://www.flipkart.com/noise-colorfit-icon-2-1-8-display-bluetooth-calling-ai-voice-assistant-smartwatch/p/itmd4cd819eadb9f?pid=SMWGEH7VGYMGCP3V&lid=LSTSMWGEH7VGYMGCP3VXIJHDY&marketplace=FLIPKART&q=smartwatch&store=ajy%2Fbuh&spotlightTagId=default_BestsellerId_ajy%2Fbuh&srno=s_1_9&otracker=search&otracker1=search&fm=Search&iid=1cfc3223-2be9-4710-960a-03f8a5c5a08e.SMWGEH7VGYMGCP3V.SEARCH&ppt=sp&ppn=sp&qH=adc5bc5b72db9fa3', rating: 4.1 }
     }
   },
 
@@ -317,7 +313,7 @@ export const mockProducts: Product[] = [
     id: '21',
     name: 'Bare Anatomy Anti Dandruff Shampoo',
     description: 'Reduces Up to 100% Dandruff and Strengthens Hair | Derma Approved Shampoo with Salicylic Acid & Biotin | Helps Remove Flakes and Itching | Shampoo For All Hair types | For Women And Men',
-    image: 'https://i.postimg.cc/0QzWS3Ry/Screenshot-2025-09-07-185956.png',
+    image: 'https://images.pexels.com/photos/3735657/pexels-photo-3735657.jpeg',
     category: 'Personal Care',
     keywords: ['shampoo', 'anti-dandruff', 'hair care', 'zinc pyrithione'],
     platforms: {
@@ -330,7 +326,7 @@ export const mockProducts: Product[] = [
     id: '22',
     name: 'Dove Moisturizing Body Soap',
     description: 'Nourished Skin with ¼ Moisturising Cream and Nutrient Serum',
-    image: 'https://i.postimg.cc/YS5gXyL9/Screenshot-2025-09-07-190752.png',
+    image: 'https://images.pexels.com/photos/4465831/pexels-photo-4465831.jpeg',
     category: 'Personal Care',
     keywords: ['soap', 'moisturizing', 'glycerin', 'aloe vera', 'body care'],
     platforms: {
@@ -343,20 +339,19 @@ export const mockProducts: Product[] = [
     id: '23',
     name: 'Deconstruct Vitamin C Face Serum',
     description: '10% Non-irritating Vitamin C Face Serum For Glowing Skin | Highly Stable Vitamin C Face Serum For Women and Men | Beginner Friendly ',
-    image: 'https://i.postimg.cc/JzBzT7NN/Screenshot-2025-09-07-191020.png',
+    image: 'https://images.pexels.com/photos/7755515/pexels-photo-7755515.jpeg',
     category: 'Personal Care',
     keywords: ['face serum', 'vitamin c', 'niacinamide', 'brightening', 'skincare'],
     platforms: {
       amazon: { price: 278, available: true, url: 'https://www.amazon.in/Deconstruct-Non-Irritating-Non-Sticky-Sensitive-Beginner-Friendly/dp/B0DWT2XL34/ref=sr_1_3_sspa?crid=Z6FB91G4X06P&dib=eyJ2IjoiMSJ9.pUBS0T_PHbz3wEuz702tXpwBkHRHxL-Ko1Gxye96RiCaaWASwrbNVZa9j6fI8BkTLeOq1bgvoHE8LxG7q2uwrvLqX2RUsQVCaC3LPYeweqTdHweySCKCRZaDgf7ndtx9Z_JQZJ7IoegRY4XY6a4FklnmeWP0K5qww_I4I5jvKN2aQTk2S_gMn-nGlbG0w3w6kxPXpv3EpG4YhzsJlm7-dIiNR8-Qf6Q1bsEtYUcDZuOlUM4BppTM1A4w-dFVEC2MNQchzbfC4mfQALK5yP0QJxPeENWhSrJk5xIXgxjJyE8.7qaMFM3Heuzb0qDSSNnqfMjqeujxMkT22LDNJJpJ9-w&dib_tag=se&keywords=Vitamin%2BC%2BFace%2BSerum&qid=1757251340&sprefix=%2Caps%2C410&sr=8-3-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1', rating: 4.0 },
-      flipkart: { price: 279, available: true, url: 'https://www.amazon.in/Deconstruct-Non-Irritating-Non-Sticky-Sensitive-Beginner-Friendly/dp/B0DWT2XL34/ref=sr_1_3_sspa?crid=Z6FB91G4X06P&dib=eyJ2IjoiMSJ9.pUBS0T_PHbz3wEuz702tXpwBkHRHxL-Ko1Gxye96RiCaaWASwrbNVZa9j6fI8BkTLeOq1bgvoHE8LxG7q2uwrvLqX2RUsQVCaC3LPYeweqTdHweySCKCRZaDgf7ndtx9Z_JQZJ7IoegRY4XY6a4FklnmeWP0K5qww_I4I5jvKN2aQTk2S_gMn-nGlbG0w3w6kxPXpv3EpG4YhzsJlm7-dIiNR8-Qf6Q1bsEtYUcDZuOlUM4BppTM1A4w-dFVEC2MNQchzbfC4mfQALK5yP0QJxPeENWhSrJk5xIXgxjJyE8.7qaMFM3Heuzb0qDSSNnqfMjqeujxMkT22LDNJJpJ9-w&dib_tag=se&keywords=Vitamin%2BC%2BFace%2BSerum&qid=1757251340&sprefix=%2Caps%2C410&sr=8-3-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1', rating: 4.1 },
-      meesho: { available: false, message: 'Product not available on Meesho' }
+      flipkart: { price: 279, available: true, url: 'https://www.flipkart.com/deconstruct-vitamin-c-face-serum-10-non-irritating-non-sticky-sensitive-beginner-friendly/p/itm123456789', rating: 4.1 }
     }
   },
   {
     id: '24',
     name: 'The Derma Co Sunscreen',
     description: 'Broad spectrum sunscreen with SPF 50+, water-resistant and non-greasy formula',
-    image: 'https://i.postimg.cc/7ZBjTSGX/Screenshot-2025-09-07-191244.png',
+    image: 'https://images.pexels.com/photos/4465124/pexels-photo-4465124.jpeg',
     category: 'Personal Care',
     keywords: ['sunscreen', 'spf 50', 'broad spectrum', 'water resistant', 'sun protection'],
     platforms: {
