@@ -37,10 +37,6 @@ export const categories = [
   'Sports',
   'Books',
   'Toys & Games',
-  'Automotive',
-  'Health & Wellness',
-  'Jewelry',
-  'Pet Supplies',
   'Personal Care'
 ];
 
@@ -210,54 +206,54 @@ export const mockProducts: Product[] = [
   // Sports
   {
     id: '13',
-    name: 'Yoga Mat Premium',
+    name: 'Yoga Mat',
     description: '6mm thick anti-slip yoga mat with carrying strap',
     image: 'https://images.pexels.com/photos/3822906/pexels-photo-3822906.jpeg',
     category: 'Sports',
     keywords: ['yoga', 'mat', 'exercise', 'fitness'],
     platforms: {
-      amazon: { price: 1299, available: true, url: 'https://amazon.in/yoga-mat', rating: 4.3 },
-      flipkart: { price: 1399, available: true, url: 'https://flipkart.com/yoga-mat', rating: 4.1 },
-      meesho: { price: 1199, available: true, url: 'https://meesho.com/yoga-mat', rating: 4.0 }
+      amazon: { price: 1299, available: true, url: 'https://www.amazon.in/s?k=yoga+mat&crid=15P3G5GK0V6QY&sprefix=yoga+mat+%2Caps%2C345&ref=nb_sb_noss_2', rating: 4.3 },
+      flipkart: { price: 1399, available: true, url: 'https://www.flipkart.com/search?q=yoga%20mat%20&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off', rating: 4.1 },
+      meesho: { price: 1199, available: true, url: 'https://www.meesho.com/search?q=yoga%20mat%20&searchType=manual&searchIdentifier=text_search', rating: 4.0 }
     }
   },
   {
     id: '14',
-    name: 'Dumbbell Set Adjustable',
+    name: 'Dumbbell Set',
     description: 'Adjustable dumbbell set 10-50kg with secure locking',
     image: 'https://images.pexels.com/photos/416717/pexels-photo-416717.jpeg',
     category: 'Sports',
     keywords: ['dumbbell', 'weights', 'fitness', 'gym'],
     platforms: {
-      amazon: { price: 8999, available: true, url: 'https://amazon.in/dumbbell', rating: 4.4 },
-      flipkart: { price: 9499, available: true, url: 'https://flipkart.com/dumbbell', rating: 4.2 },
-      meesho: { price: 8499, available: true, url: 'https://meesho.com/dumbbell', rating: 4.1 }
+      amazon: { price: 8999, available: true, url: 'https://www.amazon.in/s?k=Dumbbell+Set&crid=2HWGPDF1UD3KX&sprefix=dumbbell+set%2Caps%2C339&ref=nb_sb_noss_2', rating: 4.4 },
+      flipkart: { price: 9499, available: true, url: 'https://www.flipkart.com/search?q=Dumbbell%20Set&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off', rating: 4.2 },
+      meesho: { price: 8499, available: true, url: 'https://www.meesho.com/search?q=Dumbbell%20Set&searchType=manual&searchIdentifier=text_search', rating: 4.1 }
     }
   },
   {
     id: '15',
-    name: 'Cricket Bat Professional',
+    name: 'Cricket Bat',
     description: 'Professional grade cricket bat made from English willow',
     image: 'https://images.pexels.com/photos/1661950/pexels-photo-1661950.jpeg',
     category: 'Sports',
     keywords: ['cricket', 'bat', 'sports', 'willow'],
     platforms: {
-      amazon: { price: 4999, available: true, url: 'https://amazon.in/cricket-bat', rating: 4.2 },
-      flipkart: { price: 5299, available: true, url: 'https://flipkart.com/cricket-bat', rating: 4.0 },
-      meesho: { price: 4699, available: true, url: 'https://meesho.com/cricket-bat', rating: 3.9 }
+      amazon: { price: 4999, available: true, url: 'https://www.amazon.in/s?k=Cricket+Bat&crid=2X175D5JVN29G&sprefix=cricket+bat%2Caps%2C334&ref=nb_sb_noss_2', rating: 4.2 },
+      flipkart: { price: 5299, available: true, url: 'https://www.flipkart.com/search?q=Cricket%20Bat&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off', rating: 4.0 },
+      meesho: { price: 4699, available: true, url: 'https://www.meesho.com/search?q=Cricket%20Bat&searchType=manual&searchIdentifier=text_search', rating: 3.9 }
     }
   },
   {
     id: '16',
-    name: 'Football Official Size',
-    description: 'FIFA approved official size 5 football with pump',
+    name: 'Football',
+    description: 'Rubber Professional Football [Size-5] | Hard Ground Foot-Ball | Ideal for Grass Ground & Artificial Turf | Training Foot Ball | Soccer Ball',
     image: 'https://images.pexels.com/photos/47730/the-ball-stadion-football-the-pitch-47730.jpeg',
     category: 'Sports',
     keywords: ['football', 'soccer', 'ball', 'sports'],
     platforms: {
-      amazon: { price: 1299, available: true, url: 'https://amazon.in/football', rating: 4.1 },
-      flipkart: { price: 1399, available: true, url: 'https://flipkart.com/football', rating: 3.9 },
-      meesho: { price: 1199, available: true, url: 'https://meesho.com/football', rating: 3.8 }
+      amazon: { price: 1299, available: true, url: 'https://www.amazon.in/s?k=football&crid=1E1P0EHVNBWHP&sprefix=football%2Caps%2C335&ref=nb_sb_noss_2', rating: 4.1 },
+      flipkart: { price: 1399, available: true, url: 'https://www.flipkart.com/search?q=football&sid=abc%2Cgxg%2Ceha&as=on&as-show=on&otracker=AS_QueryStore_OrganicAutoSuggest_1_3_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_3_na_na_na&as-pos=1&as-type=RECENT&suggestionId=football%7CFootballs&requestId=da1376fd-17fe-4193-bde5-f65172bbb4b6&as-backfill=on', rating: 3.9 },
+      meesho: { price: 1199, available: true, url: 'https://www.meesho.com/search?q=football&searchType=manual&searchIdentifier=text_search', rating: 3.8 }
     }
   },
 
@@ -270,9 +266,9 @@ export const mockProducts: Product[] = [
     category: 'Books',
     keywords: ['harry potter', 'books', 'series', 'fiction'],
     platforms: {
-      amazon: { price: 2499, available: true, url: 'https://amazon.in/harry-potter', rating: 4.8 },
-      flipkart: { price: 2699, available: true, url: 'https://flipkart.com/harry-potter', rating: 4.7 },
-      meesho: { price: 2199, available: true, url: 'https://meesho.com/harry-potter', rating: 4.6 }
+      amazon: { price: 2499, available: true, url: 'https://www.amazon.in/s?k=Harry+Potter+Complete+Book+Series&crid=2B68JYWLNVL5O&sprefix=harry+potter+complete+book+series%2Caps%2C319&ref=nb_sb_noss_2', rating: 4.8 },
+      flipkart: { price: 2699, available: true, url: 'https://www.flipkart.com/search?q=Harry%20Potter%20Complete%20Book%20Series&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off', rating: 4.7 },
+      meesho: { price: 2199, available: true, url: 'https://www.meesho.com/search?q=Harry%20Potter%20Complete%20Book%20Series&searchType=manual&searchIdentifier=text_search', rating: 4.6 }
     }
   },
   {
@@ -283,9 +279,9 @@ export const mockProducts: Product[] = [
     category: 'Books',
     keywords: ['alchemist', 'paulo coelho', 'fiction', 'bestseller'],
     platforms: {
-      amazon: { price: 299, available: true, url: 'https://amazon.in/alchemist', rating: 4.6 },
-      flipkart: { price: 319, available: true, url: 'https://flipkart.com/alchemist', rating: 4.5 },
-      meesho: { price: 259, available: true, url: 'https://meesho.com/alchemist', rating: 4.4 }
+      amazon: { price: 299, available: true, url: 'https://www.amazon.in/s?k=The+Alchemist+by+Paulo+Coelho&ref=nb_sb_noss', rating: 4.6 },
+      flipkart: { price: 319, available: true, url: 'https://www.flipkart.com/search?q=The%20Alchemist%20by%20Paulo%20Coelho&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off', rating: 4.5 },
+      meesho: { price: 259, available: true, url: 'https://www.meesho.com/search?q=The%20Alchemist%20by%20Paulo%20Coelho&searchType=manual&searchIdentifier=text_search', rating: 4.4 }
     }
   },
 
@@ -298,9 +294,9 @@ export const mockProducts: Product[] = [
     category: 'Toys & Games',
     keywords: ['lego', 'toys', 'creative', 'kids'],
     platforms: {
-      amazon: { price: 4999, available: true, url: 'https://amazon.in/lego', rating: 4.7 },
-      flipkart: { price: 5199, available: true, url: 'https://flipkart.com/lego', rating: 4.6 },
-      meesho: { price: 4599, available: true, url: 'https://meesho.com/lego', rating: 4.5 }
+      amazon: { price: 4999, available: true, url: 'https://www.amazon.in/s?k=LEGO+Classic+Creative+Bricks+Set&crid=3LK6LLFU3QMJF&sprefix=lego+classic+creative+bricks+set%2Caps%2C371&ref=nb_sb_noss_1', rating: 4.7 },
+      flipkart: { price: 5199, available: true, url: 'https://www.flipkart.com/search?q=LEGO%20Classic%20Creative%20Bricks%20Set&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off', rating: 4.6 },
+      meesho: { price: 4599, available: true, url: 'https://www.meesho.com/search?q=LEGO%20Classic%20Creative%20Bricks%20Set&searchType=manual&searchIdentifier=text_search', rating: 4.5 }
     }
   },
   {
@@ -311,201 +307,62 @@ export const mockProducts: Product[] = [
     category: 'Toys & Games',
     keywords: ['monopoly', 'board game', 'family', 'classic'],
     platforms: {
-      amazon: { price: 1999, available: true, url: 'https://amazon.in/monopoly', rating: 4.4 },
-      flipkart: { price: 2099, available: true, url: 'https://flipkart.com/monopoly', rating: 4.3 },
-      meesho: { price: 1799, available: true, url: 'https://meesho.com/monopoly', rating: 4.2 }
+      amazon: { price: 1999, available: true, url: 'https://www.amazon.in/s?k=Monopoly+Board+Game+Classic+Edition&crid=2URDDEUHSL079&sprefix=monopoly+board+game+classic+edition%2Caps%2C347&ref=nb_sb_noss', rating: 4.4 },
+      flipkart: { price: 2099, available: true, url: 'https://www.flipkart.com/search?q=Monopoly%20Board%20Game%20Classic%20Edition&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off', rating: 4.3 },
+      meesho: { price: 1799, available: true, url: 'https://www.meesho.com/search?q=Monopoly%20Board%20Game%20Classic%20Edition&searchType=manual&searchIdentifier=text_search', rating: 4.2 }
     }
   },
-
-  // Automotive
+  // Personal Care
   {
     id: '21',
-    name: 'Car Dashboard Camera HD 1080p',
-    description: 'Full HD recording dash cam with night vision and G-sensor',
-    image: 'https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg',
-    category: 'Automotive',
-    keywords: ['dashcam', 'car', 'camera', 'recording'],
+    name: 'Bare Anatomy Anti Dandruff Shampoo',
+    description: 'Reduces Up to 100% Dandruff and Strengthens Hair | Derma Approved Shampoo with Salicylic Acid & Biotin | Helps Remove Flakes and Itching | Shampoo For All Hair types | For Women And Men',
+    image: 'https://i.postimg.cc/0QzWS3Ry/Screenshot-2025-09-07-185956.png',
+    category: 'Personal Care',
+    keywords: ['shampoo', 'anti-dandruff', 'hair care', 'zinc pyrithione'],
     platforms: {
-      amazon: { price: 3999, available: true, url: 'https://amazon.in/dashcam', rating: 4.2 },
-      flipkart: { price: 4199, available: true, url: 'https://flipkart.com/dashcam', rating: 4.0 },
-      meesho: { price: 3599, available: true, url: 'https://meesho.com/dashcam', rating: 3.9 }
+      amazon: { price: 219, available: true, url: 'https://www.amazon.in/Bare-Anatomy-Dandruff-Strengthens-Salicylic/dp/B0F5BLYYCN/ref=sr_1_1_sspa?crid=AQVLXT5DMN33&dib=eyJ2IjoiMSJ9.mk11LMOH4jHbkPAQ5JIN1AUSXaq1-UsayRkSuN-kiybMDhUIXFpIlpEBOKD0-l-0zBVSXYQNEzcF8k2JFwDZyQqACFVBXmt3H0FqjNg0_eZ8WKY4wd7ZgvcfuJJDNy9tv3fZHFZrBzsifT1Fk16MZ0bIa4RMNAZP6LnIEdMrlMPrVWWdvSvs1dBYVS1pn94MvvKIE_cgpIX-NPCK8nHNnUfEGGCOx5gkA-SQnbU6amB-XOKwXQvMISrrYV7zh5lmShf6W8PZtjsUi-OToq60yBs-bD1JMeKXzAJM3ms4r2M.cHzV9YpdawJ-2ZO6Q5184s8iqk_-5frQ-bOsGryRtpA&dib_tag=se&keywords=Anti-Dandruff%2BShampoo&qid=1757250398&sprefix=anti-dandruff%2Bshampoo%2Caps%2C318&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1', rating: 4.1 },
+      flipkart: { price: 219, available: true, url: 'https://www.flipkart.com/bare-anatomy-anti-dandruff-shampoo-upto-100-dandruff-reduction-salicylic-acid-biotin/p/itmac8e1aac3e78f?pid=SMPGWU5ZTRVGZ4PC&lid=LSTSMPGWU5ZTRVGZ4PCPHSWOG&marketplace=FLIPKART&q=Anti-Dandruff%20Shampoo&sattr[]=quantity&st=quantity', rating: 4.2 },
+      meesho: { price: 139, available: true, url: 'https://www.meesho.com/anti-dandruff-shampoo-add-to-cart-buy-now-1-similar-products-anti-dandruff-shampoo-anti-dandruff-shampoo/p/9n66om', rating: 3.9 }
     }
   },
   {
     id: '22',
-    name: 'Car Phone Holder Magnetic Mount',
-    description: 'Universal magnetic car mount with 360° rotation',
-    image: 'https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg',
-    category: 'Automotive',
-    keywords: ['phone holder', 'car mount', 'magnetic', 'universal'],
+    name: 'Dove Moisturizing Body Soap',
+    description: 'Nourished Skin with ¼ Moisturising Cream and Nutrient Serum',
+    image: 'https://i.postimg.cc/YS5gXyL9/Screenshot-2025-09-07-190752.png',
+    category: 'Personal Care',
+    keywords: ['soap', 'moisturizing', 'glycerin', 'aloe vera', 'body care'],
     platforms: {
-      amazon: { price: 899, available: true, url: 'https://amazon.in/phone-holder', rating: 4.1 },
-      flipkart: { price: 949, available: true, url: 'https://flipkart.com/phone-holder', rating: 3.9 },
-      meesho: { price: 699, available: true, url: 'https://meesho.com/phone-holder', rating: 3.8 }
+      amazon: { price: 310, available: true, url: 'https://www.amazon.in/Dove-Cream-Beauty-Bar-Moisturised/dp/B08S56PYDJ/ref=sr_1_6?crid=16GBAT7TNQNPY&dib=eyJ2IjoiMSJ9.X1pODJGLrRJ_dUdKh2PwAQxf0Py1_RsExwr2-PWieQUY13FOKWoDeithM7unjuv32BbtY1IqDzi6ctgiUl6R-Y9pC7ezt5cAhF867P3rJRIZiLsehyAD3JkNdnhrWgkNw04u8VqGcupENqcAtIwfZyHW3wbmu0i9YrS8TG8KwRI8LJgFYIZsqrGS38q-QAhiycXEvWs1awccA4BDYyNJ_a5x17ekNrl-b0w0G_OHIRRnYoh1RkE4sLdLcknf8uPPgqJf1dWQnPdS8wyjP7kSRbymlfLtzoCVWY0j_bpgw4A.v6Id3Pu-EG2n3MPdPMHaW2SRRSUgickq3wDWbgB1B-o&dib_tag=se&keywords=Moisturizing+Body+Soap&qid=1757250691&sprefix=moisturizing+body+soap%2Caps%2C390&sr=8-6', rating: 4.5 },
+      flipkart: { price: 381, available: true, url: 'https://www.flipkart.com/dove-serum-beauty-bar-b4g1/p/itmebb55e604af0d?pid=SOPFZ2G8XGGH8JFF&lid=LSTSOPFZ2G8XGGH8JFFTZJQYT&marketplace=FLIPKART&q=dove+Moisturizing+Body+Soap&store=g9b%2F5nz%2Fb1b%2Fyug&srno=s_1_1&otracker=search&otracker1=search&fm=Search&iid=en_BGqbgAyYTFlutHFZ8RRsXF9Bfyzo8jXhvZLBnMgxC60CC2en0MusOP-H9jNQchkHad2shRc-1OuVR1-tFsp--EKsf8s6I2Oz2HOgbXTo_9U%3D&ppt=sp&ppn=sp&ssid=4twdgoovbk0000001757250789716&qH=5a4b60a2d68a9f7f', rating: 4.5 },
+      meesho: { price: 309, available: true, url: 'https://www.meesho.com/dove-care-protect-bar-removes-99-germs-moisturises-skin-4x100-g/p/7qtpsj', rating: 4.3 }
     }
   },
-
-  // Health & Wellness
   {
     id: '23',
-    name: 'Yoga Mat Anti-Slip Exercise Mat',
-    description: '6mm thick eco-friendly TPE material yoga mat',
-    image: 'https://images.pexels.com/photos/3822906/pexels-photo-3822906.jpeg',
-    category: 'Health & Wellness',
-    keywords: ['yoga mat', 'exercise', 'fitness', 'wellness'],
+    name: 'Deconstruct Vitamin C Face Serum',
+    description: '10% Non-irritating Vitamin C Face Serum For Glowing Skin | Highly Stable Vitamin C Face Serum For Women and Men | Beginner Friendly ',
+    image: 'https://i.postimg.cc/JzBzT7NN/Screenshot-2025-09-07-191020.png',
+    category: 'Personal Care',
+    keywords: ['face serum', 'vitamin c', 'niacinamide', 'brightening', 'skincare'],
     platforms: {
-      amazon: { price: 1499, available: true, url: 'https://amazon.in/exercise-mat', rating: 4.3 },
-      flipkart: { price: 1599, available: true, url: 'https://flipkart.com/exercise-mat', rating: 4.1 },
-      meesho: { price: 1299, available: true, url: 'https://meesho.com/exercise-mat', rating: 4.0 }
+      amazon: { price: 278, available: true, url: 'https://www.amazon.in/Deconstruct-Non-Irritating-Non-Sticky-Sensitive-Beginner-Friendly/dp/B0DWT2XL34/ref=sr_1_3_sspa?crid=Z6FB91G4X06P&dib=eyJ2IjoiMSJ9.pUBS0T_PHbz3wEuz702tXpwBkHRHxL-Ko1Gxye96RiCaaWASwrbNVZa9j6fI8BkTLeOq1bgvoHE8LxG7q2uwrvLqX2RUsQVCaC3LPYeweqTdHweySCKCRZaDgf7ndtx9Z_JQZJ7IoegRY4XY6a4FklnmeWP0K5qww_I4I5jvKN2aQTk2S_gMn-nGlbG0w3w6kxPXpv3EpG4YhzsJlm7-dIiNR8-Qf6Q1bsEtYUcDZuOlUM4BppTM1A4w-dFVEC2MNQchzbfC4mfQALK5yP0QJxPeENWhSrJk5xIXgxjJyE8.7qaMFM3Heuzb0qDSSNnqfMjqeujxMkT22LDNJJpJ9-w&dib_tag=se&keywords=Vitamin%2BC%2BFace%2BSerum&qid=1757251340&sprefix=%2Caps%2C410&sr=8-3-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1', rating: 4.0 },
+      flipkart: { price: 279, available: true, url: 'https://www.amazon.in/Deconstruct-Non-Irritating-Non-Sticky-Sensitive-Beginner-Friendly/dp/B0DWT2XL34/ref=sr_1_3_sspa?crid=Z6FB91G4X06P&dib=eyJ2IjoiMSJ9.pUBS0T_PHbz3wEuz702tXpwBkHRHxL-Ko1Gxye96RiCaaWASwrbNVZa9j6fI8BkTLeOq1bgvoHE8LxG7q2uwrvLqX2RUsQVCaC3LPYeweqTdHweySCKCRZaDgf7ndtx9Z_JQZJ7IoegRY4XY6a4FklnmeWP0K5qww_I4I5jvKN2aQTk2S_gMn-nGlbG0w3w6kxPXpv3EpG4YhzsJlm7-dIiNR8-Qf6Q1bsEtYUcDZuOlUM4BppTM1A4w-dFVEC2MNQchzbfC4mfQALK5yP0QJxPeENWhSrJk5xIXgxjJyE8.7qaMFM3Heuzb0qDSSNnqfMjqeujxMkT22LDNJJpJ9-w&dib_tag=se&keywords=Vitamin%2BC%2BFace%2BSerum&qid=1757251340&sprefix=%2Caps%2C410&sr=8-3-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1', rating: 4.1 },
+      meesho: { available: false, message: 'Product not available on Meesho' }
     }
   },
   {
     id: '24',
-    name: 'Whey Protein Powder 2kg',
-    description: 'Premium whey protein isolate, chocolate flavor',
-    image: 'https://images.pexels.com/photos/416717/pexels-photo-416717.jpeg',
-    category: 'Health & Wellness',
-    keywords: ['protein', 'whey', 'supplement', 'fitness'],
-    platforms: {
-      amazon: { price: 3999, available: true, url: 'https://amazon.in/protein', rating: 4.4 },
-      flipkart: { price: 4199, available: true, url: 'https://flipkart.com/protein', rating: 4.2 },
-      meesho: { price: 3599, available: true, url: 'https://meesho.com/protein', rating: 4.1 }
-    }
-  },
-
-  // Jewelry
-  {
-    id: '25',
-    name: 'Gold Plated Chain Necklace',
-    description: '18K gold plated necklace, 20 inch length, hypoallergenic',
-    image: 'https://images.pexels.com/photos/1454806/pexels-photo-1454806.jpeg',
-    category: 'Jewelry',
-    keywords: ['necklace', 'gold plated', 'jewelry', 'chain'],
-    platforms: {
-      amazon: { price: 2999, available: true, url: 'https://amazon.in/necklace', rating: 4.2 },
-      flipkart: { price: 3199, available: true, url: 'https://flipkart.com/necklace', rating: 4.0 },
-      meesho: { price: 2599, available: true, url: 'https://meesho.com/necklace', rating: 3.9 }
-    }
-  },
-  {
-    id: '26',
-    name: 'Silver Stud Earrings Set',
-    description: 'Sterling silver earring set of 6 pairs with gift box',
-    image: 'https://images.pexels.com/photos/1454806/pexels-photo-1454806.jpeg',
-    category: 'Jewelry',
-    keywords: ['earrings', 'silver', 'jewelry', 'set'],
-    platforms: {
-      amazon: { price: 1499, available: true, url: 'https://amazon.in/earrings', rating: 4.1 },
-      flipkart: { price: 1599, available: true, url: 'https://flipkart.com/earrings', rating: 3.9 },
-      meesho: { price: 1299, available: true, url: 'https://meesho.com/earrings', rating: 3.8 }
-    }
-  },
-
-  // Pet Supplies
-  {
-    id: '27',
-    name: 'Dog Food Premium Adult Formula',
-    description: '10kg pack high protein dog food with real chicken',
-    image: 'https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg',
-    category: 'Pet Supplies',
-    keywords: ['dog food', 'pet food', 'premium', 'chicken'],
-    platforms: {
-      amazon: { price: 2999, available: true, url: 'https://amazon.in/dog-food', rating: 4.3 },
-      flipkart: { price: 3199, available: true, url: 'https://flipkart.com/dog-food', rating: 4.1 },
-      meesho: { price: 2699, available: true, url: 'https://meesho.com/dog-food', rating: 4.0 }
-    }
-  },
-  {
-    id: '28',
-    name: 'Cat Litter Box Self-Cleaning',
-    description: 'Automatic self-cleaning litter box with odor control',
-    image: 'https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg',
-    category: 'Pet Supplies',
-    keywords: ['cat litter', 'self cleaning', 'pet supplies', 'automatic'],
-    platforms: {
-      amazon: { price: 4999, available: true, url: 'https://amazon.in/cat-litter', rating: 4.2 },
-      flipkart: { price: 5199, available: true, url: 'https://flipkart.com/cat-litter', rating: 4.0 },
-      meesho: { price: 4599, available: true, url: 'https://meesho.com/cat-litter', rating: 3.9 }
-    }
-  },
-
-  // Personal Care
-  {
-    id: '29',
-    name: 'Anti-Dandruff Shampoo 400ml',
-    description: 'Clinically proven anti-dandruff shampoo with zinc pyrithione, suitable for all hair types',
-    image: 'https://images.pexels.com/photos/4465124/pexels-photo-4465124.jpeg',
-    category: 'Personal Care',
-    keywords: ['shampoo', 'anti-dandruff', 'hair care', 'zinc pyrithione'],
-    platforms: {
-      amazon: { price: 299, available: true, url: 'https://amazon.in/anti-dandruff-shampoo', rating: 4.2 },
-      flipkart: { price: 319, available: true, url: 'https://flipkart.com/anti-dandruff-shampoo', rating: 4.1 },
-      meesho: { price: 279, available: true, url: 'https://meesho.com/anti-dandruff-shampoo', rating: 4.0 }
-    }
-  },
-  {
-    id: '30',
-    name: 'Moisturizing Body Soap Pack of 4',
-    description: 'Natural glycerin soap bars with aloe vera and vitamin E, gentle on skin',
-    image: 'https://images.pexels.com/photos/4465831/pexels-photo-4465831.jpeg',
-    category: 'Personal Care',
-    keywords: ['soap', 'moisturizing', 'glycerin', 'aloe vera', 'body care'],
-    platforms: {
-      amazon: { price: 199, available: true, url: 'https://amazon.in/moisturizing-soap', rating: 4.3 },
-      flipkart: { price: 219, available: true, url: 'https://flipkart.com/moisturizing-soap', rating: 4.2 },
-      meesho: { price: 179, available: true, url: 'https://meesho.com/moisturizing-soap', rating: 4.1 }
-    }
-  },
-  {
-    id: '31',
-    name: 'Anti-Aging Night Cream 50g',
-    description: 'Advanced anti-aging night cream with retinol and hyaluronic acid for younger-looking skin',
-    image: 'https://images.pexels.com/photos/3685530/pexels-photo-3685530.jpeg',
-    category: 'Personal Care',
-    keywords: ['night cream', 'anti-aging', 'retinol', 'hyaluronic acid', 'skincare'],
-    platforms: {
-      amazon: { price: 899, available: true, url: 'https://amazon.in/anti-aging-cream', rating: 4.4 },
-      flipkart: { price: 949, available: true, url: 'https://flipkart.com/anti-aging-cream', rating: 4.3 },
-      meesho: { price: 799, available: true, url: 'https://meesho.com/anti-aging-cream', rating: 4.2 }
-    }
-  },
-  {
-    id: '32',
-    name: 'Vitamin C Face Serum 30ml',
-    description: '20% Vitamin C serum with niacinamide for brightening and reducing dark spots',
-    image: 'https://images.pexels.com/photos/7755515/pexels-photo-7755515.jpeg',
-    category: 'Personal Care',
-    keywords: ['face serum', 'vitamin c', 'niacinamide', 'brightening', 'skincare'],
-    platforms: {
-      amazon: { price: 599, available: true, url: 'https://amazon.in/vitamin-c-serum', rating: 4.5 },
-      flipkart: { price: 629, available: true, url: 'https://flipkart.com/vitamin-c-serum', rating: 4.4 },
-      meesho: { price: 549, available: true, url: 'https://meesho.com/vitamin-c-serum', rating: 4.3 }
-    }
-  },
-  {
-    id: '33',
-    name: 'Herbal Face Wash 150ml',
-    description: 'Natural herbal face wash with neem and turmeric, suitable for oily and acne-prone skin',
-    image: 'https://images.pexels.com/photos/4465124/pexels-photo-4465124.jpeg',
-    category: 'Personal Care',
-    keywords: ['face wash', 'herbal', 'neem', 'turmeric', 'acne', 'oily skin'],
-    platforms: {
-      amazon: { price: 149, available: true, url: 'https://amazon.in/herbal-face-wash', rating: 4.1 },
-      flipkart: { price: 159, available: true, url: 'https://flipkart.com/herbal-face-wash', rating: 4.0 },
-      meesho: { price: 129, available: true, url: 'https://meesho.com/herbal-face-wash', rating: 3.9 }
-    }
-  },
-  {
-    id: '34',
-    name: 'Sunscreen SPF 50+ 100ml',
+    name: 'The Derma Co Sunscreen',
     description: 'Broad spectrum sunscreen with SPF 50+, water-resistant and non-greasy formula',
-    image: 'https://images.pexels.com/photos/4465831/pexels-photo-4465831.jpeg',
+    image: 'https://i.postimg.cc/7ZBjTSGX/Screenshot-2025-09-07-191244.png',
     category: 'Personal Care',
     keywords: ['sunscreen', 'spf 50', 'broad spectrum', 'water resistant', 'sun protection'],
     platforms: {
-      amazon: { price: 399, available: true, url: 'https://amazon.in/sunscreen-spf50', rating: 4.3 },
-      flipkart: { price: 419, available: true, url: 'https://flipkart.com/sunscreen-spf50', rating: 4.2 },
-      meesho: { price: 359, available: true, url: 'https://meesho.com/sunscreen-spf50', rating: 4.1 }
+      amazon: { price: 263, available: true, url: 'https://www.amazon.in/Derma-Co-Hyaluronic-Lightweight-white-cast/dp/B0C6M3KHXV/ref=sr_1_6?crid=1Y8P5QJNA1VYP&dib=eyJ2IjoiMSJ9.xofoKlPza_6CcRrPLGJloR7c9MaUz9NWSZh4FXtdhC1WWFhGmKBxUAahYPgY4oaU-TzBbLcGRQZOUOmDnz3BUaTU1d9StWKa7wCYtzJ2vKtVxbtiJ7hMcDtPTSS8rD83tJGmc715atxIGFgX7IfSqLiJxd4k46lWsYEUPPdcxQZJ3gKUhf_f5mHHaHuJZdYN1CrJOrD9JZ7WiplhzW4Rql7ATOlwlAL4CIKaqNxJ9A-MoDxK5jVwMb57tsYkEYOt6L_gZwDgmdYQnEhAub40_yXNCjegSGnUa4KXKPM6YoE.3RJ4KCxeI0Dk2sRKCW8PRXSqJH1FobosrDBnpIcveIY&dib_tag=se&keywords=sunscreen%2Bspf50&qid=1757251564&sprefix=suns%2Caps%2C342&sr=8-6&th=1', rating: 4.2 },
+      flipkart: { price: 245, available: true, url: 'https://www.flipkart.com/derma-co-sunscreen-spf-50-pa-1-hyaluronic-aqua-gel-lightweight-no-white-cast-broad-spectrum/p/itmf8528fbeb0ee7?pid=SNRGQFP2SH37HH58&lid=LSTSNRGQFP2SH37HH58KRJHCT&marketplace=FLIPKART&q=sunscreen+spf50&store=g9b%2Fema%2F5la%2Fxrh&spotlightTagId=default_BestsellerId_g9b%2Fema%2F5la%2Fxrh&srno=s_1_3&otracker=search&otracker1=search&fm=Search&iid=d7b0b73a-77bc-4e4a-8eb9-17a6390f46f3.SNRGQFP2SH37HH58.SEARCH&ppt=sp&ppn=sp&ssid=utjoe2rre80000001757251577018&qH=b4c27c4dd026a527', rating: 4.2 },
+      meesho: { price: 282, available: true, url: 'https://www.meesho.com/the-derma-co1-hyaluronic-sunscreen-spf-50-aqua-gel-pa-lightweight-no-white-cast-for-broad-spectrum-blue-light-protection-for-oily-dry-acne-prone-skin-30g/p/60vjak', rating: 4.0 }
     }
   }
 ];
