@@ -30,9 +30,9 @@ export const AlternativeSuggestions: React.FC<AlternativeSuggestionsProps> = ({
           const lowest = getLowestPrice(product);
           const savings = originalLowest.price - lowest.price;
           const savingsPercentage = calculateSavingsPercentage(lowest.price, originalLowest.price);
+          const platformData = product.platforms[lowest.platform as 'amazon' | 'flipkart' | 'meesho'];
 
           const handleAddToCart = () => {
-            const platformData = product.platforms[lowest.platform as 'amazon' | 'flipkart' | 'meesho'];
             if (platformData) {
               const cartItem: CartItem = {
                 productId: product.id,
