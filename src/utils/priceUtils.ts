@@ -66,11 +66,13 @@ export const calculateSavingsPercentage = (currentPrice: number, highestPrice: n
 export const findSimilarProducts = (searchProduct: Product, allProducts: Product[], maxResults = 3) => {
   const searchKeywords = searchProduct.keywords;
   const searchCategory = searchProduct.category;
+  const searchIngredients = searchProduct.ingredients || [];
   
   return allProducts
     .filter(product => product.id !== searchProduct.id)
     .filter(product => product.category === searchCategory) // Only show products from same category
     .map(product => {
+      // Calculate keyword similarity
       const matchingKeywords = product.keywords.filter(keyword => 
         searchKeywords.some(searchKeyword => 
           keyword.toLowerCase().includes(searchKeyword.toLowerCase()) ||
@@ -78,9 +80,28 @@ export const findSimilarProducts = (searchProduct: Product, allProducts: Product
         )
       );
       
+      // Calculate ingredient similarity if both products have ingredients
+      let ingredientSimilarity = 0;
+      if (searchIngredients.length > 0 && product.ingredients && product.ingredients.length > 0) {
+        const matchingIngredients = product.ingredients.filter(ingredient =>
+          searchIngredients.some(searchIngredient =>
+            ingredient.toLowerCase().includes(searchIngredient.toLowerCase()) ||
+            searchIngredient.toLowerCase().includes(ingredient.toLowerCase())
+          )
+        );
+        ingredientSimilarity = matchingIngredients.length / Math.max(searchIngredients.length, product.ingredients.length);
+      }
+      
+      // Combine keyword and ingredient similarity (give more weight to ingredients if available)
+      const keywordSimilarity = matchingKeywords.length / Math.max(searchKeywords.length, product.keywords.length);
+      const totalSimilarity = searchIngredients.length > 0 && product.ingredients 
+        ? (keywordSimilarity * 0.3 + ingredientSimilarity * 0.7) // 70% weight to ingredients
+        : keywordSimilarity; // 100% weight to keywords if no ingredients
+      
       return {
         product,
-        similarity: matchingKeywords.length / Math.max(searchKeywords.length, product.keywords.length)
+        similarity: totalSimilarity,
+        hasIngredients: !!(searchIngredients.length > 0 && product.ingredients)
       };
     })
     .filter(({ similarity }) => similarity > 0)

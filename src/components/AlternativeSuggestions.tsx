@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink, ShoppingCart, Lightbulb } from 'lucide-react';
+import { ExternalLink, ShoppingCart, Lightbulb, Beaker } from 'lucide-react';
 import { Product, CartItem } from '../data/products';
 import { formatPrice, getLowestPrice, calculateSavingsPercentage, getPlatformLogo } from '../utils/priceUtils';
 
@@ -22,7 +22,15 @@ export const AlternativeSuggestions: React.FC<AlternativeSuggestionsProps> = ({
     <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
       <div className="flex items-center gap-2 mb-6">
         <Lightbulb className="w-6 h-6 text-yellow-500" />
-        <h2 className="text-2xl font-bold">AI-Powered Alternatives</h2>
+        <h2 className="text-2xl font-bold">
+          {originalProduct.ingredients ? 'Ingredient-Based' : 'AI-Powered'} Alternatives
+        </h2>
+        {originalProduct.ingredients && (
+          <div className="flex items-center gap-1 bg-green-100 text-green-800 px-2 py-1 rounded text-sm">
+            <Beaker className="w-4 h-4" />
+            Smart Match
+          </div>
+        )}
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -57,6 +65,22 @@ export const AlternativeSuggestions: React.FC<AlternativeSuggestionsProps> = ({
               
               <h3 className="font-bold text-lg mb-2 line-clamp-2">{product.name}</h3>
               <p className="text-gray-600 text-sm mb-3 line-clamp-3">{product.description}</p>
+              
+              {product.ingredients && (
+                <div className="mb-3">
+                  <div className="text-xs text-gray-500 mb-1">Key Ingredients:</div>
+                  <div className="flex flex-wrap gap-1">
+                    {product.ingredients.slice(0, 3).map((ingredient, index) => (
+                      <span key={index} className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">
+                        {ingredient}
+                      </span>
+                    ))}
+                    {product.ingredients.length > 3 && (
+                      <span className="text-gray-500 text-xs">+{product.ingredients.length - 3} more</span>
+                    )}
+                  </div>
+                </div>
+              )}
               
               <div className="flex items-center justify-between mb-3">
                 <div>

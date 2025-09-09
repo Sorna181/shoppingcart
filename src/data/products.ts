@@ -11,6 +11,7 @@ export interface Product {
   description: string;
   image: string;
   category: string;
+  ingredients?: string[];
   keywords: string[];
   platforms: {
     amazon?: PlatformData;
@@ -315,6 +316,7 @@ export const mockProducts: Product[] = [
     description: 'Reduces Up to 100% Dandruff and Strengthens Hair | Derma Approved Shampoo with Salicylic Acid & Biotin | Helps Remove Flakes and Itching | Shampoo For All Hair types | For Women And Men',
     image: 'https://images.pexels.com/photos/3735657/pexels-photo-3735657.jpeg',
     category: 'Personal Care',
+    ingredients: ['Salicylic Acid', 'Biotin', 'Zinc Pyrithione', 'Sodium Laureth Sulfate'],
     keywords: ['shampoo', 'anti-dandruff', 'hair care', 'zinc pyrithione'],
     platforms: {
       amazon: { price: 219, available: true, url: 'https://www.amazon.in/Bare-Anatomy-Dandruff-Strengthens-Salicylic/dp/B0F5BLYYCN/ref=sr_1_1_sspa?crid=AQVLXT5DMN33&dib=eyJ2IjoiMSJ9.mk11LMOH4jHbkPAQ5JIN1AUSXaq1-UsayRkSuN-kiybMDhUIXFpIlpEBOKD0-l-0zBVSXYQNEzcF8k2JFwDZyQqACFVBXmt3H0FqjNg0_eZ8WKY4wd7ZgvcfuJJDNy9tv3fZHFZrBzsifT1Fk16MZ0bIa4RMNAZP6LnIEdMrlMPrVWWdvSvs1dBYVS1pn94MvvKIE_cgpIX-NPCK8nHNnUfEGGCOx5gkA-SQnbU6amB-XOKwXQvMISrrYV7zh5lmShf6W8PZtjsUi-OToq60yBs-bD1JMeKXzAJM3ms4r2M.cHzV9YpdawJ-2ZO6Q5184s8iqk_-5frQ-bOsGryRtpA&dib_tag=se&keywords=Anti-Dandruff%2BShampoo&qid=1757250398&sprefix=anti-dandruff%2Bshampoo%2Caps%2C318&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1', rating: 4.1 },
@@ -328,6 +330,7 @@ export const mockProducts: Product[] = [
     description: 'Nourished Skin with ¼ Moisturising Cream and Nutrient Serum',
     image: 'https://images.pexels.com/photos/4465831/pexels-photo-4465831.jpeg',
     category: 'Personal Care',
+    ingredients: ['Sodium Palmate', 'Sodium Palm Kernelate', 'Glycerin', 'Sodium Chloride'],
     keywords: ['soap', 'moisturizing', 'glycerin', 'aloe vera', 'body care'],
     platforms: {
       amazon: { price: 310, available: true, url: 'https://www.amazon.in/Dove-Cream-Beauty-Bar-Moisturised/dp/B08S56PYDJ/ref=sr_1_6?crid=16GBAT7TNQNPY&dib=eyJ2IjoiMSJ9.X1pODJGLrRJ_dUdKh2PwAQxf0Py1_RsExwr2-PWieQUY13FOKWoDeithM7unjuv32BbtY1IqDzi6ctgiUl6R-Y9pC7ezt5cAhF867P3rJRIZiLsehyAD3JkNdnhrWgkNw04u8VqGcupENqcAtIwfZyHW3wbmu0i9YrS8TG8KwRI8LJgFYIZsqrGS38q-QAhiycXEvWs1awccA4BDYyNJ_a5x17ekNrl-b0w0G_OHIRRnYoh1RkE4sLdLcknf8uPPgqJf1dWQnPdS8wyjP7kSRbymlfLtzoCVWY0j_bpgw4A.v6Id3Pu-EG2n3MPdPMHaW2SRRSUgickq3wDWbgB1B-o&dib_tag=se&keywords=Moisturizing+Body+Soap&qid=1757250691&sprefix=moisturizing+body+soap%2Caps%2C390&sr=8-6', rating: 4.5 },
@@ -341,6 +344,7 @@ export const mockProducts: Product[] = [
     description: '10% Non-irritating Vitamin C Face Serum For Glowing Skin | Highly Stable Vitamin C Face Serum For Women and Men | Beginner Friendly ',
     image: 'https://images.pexels.com/photos/7755515/pexels-photo-7755515.jpeg',
     category: 'Personal Care',
+    ingredients: ['Vitamin C', 'Niacinamide', 'Hyaluronic Acid', 'Glycerin'],
     keywords: ['face serum', 'vitamin c', 'niacinamide', 'brightening', 'skincare'],
     platforms: {
       amazon: { price: 278, available: true, url: 'https://www.amazon.in/Deconstruct-Non-Irritating-Non-Sticky-Sensitive-Beginner-Friendly/dp/B0DWT2XL34/ref=sr_1_3_sspa?crid=Z6FB91G4X06P&dib=eyJ2IjoiMSJ9.pUBS0T_PHbz3wEuz702tXpwBkHRHxL-Ko1Gxye96RiCaaWASwrbNVZa9j6fI8BkTLeOq1bgvoHE8LxG7q2uwrvLqX2RUsQVCaC3LPYeweqTdHweySCKCRZaDgf7ndtx9Z_JQZJ7IoegRY4XY6a4FklnmeWP0K5qww_I4I5jvKN2aQTk2S_gMn-nGlbG0w3w6kxPXpv3EpG4YhzsJlm7-dIiNR8-Qf6Q1bsEtYUcDZuOlUM4BppTM1A4w-dFVEC2MNQchzbfC4mfQALK5yP0QJxPeENWhSrJk5xIXgxjJyE8.7qaMFM3Heuzb0qDSSNnqfMjqeujxMkT22LDNJJpJ9-w&dib_tag=se&keywords=Vitamin%2BC%2BFace%2BSerum&qid=1757251340&sprefix=%2Caps%2C410&sr=8-3-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1', rating: 4.0 },
@@ -353,11 +357,67 @@ export const mockProducts: Product[] = [
     description: 'Broad spectrum sunscreen with SPF 50+, water-resistant and non-greasy formula',
     image: 'https://images.pexels.com/photos/4465124/pexels-photo-4465124.jpeg',
     category: 'Personal Care',
+    ingredients: ['Zinc Oxide', 'Titanium Dioxide', 'Octinoxate', 'Avobenzone'],
     keywords: ['sunscreen', 'spf 50', 'broad spectrum', 'water resistant', 'sun protection'],
     platforms: {
       amazon: { price: 263, available: true, url: 'https://www.amazon.in/Derma-Co-Hyaluronic-Lightweight-white-cast/dp/B0C6M3KHXV/ref=sr_1_6?crid=1Y8P5QJNA1VYP&dib=eyJ2IjoiMSJ9.xofoKlPza_6CcRrPLGJloR7c9MaUz9NWSZh4FXtdhC1WWFhGmKBxUAahYPgY4oaU-TzBbLcGRQZOUOmDnz3BUaTU1d9StWKa7wCYtzJ2vKtVxbtiJ7hMcDtPTSS8rD83tJGmc715atxIGFgX7IfSqLiJxd4k46lWsYEUPPdcxQZJ3gKUhf_f5mHHaHuJZdYN1CrJOrD9JZ7WiplhzW4Rql7ATOlwlAL4CIKaqNxJ9A-MoDxK5jVwMb57tsYkEYOt6L_gZwDgmdYQnEhAub40_yXNCjegSGnUa4KXKPM6YoE.3RJ4KCxeI0Dk2sRKCW8PRXSqJH1FobosrDBnpIcveIY&dib_tag=se&keywords=sunscreen%2Bspf50&qid=1757251564&sprefix=suns%2Caps%2C342&sr=8-6&th=1', rating: 4.2 },
       flipkart: { price: 245, available: true, url: 'https://www.flipkart.com/derma-co-sunscreen-spf-50-pa-1-hyaluronic-aqua-gel-lightweight-no-white-cast-broad-spectrum/p/itmf8528fbeb0ee7?pid=SNRGQFP2SH37HH58&lid=LSTSNRGQFP2SH37HH58KRJHCT&marketplace=FLIPKART&q=sunscreen+spf50&store=g9b%2Fema%2F5la%2Fxrh&spotlightTagId=default_BestsellerId_g9b%2Fema%2F5la%2Fxrh&srno=s_1_3&otracker=search&otracker1=search&fm=Search&iid=d7b0b73a-77bc-4e4a-8eb9-17a6390f46f3.SNRGQFP2SH37HH58.SEARCH&ppt=sp&ppn=sp&ssid=utjoe2rre80000001757251577018&qH=b4c27c4dd026a527', rating: 4.2 },
       meesho: { price: 282, available: true, url: 'https://www.meesho.com/the-derma-co1-hyaluronic-sunscreen-spf-50-aqua-gel-pa-lightweight-no-white-cast-for-broad-spectrum-blue-light-protection-for-oily-dry-acne-prone-skin-30g/p/60vjak', rating: 4.0 }
+    }
+  },
+  {
+    id: '25',
+    name: 'Dove Dandruff Care Shampoo',
+    description: 'Dandruff Care Shampoo for Dry, Itchy & Flaky Scalp - 180ml | Enriched with Bio-Protein Care and Salicylic Acid for Ultimate Dandruff Protection | For Men & Women',
+    image: 'https://images.pexels.com/photos/3735657/pexels-photo-3735657.jpeg',
+    category: 'Personal Care',
+    ingredients: ['Sodium Laureth Sulfate', 'Cocamidopropyl Betaine', 'Parfum', 'Sodium Chloride', 'Dimethiconol'],
+    keywords: ['shampoo', 'anti-dandruff', 'hair care'],
+    platforms: {
+      amazon: { price: 185, available: true, url: 'https://www.amazon.in/dp/B00GQV7MT4/ref=sspa_dk_detail_3?pd_rd_i=B085WJY6NH&pd_rd_w=qrbkB&content-id=amzn1.sym.67d3dec9-3503-44a1-a945-e969d04cca69&pf_rd_p=67d3dec9-3503-44a1-a945-e969d04cca69&pf_rd_r=KDC7Q35RCTSFQ1X4B3FK&pd_rd_wg=K8RCi&pd_rd_r=c753dd05-1b17-49ab-903a-2351ea28843f&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM&th=1', rating: 4.3 },
+      flipkart: { price: 190, available: true, url: 'https://www.flipkart.com/dove-dandruff-care-shampoo/p/itmf3xfy7sturrzh?pid=SMPD9FYFGBTBHSWQ&lid=LSTSMPD9FYFGBTBHSWQ5MCDAS&marketplace=FLIPKART&q=dove%20dandruff%20care%20shampoo&sattr[]=quantity&st=quantity', rating: 4.4 }
+    }
+  },
+  {
+    id: '26',
+    name: 'Mamaearth Ubtan Moisturizing Lotion Soap',
+    description: 'Removes Tan | Benefits of Lotion in a soap | Gently Exfoliates & Deeply Cleanses | Nourishes Dry Skin | Non Drying | Grade 1 Soap',
+    image: 'https://images.pexels.com/photos/4465831/pexels-photo-4465831.jpeg',
+    category: 'Personal Care',
+    ingredients: ['Sodium Palmate', 'Sodium Palm Kernelate', 'Glycerine', 'Sodium Chloride', 'Mustard Butter'],
+    keywords: ['soap', 'moisturizing', 'body care', 'Glycerine'],
+    platforms: {
+      amazon: { price: 396, available: true, url: 'https://www.amazon.in/Mamaearth-Moisturizing-Benefits-Exfoliates-Nourishes/dp/B0CR18RD83/ref=sr_1_10?crid=20KHA8K2E5SJK&dib=eyJ2IjoiMSJ9.L8RX6CLOfl019Pf_ty1TYwnHdf4zf_bmtBJZ9XODG_QKxzqq-WShsYosGiA8Ngw37vf9Waak5r-8yJ-Tth9ipqoQMoa3OBGUcv_fnl31KMiABFmPi6mYHQHW4X3TEhCK4y8wY6DaGtGg67_CyCEDP_v2HZJpsTiVEH-w5dvchiCQXdkj_D5j-4vAJBvkMPCfbgkOafLrbqAXMJBXHSVpyRZYrutxYF3JdfkAjhIJRlYDe-TkgrbjSmIGb21HZQwoAZIhSmo_NP4LSSI4bnJv3i7ftjj3B5AjyDWtyKcnb-4.TtViEuTot1TV3EIYLtwqK-s83n1lw6kqgOa5ofp8yug&dib_tag=se&keywords=moisturizing%2Bbody%2Bsoap&qid=1757423912&s=beauty&sprefix=moisturizering%2Bbody%2Bsoap%2Cbeauty%2C346&sr=1-10&th=1', rating: 4.1 },
+      flipkart: { price: 300, available: true, url: 'https://www.flipkart.com/mamaearth-ubtan-moisturizing-lotion-soap-removes-tan-benefits/p/itmd634d160812a1?pid=SOPGWHBNHFE6YDXX&lid=LSTSOPGWHBNHFE6YDXXXTKID9&marketplace=FLIPKART&q=Mamaearth%20Ubtan%20Moisturizing%20Lotion%20Soap&sattr[]=quantity&st=quantity&otracker=search', rating: 4.2 },
+      meesho: { price: 310, available: true, url: 'https://www.meesho.com/mamaearth-ubtan-moisturizing-lotion-soap-125g-x-8-pack-of-8-removes-tan-benefits-of-lotion-in-a-soap-gently-exfoliates-deeply-cleanses-nourishes-dry-skin-non-drying-grade-1-soap/p/7lkbyb', rating: 4.0 }
+    }
+  },
+  {
+    id: '27',
+    name: 'Pilgrim Vitamin C Face Serum',
+    description: 'For Daily Brightness 10 ml | Face serum for glowing skin | Reduces Dark Spots & Evens Skin Tone | For Oily, Combination, Normal Skin Types | Fragrance Free | For Men and Women',
+    image: 'https://images.pexels.com/photos/7755515/pexels-photo-7755515.jpeg',
+    category: 'Personal Care',
+    ingredients: ['3-O-Ethyl Ascorbic Acid', 'Niacinamide', 'Butylene Glycol', 'Propanediol'],
+    keywords: ['face serum', 'vitamin c', 'brightening', 'skincare'],
+    platforms: {
+      amazon: { price: 203, available: true, url: 'https://www.amazon.in/Niacinamide-Hyaluronic-Glycolic-Pigmentation-Combination/dp/B0D5DBMKMC/ref=sr_1_1_sspa?crid=1SIC184C5PNO7&dib=eyJ2IjoiMSJ9.iM4C1E2HfFOd1fMDun2BtmlJ8Sghq8gq618CxGYLiuBIduFc3v6UdYiL0QPCN5GPwJ31uEGdJ2XZLuowU44r4B7BrpAzKLcZYeERnNymB0PUt64cgA5lYxPfeOy5-aJYQOmEBtMA_zyl2Se62cnsf6EsbZV6ipZT-yUzyNVxfuS0znIetkTeRLZbp2TTSlRvuXgwT_mDmQ0yGsX4P9vQyqKjwOPSB2a8424q1JvbhjEuWwsBOYb6RSWrs1fW75gg5qOnaxaQ0d15VrlVKW_6PHCRFFEpO2H3IgDT55Sr0lE.bFaBHuVsvWrzlracXgx2g5BfMnBUnDva2hlPRIN--M0&dib_tag=se&keywords=pilgrim%2BVitamin%2BC%2BFace%2BSerum&nsdOptOutParam=true&qid=1757427459&s=beauty&sprefix=pilgrim%2Bvitamin%2Bc%2Bface%2Bserum%2Cbeauty%2C341&sr=1-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1', rating: 4.0 },
+      flipkart: { price: 191, available: true, url: 'https://www.flipkart.com/pilgrim-10-vitamin-c-face-serum-oily-skin-men-women-skin-brightening/p/itm41b5c7deab6b8?pid=FRNHFCJDBTSBZGNF&lid=LSTFRNHFCJDBTSBZGNFPUBK4O&marketplace=FLIPKART&q=pilgrim%20Vitamin%20C%20Face%20Serum&sattr[]=quantity&st=quantity', rating: 4.0 },
+      meesho: { price: 224, available: true, url: 'https://www.meesho.com/pilgrim-10-vitamin-c-face-serum-10-ml/p/7a7pn1', rating: 4.1 }
+    }
+  },
+  {
+    id: '28',
+    name: 'Dot & Key Watermelon Cooling Sunscreen',
+    description: 'SPF 50+ PA++++ | With Hyaluronic Acid, Instantly Cools Skin, Broad Spectrum Protection | Controls Excess Oil, Checks Tanning, No White Cast, All Skin Types ',
+    image: 'https://images.pexels.com/photos/4465124/pexels-photo-4465124.jpeg',
+    category: 'Personal Care',
+    ingredients: ['Methylene Bis-Benzotriazolyl Tetramethylbutylphenol', 'Ethylhexyl Methoxycinnamate', 'Butyl Methoxydibenzoylmethane', 'Titanium Dioxide'],
+    keywords: ['sunscreen', 'spf 50', 'broad spectrum', 'water resistant', 'sun protection'],
+    platforms: {
+      amazon: { price: 385, available: true, url: 'https://www.amazon.in/Watermelon-Hyaluronic-Moisturized-Protection-Lightweight/dp/B0BQN2YWN5/ref=sr_1_5?crid=2Q9RQMHYVKGER&dib=eyJ2IjoiMSJ9.WWHUefMKr9XZ9yBBhKmUIUmhskdWwoK3URii2hGJY3MtFjEGdhGwGi7Fz3fNLGbjdTU6pHv5X2XsHK15HlGJdZjzgTZIN0tBxU1mo3S2IWHMIBQGmQ5ZK-anwf19EzHQ2EPcgyDgKKJedGCVY9YI2pgDrPgXBQVK1cvtWHMi4kpdgevbXSPlvJPfrirZYvaw7Xurwwq9rJqgXGKXZD8aNL_26bszP3T66Uc7LoasD1Dvus9Zui9aQn2G4Yl9zykxn3msEgivNYfU_kBdttktl_Hp_VlYG_6vliGUamKl9sQ.nyvL26DUxJJVCrvZLIouwQW3U5jirTrmqaeailUkAU0&dib_tag=se&keywords=Dot%2Band%2BKey%2BWatermelon%2BCooling%2BSunscreen%2BSPF%2B50%2BPA%2B%2B%2B&nsdOptOutParam=true&qid=1757428135&s=beauty&sprefix=dot%2Band%2Bkey%2Bwatermelon%2Bcooling%2Bsunscreen%2Bspf%2B50%2Bpa%2B%2B%2B%2Cbeauty%2C326&sr=1-5&th=1', rating: 4.3 },
+      flipkart: { price: 356, available: true, url: 'https://www.flipkart.com/dot-key-sunscreen-spf-50-pa-watermelon-hyaluronic-cooling-for-oily-normal-combination-skin-lightweight/p/itm9c61e2513ef50?pid=SNRGH4YBDDVGMJ9N&lid=LSTSNRGH4YBDDVGMJ9NBAYMPQ&marketplace=FLIPKART&q=Dot%20and%20Key%20Watermelon%20Cooling%20Sunscreen%20SPF%2050%20PA%20%20%20&sattr[]=quantity&st=quantity', rating: 4.3 },
+      meesho: { price: 414, available: true, url: 'https://www.meesho.com/dot-and-key-watermelon-cooling-sunscreen-spf-50-pa-for-moisturized-skin-no-white-cast/p/78d4ep', rating: 4.2 }
     }
   }
 ];
