@@ -190,7 +190,7 @@ export const mockProducts: Product[] = [
     id: '12',
     name: 'LED Table Lamp',
     description: 'Adjustable LED desk lamp with USB charging port',
-    image: 'https://images.pexels.com/photos/1112598/pexels-photo-1112598.jpeg',
+    image: 'https://i.postimg.cc/cCYBrF6L/dandruff.jpg',
     category: 'Home & Kitchen',
     keywords: ['lamp', 'led', 'desk', 'lighting'],
     platforms: {
