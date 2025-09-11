@@ -1,7 +1,7 @@
 import React from 'react';
 import { ExternalLink, Beaker } from 'lucide-react';
 import { Product } from '../data/products';
-import { formatPrice, getPlatformLogo, calculateSavings, getHighestPrice } from '../utils/priceUtils';
+import { formatPrice, getPlatformLogo, calculateSavings, getHighestPrice, getIngredientBenefit } from '../utils/priceUtils';
 
 interface ComparisonTableProps {
   product: Product;
@@ -37,11 +37,18 @@ export const ComparisonTable: React.FC<ComparisonTableProps> = ({ product }) => 
       {product.ingredients && (
         <div className="mb-6 p-4 bg-gray-50 rounded-lg">
           <h3 className="font-semibold text-gray-800 mb-2">Key Ingredients:</h3>
-          <div className="flex flex-wrap gap-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {product.ingredients.map((ingredient, index) => (
-              <span key={index} className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">
-                {ingredient}
-              </span>
+              <div key={index} className="bg-white p-3 rounded-lg border border-blue-200">
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm font-semibold">
+                    {ingredient}
+                  </span>
+                </div>
+                <p className="text-xs text-gray-600">
+                  {getIngredientBenefit(ingredient)}
+                </p>
+              </div>
             ))}
           </div>
         </div>

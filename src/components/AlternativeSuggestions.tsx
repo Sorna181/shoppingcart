@@ -68,15 +68,18 @@ export const AlternativeSuggestions: React.FC<AlternativeSuggestionsProps> = ({
               
               {product.ingredients && (
                 <div className="mb-3">
-                  <div className="text-xs text-gray-500 mb-1">Key Ingredients:</div>
-                  <div className="flex flex-wrap gap-1">
+                  <div className="text-xs text-gray-500 mb-2">Key Ingredients & Benefits:</div>
+                  <div className="space-y-2">
                     {product.ingredients.slice(0, 3).map((ingredient, index) => (
-                      <span key={index} className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">
-                        {ingredient}
-                      </span>
+                      <div key={index} className="bg-gray-50 p-2 rounded text-xs">
+                        <div className="font-semibold text-gray-800 mb-1">{ingredient}</div>
+                        <div className="text-gray-600">{getIngredientBenefit(ingredient)}</div>
+                      </div>
                     ))}
                     {product.ingredients.length > 3 && (
-                      <span className="text-gray-500 text-xs">+{product.ingredients.length - 3} more</span>
+                      <div className="text-gray-500 text-xs text-center py-1">
+                        +{product.ingredients.length - 3} more ingredients
+                      </div>
                     )}
                   </div>
                 </div>
