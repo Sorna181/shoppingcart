@@ -125,3 +125,43 @@ export const getCartSummary = (cartItems: CartItem[]) => {
     platformCounts
   };
 };
+
+export const getIngredientBenefit = (ingredient: string): string => {
+  const benefits: Record<string, string> = {
+    // Anti-Dandruff & Hair Care
+    'Salicylic Acid': 'Exfoliates scalp, removes dead skin cells, reduces dandruff',
+    'Biotin': 'Strengthens hair follicles, promotes hair growth, prevents breakage',
+    'Zinc Pyrithione': 'Anti-fungal agent, controls dandruff-causing microbes',
+    'Sodium Laureth Sulfate': 'Primary cleansing agent, removes dirt and oil',
+    'Cocamidopropyl Betaine': 'Mild surfactant, gentle cleansing, reduces irritation',
+    'Dimethiconol': 'Smooths hair cuticles, adds shine, reduces frizz',
+    
+    // Skincare & Serums
+    'Vitamin C': 'Powerful antioxidant, brightens skin, stimulates collagen production',
+    'Niacinamide': 'Reduces pore size, controls oil production, improves skin texture',
+    'Hyaluronic Acid': 'Intense hydration, plumps skin, reduces fine lines',
+    'Glycerin': 'Intense moisturizer, prevents skin dryness, softens skin',
+    '3-O-Ethyl Ascorbic Acid': 'Stable form of Vitamin C, brightening, anti-aging',
+    'Butylene Glycol': 'Humectant, improves product texture, enhances absorption',
+    'Propanediol': 'Natural moisturizer, enhances ingredient penetration',
+    
+    // Sunscreen Protection
+    'Zinc Oxide': 'Physical UV blocker, broad spectrum protection, gentle on sensitive skin',
+    'Titanium Dioxide': 'Physical sunscreen, reflects UV rays, suitable for sensitive skin',
+    'Octinoxate': 'Chemical sunscreen, UVB protection, lightweight formula',
+    'Avobenzone': 'Chemical sunscreen, UVA protection, prevents skin aging',
+    'Methylene Bis-Benzotriazolyl Tetramethylbutylphenol': 'Advanced UV filter, broad spectrum protection',
+    'Ethylhexyl Methoxycinnamate': 'UVB filter, prevents sunburn, lightweight',
+    'Butyl Methoxydibenzoylmethane': 'UVA filter, prevents premature aging',
+    
+    // Body Care & Soaps
+    'Sodium Palmate': 'Natural soap base from palm oil, gentle cleansing',
+    'Sodium Palm Kernelate': 'Soap base, creates rich lather, moisturizing properties',
+    'Sodium Chloride': 'Natural salt, thickening agent, mild exfoliant',
+    'Parfum': 'Fragrance, provides pleasant scent',
+    'Mustard Butter': 'Natural moisturizer, nourishes skin, anti-inflammatory',
+    'Glycerine': 'Intense moisturizer, prevents skin dryness, softens skin'
+  };
+  
+  return benefits[ingredient] || 'Beneficial ingredient for skin/hair care';
+};
