@@ -1,7 +1,7 @@
 import React from 'react';
 import { ExternalLink, ShoppingCart, Lightbulb, Beaker } from 'lucide-react';
 import { Product, CartItem } from '../data/products';
-import { formatPrice, getLowestPrice, calculateSavingsPercentage, getPlatformLogo } from '../utils/priceUtils';
+import { formatPrice, getLowestPrice, calculateSavingsPercentage, getPlatformLogo, getIngredientBenefit } from '../utils/priceUtils';
 
 interface AlternativeSuggestionsProps {
   alternatives: Product[];
