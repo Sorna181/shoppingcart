@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink, Beaker } from 'lucide-react';
+import { ExternalLink, Beaker, Star, ChevronDown, ChevronUp } from 'lucide-react';
 import { Product } from '../data/products';
 import { formatPrice, getPlatformLogo, calculateSavings, getHighestPrice, getIngredientBenefit } from '../utils/priceUtils';
 
@@ -8,14 +8,36 @@ interface ComparisonTableProps {
 }
 
 export const ComparisonTable: React.FC<ComparisonTableProps> = ({ product }) => {
+  const [expandedIngredients, setExpandedIngredients] = React.useState(false);
   const highestPriceData = getHighestPrice(product);
   
+  const toggleIngredients = () => {
+    setExpandedIngredients(!expandedIngredients);
+  };
+
+  const renderStars = (rating: number) => {
+    return (
+      <div className="flex items-center gap-1">
+        {[1, 2, 3, 4, 5].map((star) => (
+          <Star
+            key={star}
+            className={`w-3 h-3 ${
+              star <= rating ? 'text-yellow-400 fill-current' : 'text-gray-300'
+            }`}
+          />
+        ))}
+        <span className="text-xs text-gray-600 ml-1">{rating}</span>
+      </div>
+    );
+  };
+
   const platforms = Object.entries(product.platforms)
     .filter(([, data]) => data?.available)
     .map(([platform, data]) => ({
       platform,
       price: data!.price,
       url: data!.url,
+      rating: data!.rating,
       savings: calculateSavings(data!.price, highestPriceData.price)
     }))
     .sort((a, b) => a.price - b.price);
@@ -37,8 +59,8 @@ export const ComparisonTable: React.FC<ComparisonTableProps> = ({ product }) => 
       {product.ingredients && (
         <div className="mb-6 p-4 bg-gray-50 rounded-lg">
           <h3 className="font-semibold text-gray-800 mb-2">Key Ingredients:</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-            {product.ingredients.map((ingredient, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
+            {(expandedIngredients ? product.ingredients : product.ingredients.slice(0, 4)).map((ingredient, index) => (
               <div key={index} className="bg-white p-3 rounded-lg border border-blue-200">
                 <div className="flex items-center gap-2 mb-1">
                   <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm font-semibold">
@@ -51,6 +73,24 @@ export const ComparisonTable: React.FC<ComparisonTableProps> = ({ product }) => 
               </div>
             ))}
           </div>
+          {product.ingredients.length > 4 && (
+            <button
+              onClick={toggleIngredients}
+              className="w-full text-blue-600 hover:text-blue-800 text-sm text-center py-2 flex items-center justify-center gap-1 hover:bg-blue-50 rounded transition-colors"
+            >
+              {expandedIngredients ? (
+                <>
+                  <ChevronUp className="w-4 h-4" />
+                  Show Less Ingredients
+                </>
+              ) : (
+                <>
+                  <ChevronDown className="w-4 h-4" />
+                  Show All {product.ingredients.length} Ingredients
+                </>
+              )}
+            </button>
+          )}
         </div>
       )}
       
@@ -60,12 +100,13 @@ export const ComparisonTable: React.FC<ComparisonTableProps> = ({ product }) => 
             <tr className="border-b-2 border-gray-200">
               <th className="text-left py-3 px-4">Platform</th>
               <th className="text-left py-3 px-4">Price</th>
+              <th className="text-left py-3 px-4">Rating</th>
               <th className="text-left py-3 px-4">Link</th>
               <th className="text-left py-3 px-4">Savings</th>
             </tr>
           </thead>
           <tbody>
-            {platforms.map(({ platform, price, url, savings }, index) => (
+            {platforms.map(({ platform, price, url, rating, savings }, index) => (
               <tr key={platform} className={`border-b border-gray-100 hover:bg-gray-50 ${index === 0 ? 'bg-green-50' : ''}`}>
                 <td className="py-4 px-4">
                   <span className={`inline-block px-3 py-1 rounded-full text-white text-sm font-semibold ${
@@ -80,6 +121,9 @@ export const ComparisonTable: React.FC<ComparisonTableProps> = ({ product }) => 
                   {index === 0 && (
                     <span className="ml-2 bg-green-500 text-white px-2 py-1 rounded text-xs">LOWEST</span>
                   )}
+                </td>
+                <td className="py-4 px-4">
+                  {renderStars(rating)}
                 </td>
                 <td className="py-4 px-4">
                   <a

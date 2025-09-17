@@ -67,10 +67,23 @@ export const findSimilarProducts = (searchProduct: Product, allProducts: Product
   const searchKeywords = searchProduct.keywords;
   const searchCategory = searchProduct.category;
   const searchIngredients = searchProduct.ingredients || [];
+  const searchName = searchProduct.name.toLowerCase();
   
   return allProducts
     .filter(product => product.id !== searchProduct.id)
     .filter(product => product.category === searchCategory) // Only show products from same category
+    .filter(product => {
+      // For ingredient-based alternatives, ensure products are of similar type
+      if (searchIngredients.length > 0 && product.ingredients && product.ingredients.length > 0) {
+        // Check if products are of similar type (e.g., both serums, both shampoos, etc.)
+        const searchType = getProductType(searchName);
+        const productType = getProductType(product.name.toLowerCase());
+        
+        // Only show products of the same type for ingredient-based comparison
+        return searchType === productType;
+      }
+      return true;
+    })
     .map(product => {
       // Calculate keyword similarity
       const matchingKeywords = product.keywords.filter(keyword => 
@@ -108,6 +121,23 @@ export const findSimilarProducts = (searchProduct: Product, allProducts: Product
     .sort((a, b) => b.similarity - a.similarity)
     .slice(0, maxResults)
     .map(({ product }) => product);
+};
+
+const getProductType = (productName: string): string => {
+  const name = productName.toLowerCase();
+  
+  if (name.includes('serum')) return 'serum';
+  if (name.includes('shampoo')) return 'shampoo';
+  if (name.includes('soap') || name.includes('bar')) return 'soap';
+  if (name.includes('sunscreen') || name.includes('spf')) return 'sunscreen';
+  if (name.includes('moisturizer') || name.includes('lotion')) return 'moisturizer';
+  if (name.includes('cream')) return 'cream';
+  if (name.includes('cleanser')) return 'cleanser';
+  if (name.includes('toner')) return 'toner';
+  if (name.includes('oil')) return 'oil';
+  if (name.includes('mask')) return 'mask';
+  
+  return 'other';
 };
 
 export const getCartSummary = (cartItems: CartItem[]) => {

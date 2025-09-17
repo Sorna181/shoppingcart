@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink, ShoppingCart, Lightbulb, Beaker } from 'lucide-react';
+import { ExternalLink, ShoppingCart, Lightbulb, Beaker, Star, ChevronDown, ChevronUp } from 'lucide-react';
 import { Product, CartItem } from '../data/products';
 import { formatPrice, getLowestPrice, calculateSavingsPercentage, getPlatformLogo, getIngredientBenefit } from '../utils/priceUtils';
 
@@ -14,7 +14,31 @@ export const AlternativeSuggestions: React.FC<AlternativeSuggestionsProps> = ({
   originalProduct,
   onAddToCart,
 }) => {
+  const [expandedIngredients, setExpandedIngredients] = React.useState<Record<string, boolean>>({});
   const originalLowest = getLowestPrice(originalProduct);
+
+  const toggleIngredients = (productId: string) => {
+    setExpandedIngredients(prev => ({
+      ...prev,
+      [productId]: !prev[productId]
+    }));
+  };
+
+  const renderStars = (rating: number) => {
+    return (
+      <div className="flex items-center gap-1">
+        {[1, 2, 3, 4, 5].map((star) => (
+          <Star
+            key={star}
+            className={`w-3 h-3 ${
+              star <= rating ? 'text-yellow-400 fill-current' : 'text-gray-300'
+            }`}
+          />
+        ))}
+        <span className="text-xs text-gray-600 ml-1">{rating}</span>
+      </div>
+    );
+  };
 
   if (alternatives.length === 0) return null;
 
@@ -69,18 +93,52 @@ export const AlternativeSuggestions: React.FC<AlternativeSuggestionsProps> = ({
               {product.ingredients && (
                 <div className="mb-3">
                   <div className="text-xs text-gray-500 mb-2">Key Ingredients & Benefits:</div>
-                  <div className="space-y-2">
-                    {product.ingredients.slice(0, 3).map((ingredient, index) => (
+                  <div className="space-y-1">
+                    {(expandedIngredients[product.id] ? product.ingredients : product.ingredients.slice(0, 3)).map((ingredient, index) => (
                       <div key={index} className="bg-gray-50 p-2 rounded text-xs">
                         <div className="font-semibold text-gray-800 mb-1">{ingredient}</div>
                         <div className="text-gray-600">{getIngredientBenefit(ingredient)}</div>
                       </div>
                     ))}
                     {product.ingredients.length > 3 && (
-                      <div className="text-gray-500 text-xs text-center py-1">
-                        +{product.ingredients.length - 3} more ingredients
-                      </div>
+                      <button
+                        onClick={() => toggleIngredients(product.id)}
+                        className="w-full text-blue-600 hover:text-blue-800 text-xs text-center py-2 flex items-center justify-center gap-1 hover:bg-blue-50 rounded transition-colors"
+                      >
+                        {expandedIngredients[product.id] ? (
+                          <>
+                            <ChevronUp className="w-3 h-3" />
+                            Show Less
+                          </>
+                        ) : (
+                          <>
+                            <ChevronDown className="w-3 h-3" />
+                            +{product.ingredients.length - 3} more ingredient{product.ingredients.length - 3 > 1 ? 's' : ''}
+                          </>
+                        )}
+                      </button>
                     )}
+                  </div>
+                </div>
+              )}
+              
+              {/* Product Rating */}
+              <div className="mb-3">
+                <div className="text-xs text-gray-500 mb-1">Platform Ratings:</div>
+                <div className="space-y-1">
+                  {Object.entries(product.platforms)
+                    .filter(([, data]) => data?.available)
+                    .map(([platform, data]) => (
+                      <div key={platform} className="flex items-center justify-between text-xs">
+                        <span className={`px-2 py-1 rounded text-white text-xs ${
+                          platform === 'amazon' ? 'bg-orange-500' :
+                          platform === 'flipkart' ? 'bg-blue-500' : 'bg-purple-500'
+                        }`}>
+                          {getPlatformLogo(platform)}
+                        </span>
+                        {renderStars(data!.rating)}
+                      </div>
+                    ))}
                   </div>
                 </div>
               )}
