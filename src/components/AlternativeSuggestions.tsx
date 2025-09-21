@@ -141,7 +141,6 @@ export const AlternativeSuggestions: React.FC<AlternativeSuggestionsProps> = ({
                     ))}
                   </div>
                 </div>
-              )}
               
               <div className="flex items-center justify-between mb-3">
                 <div>
