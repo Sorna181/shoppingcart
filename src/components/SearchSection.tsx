@@ -1,12 +1,12 @@
 import React from 'react';
 import { Search, Filter } from 'lucide-react';
-import { categories } from '../data/products';
 
 interface SearchSectionProps {
   searchTerm: string;
   setSearchTerm: (term: string) => void;
   selectedCategory: string;
   setSelectedCategory: (category: string) => void;
+  categories: string[];
 }
 
 export const SearchSection: React.FC<SearchSectionProps> = ({
@@ -14,6 +14,7 @@ export const SearchSection: React.FC<SearchSectionProps> = ({
   setSearchTerm,
   selectedCategory,
   setSelectedCategory,
+  categories,
 }) => {
   return (
     <div className="bg-white rounded-xl shadow-lg p-6 mb-8">

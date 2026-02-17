@@ -1,55 +1,84 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Zap, Search as SearchIcon } from 'lucide-react';
 import { SearchSection } from './components/SearchSection';
-import { ProductCard } from './components/ProductCard';
-import { ComparisonTable } from './components/ComparisonTable';
-import { AlternativeSuggestions } from './components/AlternativeSuggestions';
+import { ProductGrid } from './components/ProductGrid';
+import { ProductComparison } from './components/ProductComparison';
 import { ShoppingCartComponent } from './components/ShoppingCart';
 import { SavingsDashboard } from './components/SavingsDashboard';
-import { mockProducts, CartItem, categories } from './data/products';
-import { getLowestPrice, findSimilarProducts } from './utils/priceUtils';
+import { LoadingSpinner } from './components/LoadingSpinner';
+import { useProducts, useCategories } from './hooks/useProducts';
+import { useCart } from './hooks/useCart';
+import apiService from './services/api';
 
 function App() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
-  const [cartItems, setCartItems] = useState<CartItem[]>([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
-  const [selectedProduct, setSelectedProduct] = useState(mockProducts[0]);
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [page, setPage] = useState(1);
+  const [syncing, setSyncing] = useState(false);
 
-  const filteredProducts = useMemo(() => {
-    return mockProducts.filter((product) => {
-      const matchesSearch = searchTerm === '' || 
-        product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        product.keywords.some(keyword => 
-          keyword.toLowerCase().includes(searchTerm.toLowerCase())
-        );
-      
-      const matchesCategory = selectedCategory === 'All' || 
-        product.category === selectedCategory;
-      
-      return matchesSearch && matchesCategory;
-    });
-  }, [searchTerm, selectedCategory]);
+  const { products, loading: productsLoading, error: productsError, totalPages } = useProducts(searchTerm, selectedCategory, page);
+  const { categories, loading: categoriesLoading } = useCategories();
+  const { cart, addToCart, updateQuantity, removeItem } = useCart();
 
-  const handleAddToCart = (item: CartItem) => {
-    setCartItems(prev => [...prev, item]);
+  // Sync products on first load
+  useEffect(() => {
+    const syncInitialProducts = async () => {
+      if (products.length === 0 && !productsLoading && !productsError) {
+        try {
+          setSyncing(true);
+          await apiService.syncProducts();
+          // Products will be refetched automatically due to the useProducts hook
+        } catch (error) {
+          console.error('Error syncing products:', error);
+        } finally {
+          setSyncing(false);
+        }
+      }
+    };
+
+    syncInitialProducts();
+  }, [products.length, productsLoading, productsError]);
+
+  const handleAddToCart = async (productId: string, platform: string, quantity: number = 1) => {
+    try {
+      await addToCart(productId, platform, quantity);
+    } catch (error) {
+      console.error('Error adding to cart:', error);
+    }
   };
 
-  const handleRemoveFromCart = (index: number) => {
-    setCartItems(prev => prev.filter((_, i) => i !== index));
+  const handleRemoveFromCart = async (index: number) => {
+    try {
+      await removeItem(index);
+    } catch (error) {
+      console.error('Error removing from cart:', error);
+    }
   };
 
-  const handleUpdateQuantity = (index: number, newQuantity: number) => {
-    setCartItems(prev => prev.map((item, i) => 
-      i === index ? { ...item, quantity: newQuantity } : item
-    ));
+  const handleUpdateQuantity = async (index: number, newQuantity: number) => {
+    try {
+      await updateQuantity(index, newQuantity);
+    } catch (error) {
+      console.error('Error updating quantity:', error);
+    }
   };
 
-  const handleProductSelect = (product: typeof mockProducts[0]) => {
+  const handleProductSelect = (product: any) => {
     setSelectedProduct(product);
   };
 
-  const similarProducts = findSimilarProducts(selectedProduct, mockProducts);
+  const handleSyncProducts = async () => {
+    try {
+      setSyncing(true);
+      await apiService.syncProducts();
+    } catch (error) {
+      console.error('Error syncing products:', error);
+    } finally {
+      setSyncing(false);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -60,23 +89,55 @@ function App() {
             <Zap className="w-8 h-8" />
             <h1 className="text-3xl font-bold">AI-Powered Shopping Cart Price Optimizer</h1>
           </div>
-          <p className="text-blue-100">Compare prices across Amazon, Flipkart, and Meesho • Find the best deals • Save money with AI recommendations</p>
+          <div className="flex items-center justify-between">
+            <p className="text-blue-100">Real-time price comparison • AI-powered optimization • Smart savings recommendations</p>
+            <button
+              onClick={handleSyncProducts}
+              disabled={syncing}
+              className="bg-white/20 hover:bg-white/30 px-4 py-2 rounded-lg text-sm transition-colors duration-200 disabled:opacity-50"
+            >
+              {syncing ? 'Syncing...' : 'Sync Products'}
+            </button>
+          </div>
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 py-8">
+        {categoriesLoading ? (
+          <LoadingSpinner />
+        ) : (
         <SearchSection
           searchTerm={searchTerm}
           setSearchTerm={setSearchTerm}
           selectedCategory={selectedCategory}
           setSelectedCategory={setSelectedCategory}
+          categories={categories}
         />
+        )}
 
-        {filteredProducts.length === 0 ? (
+        {productsLoading || syncing ? (
+          <LoadingSpinner message={syncing ? "Syncing products from APIs..." : "Loading products..."} />
+        ) : productsError ? (
+          <div className="text-center py-12">
+            <div className="text-red-500 mb-4">Error loading products: {productsError}</div>
+            <button
+              onClick={handleSyncProducts}
+              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200"
+            >
+              Retry Sync
+            </button>
+          </div>
+        ) : products.length === 0 ? (
           <div className="text-center py-12">
             <SearchIcon className="w-16 h-16 text-gray-300 mx-auto mb-4" />
             <h2 className="text-xl font-semibold text-gray-600 mb-2">No products found</h2>
-            <p className="text-gray-500">Try adjusting your search terms or category filter</p>
+            <p className="text-gray-500 mb-4">Try adjusting your search terms or category filter</p>
+            <button
+              onClick={handleSyncProducts}
+              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200"
+            >
+              Load Products
+            </button>
           </div>
         ) : (
           <>
@@ -88,7 +149,7 @@ function App() {
                   </div>
                   <h2 className="text-2xl font-bold text-gray-800 mb-4">Search or Choose a Category</h2>
                   <p className="text-gray-600 mb-6">
-                    Search for products by name or select a specific category to discover products and compare prices across platforms.
+                    Search for products by name or select a specific category to discover real-time prices and AI-powered recommendations.
                   </p>
                   <div className="grid grid-cols-2 gap-3 text-sm">
                     {categories.slice(1).map((category) => (
@@ -105,64 +166,24 @@ function App() {
               </div>
             ) : (
               <>
-                {/* Product Selection */}
-                <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
-                  <h2 className="text-2xl font-bold mb-4">Select Product to Compare</h2>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-                    {filteredProducts.map((product) => (
-                      <button
-                        key={product.id}
-                        onClick={() => handleProductSelect(product)}
-                        className={`p-3 border rounded-lg text-left hover:shadow-md transition-all duration-200 ${
-                          selectedProduct.id === product.id 
-                            ? 'border-blue-500 bg-blue-50 ring-2 ring-blue-200' 
-                            : 'border-gray-200 hover:border-blue-300'
-                        }`}
-                      >
-                        <img
-                          src={product.image}
-                          alt={product.name}
-                          className="w-full h-32 object-cover rounded mb-2"
-                        />
-                        <h3 className="font-semibold text-sm line-clamp-1">{product.name}</h3>
-                        <p className="text-gray-600 text-xs line-clamp-2">{product.description}</p>
-                      </button>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Price Comparison Cards */}
-                <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
-                  <h2 className="text-2xl font-bold mb-6">Price Comparison - {selectedProduct.name}</h2>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {(['amazon', 'flipkart', 'meesho'] as const).map((platform) => {
-                      const lowestPlatform = getLowestPrice(selectedProduct).platform;
-                      return (
-                        <ProductCard
-                          key={platform}
-                          product={selectedProduct}
-                          platform={platform}
-                          onAddToCart={handleAddToCart}
-                          isLowestPrice={platform === lowestPlatform}
-                        />
-                      );
-                    })}
-                  </div>
-                </div>
-
-                {/* Comparison Table */}
-                <ComparisonTable product={selectedProduct} />
-
-                {/* Alternative Suggestions */}
-                <AlternativeSuggestions
-                  alternatives={similarProducts}
-                  originalProduct={selectedProduct}
+                <ProductGrid
+                  products={products}
+                  selectedProduct={selectedProduct}
+                  onProductSelect={handleProductSelect}
                   onAddToCart={handleAddToCart}
+                  page={page}
+                  totalPages={totalPages}
+                  onPageChange={setPage}
                 />
 
-                {/* Savings Dashboard */}
-                <SavingsDashboard cartItems={cartItems} />
+                {selectedProduct && (
+                  <ProductComparison
+                    product={selectedProduct}
+                    onAddToCart={handleAddToCart}
+                  />
+                )}
 
+                <SavingsDashboard cart={cart} />
               </>
             )}
           </>
@@ -171,7 +192,7 @@ function App() {
 
       {/* Shopping Cart */}
       <ShoppingCartComponent
-        cartItems={cartItems}
+        cart={cart}
         onRemoveItem={handleRemoveFromCart}
         onUpdateQuantity={handleUpdateQuantity}
         isOpen={isCartOpen}

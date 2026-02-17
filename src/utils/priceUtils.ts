@@ -1,4 +1,5 @@
-import { Product, CartItem } from '../data/products';
+// Remove the import since we're now using API data
+// The types will be defined inline or imported from a types file
 
 export const getPlatformColor = (platform: string) => {
   switch (platform) {
@@ -63,7 +64,7 @@ export const calculateSavingsPercentage = (currentPrice: number, highestPrice: n
   return ((highestPrice - currentPrice) / highestPrice) * 100;
 };
 
-export const findSimilarProducts = (searchProduct: Product, allProducts: Product[], maxResults = 3) => {
+export const findSimilarProducts = (searchProduct: any, allProducts: any[], maxResults = 3) => {
   const searchKeywords = searchProduct.keywords;
   const searchCategory = searchProduct.category;
   const searchIngredients = searchProduct.ingredients || [];
@@ -140,7 +141,7 @@ const getProductType = (productName: string): string => {
   return 'other';
 };
 
-export const getCartSummary = (cartItems: CartItem[]) => {
+export const getCartSummary = (cartItems: any[]) => {
   const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
   const totalPrice = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
   
@@ -194,4 +195,22 @@ export const getIngredientBenefit = (ingredient: string): string => {
   };
   
   return benefits[ingredient] || 'Beneficial ingredient for skin/hair care';
+};
+
+// API-compatible utility functions
+export const transformCartItemForAPI = (product: any, platform: string, quantity: number = 1) => {
+  return {
+    productId: product._id,
+    platform,
+    quantity
+  };
+};
+
+export const calculateOptimizedSavings = (originalPrice: number, optimizedPrice: number) => {
+  return Math.max(0, originalPrice - optimizedPrice);
+};
+
+export const formatSavingsPercentage = (savings: number, originalPrice: number) => {
+  if (originalPrice === 0) return 0;
+  return ((savings / originalPrice) * 100).toFixed(1);
 };
