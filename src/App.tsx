@@ -199,7 +199,7 @@ function App() {
         onToggle={() => setIsCartOpen(!isCartOpen)}
       />
     </div>
-  );
+                <SavingsDashboard cart={cart} />
 }
 
 export default App;
