@@ -142,6 +142,17 @@ const getProductType = (productName: string): string => {
 };
 
 export const getCartSummary = (cartItems: any[]) => {
+  // Add null/undefined check for cartItems
+  if (!cartItems || !Array.isArray(cartItems)) {
+    return {
+      totalItems: 0,
+      totalOriginalPrice: 0,
+      totalFinalPrice: 0,
+      totalSavings: 0,
+      averageDiscount: 0
+    };
+  }
+
   const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
   const totalPrice = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
   
