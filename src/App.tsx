@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import ProductGrid from './components/ProductGrid';
+import { ProductGrid } from './components/ProductGrid';
 import ShoppingCart from './components/ShoppingCart';
 import SearchSection from './components/SearchSection';
 import SavingsDashboard from './components/SavingsDashboard';
