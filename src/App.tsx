@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ProductGrid } from './components/ProductGrid';
 import ShoppingCart from './components/ShoppingCart';
 import SearchSection from './components/SearchSection';
-import SavingsDashboard from './components/SavingsDashboard';
+import { SavingsDashboard } from './components/SavingsDashboard';
 import { ProductComparison } from './components/ProductComparison';
 import { AlternativeSuggestions } from './components/AlternativeSuggestions';
 import { useProducts } from './hooks/useProducts';
